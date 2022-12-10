@@ -1,0 +1,10 @@
+<mujoco>
+    <asset>
+        <mesh name="main_fl" refquat="1 0 1 0" scale="0.001 0.001 0.001" file="stl-meshes/leg_servo_l.stl"/>
+        <mesh name="m2_reel_fl" refquat="1 0 0 0" scale="0.001 0.001 0.001" file="stl-meshes/m2_rl.stl"/>
+        <mesh name="m1_leg_fl" refquat="1 0 0 0" scale="0.001 0.001 0.001" file="stl-meshes/leg_fl_l1.stl"/>
+        <mesh name="leg2_fl" refquat="1 0 0 0" scale="0.001 0.001 0.001" file="stl-meshes/leg_fl_l3.stl"/>
+        <mesh name="leg3_fl" refquat="1 0 0 0" scale="0.001 0.001 0.001" file="stl-meshes/leg_fl_l4.stl"/>
+        <mesh name="tail_test" refquat="1 0 0 0" scale="0.001 0.001 0.001" file="stl-meshes/Tail_Unit.stl"/>
+    </asset>
+</mujoco>

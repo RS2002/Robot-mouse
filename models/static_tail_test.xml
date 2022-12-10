@@ -1,0 +1,19 @@
+<mujoco>
+
+    <include file="basic_scene.xml" />
+
+    <include file="tail_assets/tail_stl_assets.xml"/>
+
+    <worldbody>
+        <light diffuse=".5 .5 .5" pos="0 0 3" dir="0 0 -1"/>    
+        <geom type="plane" size="0 0 0.03" material="matplane"/>
+        <camera name="body_cam" mode="fixed" pos="0.3 -0.01 0.1" euler="90 90 0"/>
+        <body pos="0 0 0.1">
+            <include file="tail_assets/tail.xml"/>
+        </body>
+    </worldbody>
+
+    <include file="tail_assets/tail_tendon.xml"/>
+
+    <include file="tail_assets/tail_sensor_actuator.xml"/>
+</mujoco>

@@ -1,0 +1,15 @@
+<mujoco>
+    <sensor>
+        <jointpos name="m1_rl" joint="m1_rl"/>
+        <jointpos name="m2_rl" joint="m2_rl"/>
+        <!--actuatorfrc name="m1_f_rl" actuator="m1_rl"/>
+        <actuatorfrc name="m2_f_rl" actuator="m2_rl"/-->
+    </sensor>
+
+    <actuator>
+        <position name="m1_rl" gear="1" ctrllimited="true" ctrlrange="-1.57 1.57"  forcelimited="true"  forcerange="-.4 .4" joint="m1_rl" kp="200"/>
+        <position name="m2_rl" gear="1" ctrllimited="true"  ctrlrange="-3.14 3.14 " forcelimited="true"  forcerange="-.4 .4" joint="m2_rl" kp="200"/>
+        <!--motor name="m1" gear="100" joint="m1"/>
+        <motor name="m2" gear="10" joint="m2"/-->
+    </actuator>
+</mujoco>

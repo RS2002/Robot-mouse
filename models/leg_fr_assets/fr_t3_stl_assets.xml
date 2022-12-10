@@ -1,0 +1,9 @@
+<mujoco>
+    <asset>
+        <mesh name="main_fr" refquat="1 0 1 0" scale="0.001 0.001 0.001" file="stl-meshes/leg_servo_r.stl"/>
+        <mesh name="m2_reel_fr" refquat="1 0 0 0" scale="0.001 0.001 0.001" file="stl-meshes/m2_rl.stl"/>
+        <mesh name="m1_leg_fr" refquat="1 0 0 0" scale="0.001 0.001 0.001" file="stl-meshes/leg_fr_l1.stl"/>
+        <mesh name="leg2_fr" refquat="1 0 0 0" scale="0.001 0.001 0.001" file="stl-meshes/leg_fr_l3.stl"/>
+        <mesh name="leg3_fr" refquat="1 0 0 0" scale="0.001 0.001 0.001" file="stl-meshes/leg_fr_l4.stl"/>
+    </asset>
+</mujoco>

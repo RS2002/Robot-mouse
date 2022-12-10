@@ -1,0 +1,14 @@
+<mujoco>
+    <sensor>
+        <!-- tendonpos name="tendon_length" tendon="m2_tendon"/-->
+        <jointpos name="m1_fr" joint="m1_fr"/>
+        <jointpos name="m2_fr" joint="m2_fr"/>
+        <!-- actuatorfrc name="m1_F_fr" actuator="m1_fr"/>
+        <actuatorfrc name="m2_F_fr" actuator="m2_fr"/-->
+    </sensor>
+
+    <actuator>
+        <position name="m1_fr" gear="1" ctrllimited="true" ctrlrange="-3.00 3.00"  forcelimited="true" forcerange="-.4 .4" joint="m1_fr" kp="300"/>
+        <position name="m2_fr" gear="1" ctrllimited="true"  ctrlrange="-3.00 3.00 " forcelimited="true" forcerange="-0.4 0.4" joint="m2_fr" kp="300"/>
+    </actuator>
+</mujoco>
