@@ -12,4 +12,8 @@ You can train the model in flat ground first and train it in obstacle scenes nex
 
 ## ETG_RL
 
+<<<<<<< HEAD
 We write the code of this part based on [PaddleRobotics/QuadrupedalRobots/ETGRL at main · PaddlePaddle/PaddleRobotics · GitHub](https://github.com/PaddlePaddle/PaddleRobotics/tree/main/QuadrupedalRobots/ETGRL). So you can find the way to run this code in the above website.
+=======
+We write the code of this part based on [PaddleRobotics/QuadrupedalRobots/ETGRL at main · PaddlePaddle/PaddleRobotics · GitHub](https://github.com/PaddlePaddle/PaddleRobotics/tree/main/QuadrupedalRobots/ETGRL). So you can find the way to run this code in the above website.
+>>>>>>> 142a3072269f6dcb5b31e74a15187e7d0ff03713
