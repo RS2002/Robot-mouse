@@ -17,7 +17,7 @@ if __name__ == '__main__':
 		type=float, help="Gait stride") #设置步幅
 	args = parser.parse_args()
 
-	theMouse = SimModel("../models/dynamic_4l_t3.xml")
+	theMouse = SimModel("./models/dynamic_4l_t3.xml")
 
 	theController = MouseController(args.fre)
 	for i in range(500):

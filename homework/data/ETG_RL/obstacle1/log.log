@@ -1,0 +1,1416 @@
+[32m[01-27 17:35:43 MainThread @ETG_RL.py:382][0m args:Namespace(ES=1, ETG=1, ETG_H=20, ETG_T=0.5, ETG_T2=0.5, ETG_path='train_log/exp0/itr_1860624.npz', RNN_mode='None', act_bound=0.3, act_mode='traj', badfoot=0.1, e_step=1200, enable_action_filter=0, epsilon=0.4, es_rpm=1, eval=0, feet=0.3, footcontact=0.1, footheight=0.1, gamma=0.95, load='', max_steps=10000000.0, normal=1, outdir='train_log', popsize=40, random=0, random_dynamic=0, random_force=0, render=0, reward_p=5, sensor_ETG=1, sensor_ETG_obs=0, sensor_contact=1, sensor_dis=1, sensor_dynamic=0, sensor_exforce=0, sensor_footpose=0, sensor_imu=1, sensor_motor=1, sensor_noise=0, sigma=0.02, sigma_decay=0.99, stand=0, step_y=0.05, steplen=0.05, suffix='exp1', task_mode='stairstair', tau=0.07, timeinterval=1, timesteps=5, torso=1.5, up=0.6, vel_d=0.5, x_noise=0)
+[32m[01-27 17:35:44 MainThread @ETG_RL.py:407][0m Total Steps: 1201 Reward: 0.0687934926257606
+[32m[01-27 17:35:44 MainThread @ETG_RL.py:409][0m distance: 0.0687934926257606
+[32m[01-27 17:35:44 MainThread @ETG_RL.py:410][0m critic loss: not train actor loss: not train
+[32m[01-27 17:35:52 MainThread @ETG_RL.py:416][0m Evaluation over: 1 episodes, Reward: 0.05960166331652156 Steps: 5001 
+[32m[01-27 17:35:52 MainThread @ETG_RL.py:418][0m distance: 0.05960166331652156
+[32m[01-27 17:35:53 MainThread @ETG_RL.py:407][0m Total Steps: 2402 Reward: 0.08247345237873085
+[32m[01-27 17:35:53 MainThread @ETG_RL.py:409][0m distance: 0.08247345237873085
+[32m[01-27 17:35:53 MainThread @ETG_RL.py:410][0m critic loss: not train actor loss: not train
+[32m[01-27 17:35:54 MainThread @ETG_RL.py:407][0m Total Steps: 3603 Reward: 0.09919351065817546
+[32m[01-27 17:35:54 MainThread @ETG_RL.py:409][0m distance: 0.09919351065817546
+[32m[01-27 17:35:54 MainThread @ETG_RL.py:410][0m critic loss: not train actor loss: not train
+[32m[01-27 17:35:55 MainThread @ETG_RL.py:407][0m Total Steps: 4804 Reward: 0.08442550305964466
+[32m[01-27 17:35:55 MainThread @ETG_RL.py:409][0m distance: 0.08442550305964466
+[32m[01-27 17:35:55 MainThread @ETG_RL.py:410][0m critic loss: not train actor loss: not train
+[32m[01-27 17:35:56 MainThread @ETG_RL.py:407][0m Total Steps: 6005 Reward: 0.0748865204576247
+[32m[01-27 17:35:56 MainThread @ETG_RL.py:409][0m distance: 0.0748865204576247
+[32m[01-27 17:35:56 MainThread @ETG_RL.py:410][0m critic loss: not train actor loss: not train
+[32m[01-27 17:35:57 MainThread @ETG_RL.py:407][0m Total Steps: 7206 Reward: 0.08127389180086937
+[32m[01-27 17:35:57 MainThread @ETG_RL.py:409][0m distance: 0.08127389180086937
+[32m[01-27 17:35:57 MainThread @ETG_RL.py:410][0m critic loss: not train actor loss: not train
+[32m[01-27 17:35:58 MainThread @ETG_RL.py:407][0m Total Steps: 8407 Reward: -0.05077717524851219
+[32m[01-27 17:35:58 MainThread @ETG_RL.py:409][0m distance: -0.05077717524851219
+[32m[01-27 17:35:58 MainThread @ETG_RL.py:410][0m critic loss: not train actor loss: not train
+[32m[01-27 17:35:59 MainThread @ETG_RL.py:407][0m Total Steps: 9608 Reward: 0.073185311984193
+[32m[01-27 17:35:59 MainThread @ETG_RL.py:409][0m distance: 0.073185311984193
+[32m[01-27 17:35:59 MainThread @ETG_RL.py:410][0m critic loss: not train actor loss: not train
+[32m[01-27 17:36:12 MainThread @ETG_RL.py:407][0m Total Steps: 10809 Reward: 0.08059730151336225
+[32m[01-27 17:36:12 MainThread @ETG_RL.py:409][0m distance: 0.08059730151336225
+[32m[01-27 17:36:12 MainThread @ETG_RL.py:410][0m critic loss: 0.3299688795696438 actor loss: -4.950406633777383
+[32m[01-27 17:36:20 MainThread @ETG_RL.py:416][0m Evaluation over: 1 episodes, Reward: 0.06760344164400679 Steps: 5001 
+[32m[01-27 17:36:20 MainThread @ETG_RL.py:418][0m distance: 0.06760344164400679
+[32m[01-27 17:37:21 MainThread @ETG_RL.py:468][0m ESSteps: 1 Reward: 0.08882781184150204 step: 1201.0  sigma:0.0198
+[32m[01-27 17:37:21 MainThread @ETG_RL.py:470][0m average distance: -0.04174828553220723  max distance: 0.08882781184150204
+[32m[01-27 17:38:21 MainThread @ETG_RL.py:468][0m ESSteps: 2 Reward: 0.0963579616255717 step: 1201.0  sigma:0.019602
+[32m[01-27 17:38:21 MainThread @ETG_RL.py:470][0m average distance: -0.07093119978193742  max distance: 0.0963579616255717
+[32m[01-27 17:39:20 MainThread @ETG_RL.py:468][0m ESSteps: 3 Reward: 0.09684615988590005 step: 1201.0  sigma:0.01940598
+[32m[01-27 17:39:20 MainThread @ETG_RL.py:470][0m average distance: -0.0628107813488283  max distance: 0.09684615988590005
+[32m[01-27 17:40:25 MainThread @ETG_RL.py:468][0m ESSteps: 4 Reward: 0.08939347806971842 step: 1201.0  sigma:0.0192119202
+[32m[01-27 17:40:25 MainThread @ETG_RL.py:470][0m average distance: -0.06447656501151158  max distance: 0.08939347806971842
+[32m[01-27 17:41:31 MainThread @ETG_RL.py:468][0m ESSteps: 5 Reward: 0.09539869825843592 step: 1201.0  sigma:0.019019800998
+[32m[01-27 17:41:31 MainThread @ETG_RL.py:470][0m average distance: -0.052916158240011946  max distance: 0.09539869825843592
+[32m[01-27 17:42:31 MainThread @ETG_RL.py:468][0m ESSteps: 6 Reward: 0.0831898926371645 step: 1201.0  sigma:0.01882960298802
+[32m[01-27 17:42:31 MainThread @ETG_RL.py:470][0m average distance: -0.06105158942283233  max distance: 0.0831898926371645
+[32m[01-27 17:43:33 MainThread @ETG_RL.py:468][0m ESSteps: 7 Reward: 0.09377303578944335 step: 1201.0  sigma:0.0186413069581398
+[32m[01-27 17:43:33 MainThread @ETG_RL.py:470][0m average distance: -0.08972829124575335  max distance: 0.09377303578944335
+[32m[01-27 17:44:34 MainThread @ETG_RL.py:468][0m ESSteps: 8 Reward: 0.10069384165176376 step: 1183.925  sigma:0.0184548938885584
+[32m[01-27 17:44:34 MainThread @ETG_RL.py:470][0m average distance: -0.04929405103764431  max distance: 0.10069384165176376
+[32m[01-27 17:45:38 MainThread @ETG_RL.py:468][0m ESSteps: 9 Reward: 0.10311189977182275 step: 1201.0  sigma:0.018270344949672817
+[32m[01-27 17:45:38 MainThread @ETG_RL.py:470][0m average distance: -0.04585990523227775  max distance: 0.10311189977182275
+[32m[01-27 17:46:39 MainThread @ETG_RL.py:468][0m ESSteps: 10 Reward: 0.11911185830604094 step: 1201.0  sigma:0.01808764150017609
+[32m[01-27 17:46:39 MainThread @ETG_RL.py:470][0m average distance: -0.047566021574275114  max distance: 0.11911185830604094
+[32m[01-27 17:46:57 MainThread @ETG_RL.py:407][0m Total Steps: 12010 Reward: 0.05839294961573206
+[32m[01-27 17:46:57 MainThread @ETG_RL.py:409][0m distance: 0.05839294961573206
+[32m[01-27 17:46:57 MainThread @ETG_RL.py:410][0m critic loss: 0.06877229512234115 actor loss: -11.461682770274065
+[32m[01-27 17:47:16 MainThread @ETG_RL.py:407][0m Total Steps: 13211 Reward: 0.05335584152382577
+[32m[01-27 17:47:16 MainThread @ETG_RL.py:409][0m distance: 0.05335584152382577
+[32m[01-27 17:47:16 MainThread @ETG_RL.py:410][0m critic loss: 0.09120113521094723 actor loss: -20.545546838981128
+[32m[01-27 17:47:35 MainThread @ETG_RL.py:407][0m Total Steps: 14412 Reward: 0.05191464776082458
+[32m[01-27 17:47:35 MainThread @ETG_RL.py:409][0m distance: 0.05191464776082458
+[32m[01-27 17:47:35 MainThread @ETG_RL.py:410][0m critic loss: 0.10201471293349747 actor loss: -29.28584860802491
+[32m[01-27 17:47:54 MainThread @ETG_RL.py:407][0m Total Steps: 15613 Reward: 0.09317679417020237
+[32m[01-27 17:47:54 MainThread @ETG_RL.py:409][0m distance: 0.09317679417020237
+[32m[01-27 17:47:54 MainThread @ETG_RL.py:410][0m critic loss: 0.09385375278404015 actor loss: -37.66153575697112
+[32m[01-27 17:48:10 MainThread @ETG_RL.py:407][0m Total Steps: 16814 Reward: 0.06767696944051681
+[32m[01-27 17:48:10 MainThread @ETG_RL.py:409][0m distance: 0.06767696944051681
+[32m[01-27 17:48:10 MainThread @ETG_RL.py:410][0m critic loss: 0.08355750761721453 actor loss: -45.409265669061185
+[32m[01-27 17:48:27 MainThread @ETG_RL.py:407][0m Total Steps: 18015 Reward: -0.04798905742785167
+[32m[01-27 17:48:27 MainThread @ETG_RL.py:409][0m distance: -0.04798905742785167
+[32m[01-27 17:48:27 MainThread @ETG_RL.py:410][0m critic loss: 0.09891297835406912 actor loss: -52.59186259515081
+[32m[01-27 17:48:44 MainThread @ETG_RL.py:407][0m Total Steps: 19216 Reward: 0.07060901569233466
+[32m[01-27 17:48:44 MainThread @ETG_RL.py:409][0m distance: 0.07060901569233466
+[32m[01-27 17:48:44 MainThread @ETG_RL.py:410][0m critic loss: 0.07466566970852591 actor loss: -59.24341075684407
+[32m[01-27 17:49:00 MainThread @ETG_RL.py:407][0m Total Steps: 20417 Reward: 0.03724175166492146
+[32m[01-27 17:49:00 MainThread @ETG_RL.py:409][0m distance: 0.03724175166492146
+[32m[01-27 17:49:00 MainThread @ETG_RL.py:410][0m critic loss: 0.047726582545014745 actor loss: -65.35946227112579
+[32m[01-27 17:49:07 MainThread @ETG_RL.py:416][0m Evaluation over: 1 episodes, Reward: 0.027390685087198934 Steps: 5001 
+[32m[01-27 17:49:07 MainThread @ETG_RL.py:418][0m distance: 0.027390685087198934
+[32m[01-27 17:49:23 MainThread @ETG_RL.py:407][0m Total Steps: 21618 Reward: 0.05000122909365935
+[32m[01-27 17:49:23 MainThread @ETG_RL.py:409][0m distance: 0.05000122909365935
+[32m[01-27 17:49:23 MainThread @ETG_RL.py:410][0m critic loss: 0.042451569590280194 actor loss: -71.05893723156728
+[32m[01-27 17:49:37 MainThread @ETG_RL.py:407][0m Total Steps: 22819 Reward: 0.07294196200136509
+[32m[01-27 17:49:37 MainThread @ETG_RL.py:409][0m distance: 0.07294196200136509
+[32m[01-27 17:49:37 MainThread @ETG_RL.py:410][0m critic loss: 0.03772749036370616 actor loss: -76.37937361235225
+[32m[01-27 17:49:53 MainThread @ETG_RL.py:407][0m Total Steps: 24020 Reward: 0.06528200389368466
+[32m[01-27 17:49:53 MainThread @ETG_RL.py:409][0m distance: 0.06528200389368466
+[32m[01-27 17:49:53 MainThread @ETG_RL.py:410][0m critic loss: 0.0763336474294592 actor loss: -81.33331308356928
+[32m[01-27 17:50:09 MainThread @ETG_RL.py:407][0m Total Steps: 25221 Reward: 0.06021017155008754
+[32m[01-27 17:50:09 MainThread @ETG_RL.py:409][0m distance: 0.06021017155008754
+[32m[01-27 17:50:09 MainThread @ETG_RL.py:410][0m critic loss: 0.08439921380503787 actor loss: -85.97410020661493
+[32m[01-27 17:50:25 MainThread @ETG_RL.py:407][0m Total Steps: 26422 Reward: 0.10234911571915806
+[32m[01-27 17:50:25 MainThread @ETG_RL.py:409][0m distance: 0.10234911571915806
+[32m[01-27 17:50:25 MainThread @ETG_RL.py:410][0m critic loss: 0.031138870649529832 actor loss: -90.33820151806275
+[32m[01-27 17:50:40 MainThread @ETG_RL.py:407][0m Total Steps: 27623 Reward: 0.045408001405071466
+[32m[01-27 17:50:40 MainThread @ETG_RL.py:409][0m distance: 0.045408001405071466
+[32m[01-27 17:50:40 MainThread @ETG_RL.py:410][0m critic loss: 0.08879246800939407 actor loss: -94.41708255866287
+[32m[01-27 17:50:56 MainThread @ETG_RL.py:407][0m Total Steps: 28824 Reward: 0.07519585659408796
+[32m[01-27 17:50:56 MainThread @ETG_RL.py:409][0m distance: 0.07519585659408796
+[32m[01-27 17:50:56 MainThread @ETG_RL.py:410][0m critic loss: 0.028534180342803687 actor loss: -98.27871354076885
+[32m[01-27 17:51:12 MainThread @ETG_RL.py:407][0m Total Steps: 30025 Reward: 0.0625470842576621
+[32m[01-27 17:51:12 MainThread @ETG_RL.py:409][0m distance: 0.0625470842576621
+[32m[01-27 17:51:12 MainThread @ETG_RL.py:410][0m critic loss: 0.0931700426297298 actor loss: -101.8923986595338
+[32m[01-27 17:51:18 MainThread @ETG_RL.py:416][0m Evaluation over: 1 episodes, Reward: 0.06590009098845528 Steps: 5001 
+[32m[01-27 17:51:18 MainThread @ETG_RL.py:418][0m distance: 0.06590009098845528
+[32m[01-27 17:51:33 MainThread @ETG_RL.py:407][0m Total Steps: 31226 Reward: 0.07573663521385676
+[32m[01-27 17:51:33 MainThread @ETG_RL.py:409][0m distance: 0.07573663521385676
+[32m[01-27 17:51:33 MainThread @ETG_RL.py:410][0m critic loss: 0.02618501788248726 actor loss: -105.30681524348199
+[32m[01-27 17:51:48 MainThread @ETG_RL.py:407][0m Total Steps: 32427 Reward: 0.061466582318988855
+[32m[01-27 17:51:48 MainThread @ETG_RL.py:409][0m distance: 0.061466582318988855
+[32m[01-27 17:51:48 MainThread @ETG_RL.py:410][0m critic loss: 0.1003787317092249 actor loss: -108.51705202075662
+[32m[01-27 17:52:05 MainThread @ETG_RL.py:407][0m Total Steps: 33628 Reward: 0.07494917196129089
+[32m[01-27 17:52:05 MainThread @ETG_RL.py:409][0m distance: 0.07494917196129089
+[32m[01-27 17:52:05 MainThread @ETG_RL.py:410][0m critic loss: 0.10524467055024354 actor loss: -111.53109083088312
+[32m[01-27 17:52:20 MainThread @ETG_RL.py:407][0m Total Steps: 34829 Reward: 0.06543365137892665
+[32m[01-27 17:52:20 MainThread @ETG_RL.py:409][0m distance: 0.06543365137892665
+[32m[01-27 17:52:20 MainThread @ETG_RL.py:410][0m critic loss: 0.11073954111673899 actor loss: -114.36470252171246
+[32m[01-27 17:52:36 MainThread @ETG_RL.py:407][0m Total Steps: 36030 Reward: 0.07795435322045999
+[32m[01-27 17:52:36 MainThread @ETG_RL.py:409][0m distance: 0.07795435322045999
+[32m[01-27 17:52:36 MainThread @ETG_RL.py:410][0m critic loss: 0.11197971708089312 actor loss: -117.02823129442709
+[32m[01-27 17:52:52 MainThread @ETG_RL.py:407][0m Total Steps: 37231 Reward: 0.07335362240458461
+[32m[01-27 17:52:52 MainThread @ETG_RL.py:409][0m distance: 0.07335362240458461
+[32m[01-27 17:52:52 MainThread @ETG_RL.py:410][0m critic loss: 0.02356123637724404 actor loss: -119.55722949864168
+[32m[01-27 17:53:08 MainThread @ETG_RL.py:407][0m Total Steps: 38432 Reward: 0.06293559364797949
+[32m[01-27 17:53:08 MainThread @ETG_RL.py:409][0m distance: 0.06293559364797949
+[32m[01-27 17:53:08 MainThread @ETG_RL.py:410][0m critic loss: 0.023791866025714502 actor loss: -121.93124113948419
+[32m[01-27 17:53:24 MainThread @ETG_RL.py:407][0m Total Steps: 39633 Reward: -0.06484856480463565
+[32m[01-27 17:53:24 MainThread @ETG_RL.py:409][0m distance: -0.06484856480463565
+[32m[01-27 17:53:24 MainThread @ETG_RL.py:410][0m critic loss: 0.02313209794923899 actor loss: -124.15209769090943
+[32m[01-27 17:53:40 MainThread @ETG_RL.py:407][0m Total Steps: 40834 Reward: 0.07240073312215353
+[32m[01-27 17:53:40 MainThread @ETG_RL.py:409][0m distance: 0.07240073312215353
+[32m[01-27 17:53:40 MainThread @ETG_RL.py:410][0m critic loss: 0.023253488917365905 actor loss: -126.24335571848086
+[32m[01-27 17:53:46 MainThread @ETG_RL.py:416][0m Evaluation over: 1 episodes, Reward: 0.10119735227312607 Steps: 5001 
+[32m[01-27 17:53:46 MainThread @ETG_RL.py:418][0m distance: 0.10119735227312607
+[32m[01-27 17:54:02 MainThread @ETG_RL.py:407][0m Total Steps: 42035 Reward: 0.07616173464701864
+[32m[01-27 17:54:02 MainThread @ETG_RL.py:409][0m distance: 0.07616173464701864
+[32m[01-27 17:54:02 MainThread @ETG_RL.py:410][0m critic loss: 0.13326374861527293 actor loss: -128.2355078666236
+[32m[01-27 17:54:18 MainThread @ETG_RL.py:407][0m Total Steps: 43236 Reward: 0.0925751523834285
+[32m[01-27 17:54:18 MainThread @ETG_RL.py:409][0m distance: 0.0925751523834285
+[32m[01-27 17:54:18 MainThread @ETG_RL.py:410][0m critic loss: 0.1302374134725774 actor loss: -130.12003471889068
+[32m[01-27 17:54:35 MainThread @ETG_RL.py:407][0m Total Steps: 44437 Reward: 0.06876855792744523
+[32m[01-27 17:54:35 MainThread @ETG_RL.py:409][0m distance: 0.06876855792744523
+[32m[01-27 17:54:35 MainThread @ETG_RL.py:410][0m critic loss: 0.021440919480138425 actor loss: -131.9057994401028
+[32m[01-27 17:54:51 MainThread @ETG_RL.py:407][0m Total Steps: 45638 Reward: 0.05252105747995931
+[32m[01-27 17:54:51 MainThread @ETG_RL.py:409][0m distance: 0.05252105747995931
+[32m[01-27 17:54:51 MainThread @ETG_RL.py:410][0m critic loss: 0.021451464502899274 actor loss: -133.59340494300403
+[32m[01-27 17:55:07 MainThread @ETG_RL.py:407][0m Total Steps: 46839 Reward: 0.054676158251998376
+[32m[01-27 17:55:07 MainThread @ETG_RL.py:409][0m distance: 0.054676158251998376
+[32m[01-27 17:55:07 MainThread @ETG_RL.py:410][0m critic loss: 0.14576122162244798 actor loss: -135.17876340943909
+[32m[01-27 17:55:23 MainThread @ETG_RL.py:407][0m Total Steps: 48040 Reward: 0.08291160568182213
+[32m[01-27 17:55:23 MainThread @ETG_RL.py:409][0m distance: 0.08291160568182213
+[32m[01-27 17:55:23 MainThread @ETG_RL.py:410][0m critic loss: 0.019820165784748815 actor loss: -136.70751331847077
+[32m[01-27 17:55:40 MainThread @ETG_RL.py:407][0m Total Steps: 49241 Reward: 0.07058260990020104
+[32m[01-27 17:55:40 MainThread @ETG_RL.py:409][0m distance: 0.07058260990020104
+[32m[01-27 17:55:40 MainThread @ETG_RL.py:410][0m critic loss: 0.14734530023110723 actor loss: -138.13957232142567
+[32m[01-27 17:55:55 MainThread @ETG_RL.py:407][0m Total Steps: 50442 Reward: 0.07649690382709284
+[32m[01-27 17:55:55 MainThread @ETG_RL.py:409][0m distance: 0.07649690382709284
+[32m[01-27 17:55:55 MainThread @ETG_RL.py:410][0m critic loss: 0.020046485994293428 actor loss: -139.46974582338612
+[32m[01-27 17:56:01 MainThread @ETG_RL.py:416][0m Evaluation over: 1 episodes, Reward: 0.08815458532626624 Steps: 5001 
+[32m[01-27 17:56:01 MainThread @ETG_RL.py:418][0m distance: 0.08815458532626624
+[32m[01-27 17:57:04 MainThread @ETG_RL.py:468][0m ESSteps: 11 Reward: 0.11051786437856681 step: 1201.0  sigma:0.017906765085174327
+[32m[01-27 17:57:04 MainThread @ETG_RL.py:470][0m average distance: -0.028327158383228523  max distance: 0.11051786437856681
+[32m[01-27 17:58:05 MainThread @ETG_RL.py:468][0m ESSteps: 12 Reward: 0.1155937572050443 step: 1201.0  sigma:0.017727697434322585
+[32m[01-27 17:58:05 MainThread @ETG_RL.py:470][0m average distance: -0.03983109131576338  max distance: 0.1155937572050443
+[32m[01-27 17:59:07 MainThread @ETG_RL.py:468][0m ESSteps: 13 Reward: 0.1060536118377858 step: 1201.0  sigma:0.01755042045997936
+[32m[01-27 17:59:07 MainThread @ETG_RL.py:470][0m average distance: -0.02986727882191916  max distance: 0.1060536118377858
+[32m[01-27 18:00:15 MainThread @ETG_RL.py:468][0m ESSteps: 14 Reward: 0.08743455097596592 step: 1201.0  sigma:0.017374916255379565
+[32m[01-27 18:00:15 MainThread @ETG_RL.py:470][0m average distance: -0.02674962103678057  max distance: 0.08743455097596592
+[32m[01-27 18:01:19 MainThread @ETG_RL.py:468][0m ESSteps: 15 Reward: 0.08817969222180558 step: 1201.0  sigma:0.01720116709282577
+[32m[01-27 18:01:19 MainThread @ETG_RL.py:470][0m average distance: -0.03911903757004951  max distance: 0.08817969222180558
+[32m[01-27 18:02:20 MainThread @ETG_RL.py:468][0m ESSteps: 16 Reward: 0.08711003401483583 step: 1201.0  sigma:0.017029155421897514
+[32m[01-27 18:02:20 MainThread @ETG_RL.py:470][0m average distance: -0.03630177407491989  max distance: 0.08711003401483583
+[32m[01-27 18:03:21 MainThread @ETG_RL.py:468][0m ESSteps: 17 Reward: 0.09250234933849516 step: 1201.0  sigma:0.01685886386767854
+[32m[01-27 18:03:21 MainThread @ETG_RL.py:470][0m average distance: -0.03890391883470988  max distance: 0.09250234933849516
+[32m[01-27 18:04:22 MainThread @ETG_RL.py:468][0m ESSteps: 18 Reward: 0.0995386435274115 step: 1201.0  sigma:0.016690275229001753
+[32m[01-27 18:04:22 MainThread @ETG_RL.py:470][0m average distance: -0.04905098005655112  max distance: 0.0995386435274115
+[32m[01-27 18:05:24 MainThread @ETG_RL.py:468][0m ESSteps: 19 Reward: 0.10914798841526262 step: 1201.0  sigma:0.016523372476711734
+[32m[01-27 18:05:24 MainThread @ETG_RL.py:470][0m average distance: -0.038918496128204236  max distance: 0.10914798841526262
+[32m[01-27 18:06:25 MainThread @ETG_RL.py:468][0m ESSteps: 20 Reward: 0.10964558976382305 step: 1201.0  sigma:0.016358138751944615
+[32m[01-27 18:06:25 MainThread @ETG_RL.py:470][0m average distance: -0.02680062494475514  max distance: 0.10964558976382305
+[32m[01-27 18:06:41 MainThread @ETG_RL.py:407][0m Total Steps: 51643 Reward: 0.03755184794922911
+[32m[01-27 18:06:41 MainThread @ETG_RL.py:409][0m distance: 0.03755184794922911
+[32m[01-27 18:06:41 MainThread @ETG_RL.py:410][0m critic loss: 0.15013133824417532 actor loss: -140.65744535651035
+[32m[01-27 18:06:56 MainThread @ETG_RL.py:407][0m Total Steps: 52844 Reward: 0.05689910217546913
+[32m[01-27 18:06:56 MainThread @ETG_RL.py:409][0m distance: 0.05689910217546913
+[32m[01-27 18:06:56 MainThread @ETG_RL.py:410][0m critic loss: 0.020928457739152678 actor loss: -141.88462270566765
+[32m[01-27 18:07:12 MainThread @ETG_RL.py:407][0m Total Steps: 54045 Reward: 0.058459506658513564
+[32m[01-27 18:07:12 MainThread @ETG_RL.py:409][0m distance: 0.058459506658513564
+[32m[01-27 18:07:12 MainThread @ETG_RL.py:410][0m critic loss: 0.01862027203132221 actor loss: -143.04338917347116
+[32m[01-27 18:07:27 MainThread @ETG_RL.py:407][0m Total Steps: 55246 Reward: 0.07250035292311376
+[32m[01-27 18:07:27 MainThread @ETG_RL.py:409][0m distance: 0.07250035292311376
+[32m[01-27 18:07:27 MainThread @ETG_RL.py:410][0m critic loss: 0.018613085142964128 actor loss: -144.1595417438796
+[32m[01-27 18:07:43 MainThread @ETG_RL.py:407][0m Total Steps: 56447 Reward: 0.07107501386666215
+[32m[01-27 18:07:43 MainThread @ETG_RL.py:409][0m distance: 0.07107501386666215
+[32m[01-27 18:07:43 MainThread @ETG_RL.py:410][0m critic loss: 0.018435730750080846 actor loss: -145.23520427262358
+[32m[01-27 18:07:58 MainThread @ETG_RL.py:407][0m Total Steps: 57648 Reward: 0.07413831913579284
+[32m[01-27 18:07:58 MainThread @ETG_RL.py:409][0m distance: 0.07413831913579284
+[32m[01-27 18:07:58 MainThread @ETG_RL.py:410][0m critic loss: 0.017829477297705128 actor loss: -146.2531868254116
+[32m[01-27 18:08:14 MainThread @ETG_RL.py:407][0m Total Steps: 58849 Reward: 0.07117073331665487
+[32m[01-27 18:08:14 MainThread @ETG_RL.py:409][0m distance: 0.07117073331665487
+[32m[01-27 18:08:14 MainThread @ETG_RL.py:410][0m critic loss: 0.16125528935225159 actor loss: -147.22660762840863
+[32m[01-27 18:08:29 MainThread @ETG_RL.py:407][0m Total Steps: 60050 Reward: 0.05386254224403194
+[32m[01-27 18:08:29 MainThread @ETG_RL.py:409][0m distance: 0.05386254224403194
+[32m[01-27 18:08:29 MainThread @ETG_RL.py:410][0m critic loss: 0.016944219946836453 actor loss: -148.13698142732213
+[32m[01-27 18:08:36 MainThread @ETG_RL.py:416][0m Evaluation over: 1 episodes, Reward: 0.07194970203356268 Steps: 5001 
+[32m[01-27 18:08:36 MainThread @ETG_RL.py:418][0m distance: 0.07194970203356268
+[32m[01-27 18:08:52 MainThread @ETG_RL.py:407][0m Total Steps: 61251 Reward: 0.06063282089459697
+[32m[01-27 18:08:52 MainThread @ETG_RL.py:409][0m distance: 0.06063282089459697
+[32m[01-27 18:08:52 MainThread @ETG_RL.py:410][0m critic loss: 0.017622349731047187 actor loss: -149.00522172024208
+[32m[01-27 18:09:08 MainThread @ETG_RL.py:407][0m Total Steps: 62452 Reward: 0.07199017601494202
+[32m[01-27 18:09:08 MainThread @ETG_RL.py:409][0m distance: 0.07199017601494202
+[32m[01-27 18:09:08 MainThread @ETG_RL.py:410][0m critic loss: 0.017488793503310063 actor loss: -149.83129316166378
+[32m[01-27 18:09:25 MainThread @ETG_RL.py:407][0m Total Steps: 63653 Reward: 0.07619779830214288
+[32m[01-27 18:09:25 MainThread @ETG_RL.py:409][0m distance: 0.07619779830214288
+[32m[01-27 18:09:25 MainThread @ETG_RL.py:410][0m critic loss: 0.01741629816145077 actor loss: -150.61094693478498
+[32m[01-27 18:09:40 MainThread @ETG_RL.py:407][0m Total Steps: 64854 Reward: 0.0746067345128873
+[32m[01-27 18:09:40 MainThread @ETG_RL.py:409][0m distance: 0.0746067345128873
+[32m[01-27 18:09:40 MainThread @ETG_RL.py:410][0m critic loss: 0.01737180680771677 actor loss: -151.34125302177384
+[32m[01-27 18:09:56 MainThread @ETG_RL.py:407][0m Total Steps: 66055 Reward: -0.06290698588421115
+[32m[01-27 18:09:56 MainThread @ETG_RL.py:409][0m distance: -0.06290698588421115
+[32m[01-27 18:09:56 MainThread @ETG_RL.py:410][0m critic loss: 0.016923951284400034 actor loss: -152.03942867282228
+[32m[01-27 18:10:12 MainThread @ETG_RL.py:407][0m Total Steps: 67256 Reward: 0.06422588142614716
+[32m[01-27 18:10:12 MainThread @ETG_RL.py:409][0m distance: 0.06422588142614716
+[32m[01-27 18:10:12 MainThread @ETG_RL.py:410][0m critic loss: 0.016889384161404876 actor loss: -152.7061064352501
+[32m[01-27 18:10:27 MainThread @ETG_RL.py:407][0m Total Steps: 68457 Reward: 0.07034131984029082
+[32m[01-27 18:10:27 MainThread @ETG_RL.py:409][0m distance: 0.07034131984029082
+[32m[01-27 18:10:27 MainThread @ETG_RL.py:410][0m critic loss: 0.016655403242867555 actor loss: -153.3319291647626
+[32m[01-27 18:10:44 MainThread @ETG_RL.py:407][0m Total Steps: 69658 Reward: 0.057590173685979205
+[32m[01-27 18:10:44 MainThread @ETG_RL.py:409][0m distance: 0.057590173685979205
+[32m[01-27 18:10:44 MainThread @ETG_RL.py:410][0m critic loss: 0.01670272585445027 actor loss: -153.92506285452228
+[32m[01-27 18:11:00 MainThread @ETG_RL.py:407][0m Total Steps: 70859 Reward: 0.06634246802557223
+[32m[01-27 18:11:00 MainThread @ETG_RL.py:409][0m distance: 0.06634246802557223
+[32m[01-27 18:11:00 MainThread @ETG_RL.py:410][0m critic loss: 0.1756316548822871 actor loss: -154.4810054629768
+[32m[01-27 18:11:06 MainThread @ETG_RL.py:416][0m Evaluation over: 1 episodes, Reward: 0.05756819646604575 Steps: 5001 
+[32m[01-27 18:11:06 MainThread @ETG_RL.py:418][0m distance: 0.05756819646604575
+[32m[01-27 18:11:22 MainThread @ETG_RL.py:407][0m Total Steps: 72060 Reward: 0.07515333080572803
+[32m[01-27 18:11:22 MainThread @ETG_RL.py:409][0m distance: 0.07515333080572803
+[32m[01-27 18:11:22 MainThread @ETG_RL.py:410][0m critic loss: 0.3308365856119735 actor loss: -154.98812326245462
+[32m[01-27 18:11:37 MainThread @ETG_RL.py:407][0m Total Steps: 73261 Reward: 0.06701392929797759
+[32m[01-27 18:11:37 MainThread @ETG_RL.py:409][0m distance: 0.06701392929797759
+[32m[01-27 18:11:37 MainThread @ETG_RL.py:410][0m critic loss: 0.016194044277351115 actor loss: -155.4573250166284
+[32m[01-27 18:11:53 MainThread @ETG_RL.py:407][0m Total Steps: 74462 Reward: 0.060993279385884815
+[32m[01-27 18:11:53 MainThread @ETG_RL.py:409][0m distance: 0.060993279385884815
+[32m[01-27 18:11:53 MainThread @ETG_RL.py:410][0m critic loss: 0.01634738160115818 actor loss: -155.89788335566715
+[32m[01-27 18:12:08 MainThread @ETG_RL.py:407][0m Total Steps: 75663 Reward: 0.09879285134824756
+[32m[01-27 18:12:08 MainThread @ETG_RL.py:409][0m distance: 0.09879285134824756
+[32m[01-27 18:12:08 MainThread @ETG_RL.py:410][0m critic loss: 0.01654663747742611 actor loss: -156.32920942854426
+[32m[01-27 18:12:24 MainThread @ETG_RL.py:407][0m Total Steps: 76864 Reward: 0.07078196384409045
+[32m[01-27 18:12:24 MainThread @ETG_RL.py:409][0m distance: 0.07078196384409045
+[32m[01-27 18:12:24 MainThread @ETG_RL.py:410][0m critic loss: 0.01664184331645775 actor loss: -156.7468536910566
+[32m[01-27 18:12:40 MainThread @ETG_RL.py:407][0m Total Steps: 78065 Reward: -0.06466517761385634
+[32m[01-27 18:12:40 MainThread @ETG_RL.py:409][0m distance: -0.06466517761385634
+[32m[01-27 18:12:40 MainThread @ETG_RL.py:410][0m critic loss: 0.1807918512533038 actor loss: -157.1406943950923
+[32m[01-27 18:12:56 MainThread @ETG_RL.py:407][0m Total Steps: 79266 Reward: 0.06313278448452618
+[32m[01-27 18:12:56 MainThread @ETG_RL.py:409][0m distance: 0.06313278448452618
+[32m[01-27 18:12:56 MainThread @ETG_RL.py:410][0m critic loss: 0.015649183572647624 actor loss: -157.51519225261094
+[32m[01-27 18:13:12 MainThread @ETG_RL.py:407][0m Total Steps: 80467 Reward: 0.06932751985762375
+[32m[01-27 18:13:12 MainThread @ETG_RL.py:409][0m distance: 0.06932751985762375
+[32m[01-27 18:13:12 MainThread @ETG_RL.py:410][0m critic loss: 0.016365991698284878 actor loss: -157.8640711242015
+[32m[01-27 18:13:18 MainThread @ETG_RL.py:416][0m Evaluation over: 1 episodes, Reward: 0.06567605703088593 Steps: 5001 
+[32m[01-27 18:13:18 MainThread @ETG_RL.py:418][0m distance: 0.06567605703088593
+[32m[01-27 18:13:34 MainThread @ETG_RL.py:407][0m Total Steps: 81668 Reward: -0.07441116914730384
+[32m[01-27 18:13:34 MainThread @ETG_RL.py:409][0m distance: -0.07441116914730384
+[32m[01-27 18:13:34 MainThread @ETG_RL.py:410][0m critic loss: 0.016079551970693193 actor loss: -158.19778827346434
+[32m[01-27 18:13:50 MainThread @ETG_RL.py:407][0m Total Steps: 82869 Reward: 0.09670754440586263
+[32m[01-27 18:13:50 MainThread @ETG_RL.py:409][0m distance: 0.09670754440586263
+[32m[01-27 18:13:50 MainThread @ETG_RL.py:410][0m critic loss: 0.01655275120534046 actor loss: -158.51902765914065
+[32m[01-27 18:14:06 MainThread @ETG_RL.py:407][0m Total Steps: 84070 Reward: 0.057024063917403674
+[32m[01-27 18:14:06 MainThread @ETG_RL.py:409][0m distance: 0.057024063917403674
+[32m[01-27 18:14:06 MainThread @ETG_RL.py:410][0m critic loss: 0.016078255126883993 actor loss: -158.82206919191282
+[32m[01-27 18:14:21 MainThread @ETG_RL.py:407][0m Total Steps: 85271 Reward: 0.07697434883276563
+[32m[01-27 18:14:21 MainThread @ETG_RL.py:409][0m distance: 0.07697434883276563
+[32m[01-27 18:14:21 MainThread @ETG_RL.py:410][0m critic loss: 0.016460235939391398 actor loss: -159.10939582360973
+[32m[01-27 18:14:38 MainThread @ETG_RL.py:407][0m Total Steps: 86472 Reward: 0.06897277883417646
+[32m[01-27 18:14:38 MainThread @ETG_RL.py:409][0m distance: 0.06897277883417646
+[32m[01-27 18:14:38 MainThread @ETG_RL.py:410][0m critic loss: 0.016460060469998507 actor loss: -159.3749868756627
+[32m[01-27 18:14:56 MainThread @ETG_RL.py:407][0m Total Steps: 87673 Reward: 0.0705473925679164
+[32m[01-27 18:14:56 MainThread @ETG_RL.py:409][0m distance: 0.0705473925679164
+[32m[01-27 18:14:56 MainThread @ETG_RL.py:410][0m critic loss: 0.01605005978182467 actor loss: -159.63067942038862
+[32m[01-27 18:15:16 MainThread @ETG_RL.py:407][0m Total Steps: 88874 Reward: 0.06670020449079933
+[32m[01-27 18:15:16 MainThread @ETG_RL.py:409][0m distance: 0.06670020449079933
+[32m[01-27 18:15:16 MainThread @ETG_RL.py:410][0m critic loss: 0.015798675614431636 actor loss: -159.8754752839634
+[32m[01-27 18:15:33 MainThread @ETG_RL.py:407][0m Total Steps: 90075 Reward: -0.0814487273750957
+[32m[01-27 18:15:33 MainThread @ETG_RL.py:409][0m distance: -0.0814487273750957
+[32m[01-27 18:15:33 MainThread @ETG_RL.py:410][0m critic loss: 0.18629612777068852 actor loss: -160.09936961762415
+[32m[01-27 18:15:39 MainThread @ETG_RL.py:416][0m Evaluation over: 1 episodes, Reward: 0.04238098263755453 Steps: 5001 
+[32m[01-27 18:15:39 MainThread @ETG_RL.py:418][0m distance: 0.04238098263755453
+[32m[01-27 18:15:55 MainThread @ETG_RL.py:407][0m Total Steps: 91276 Reward: 0.0667112272016209
+[32m[01-27 18:15:55 MainThread @ETG_RL.py:409][0m distance: 0.0667112272016209
+[32m[01-27 18:15:55 MainThread @ETG_RL.py:410][0m critic loss: 0.18417932306393844 actor loss: -160.30550109456718
+[32m[01-27 18:16:10 MainThread @ETG_RL.py:407][0m Total Steps: 92477 Reward: 0.07180038380539915
+[32m[01-27 18:16:10 MainThread @ETG_RL.py:409][0m distance: 0.07180038380539915
+[32m[01-27 18:16:10 MainThread @ETG_RL.py:410][0m critic loss: 0.015167892633702336 actor loss: -160.49159732408864
+[32m[01-27 18:16:26 MainThread @ETG_RL.py:407][0m Total Steps: 93678 Reward: 0.07392472005041227
+[32m[01-27 18:16:26 MainThread @ETG_RL.py:409][0m distance: 0.07392472005041227
+[32m[01-27 18:16:26 MainThread @ETG_RL.py:410][0m critic loss: 0.015829301513669444 actor loss: -160.67304049959588
+[32m[01-27 18:16:43 MainThread @ETG_RL.py:407][0m Total Steps: 94879 Reward: 0.0726429309474386
+[32m[01-27 18:16:43 MainThread @ETG_RL.py:409][0m distance: 0.0726429309474386
+[32m[01-27 18:16:43 MainThread @ETG_RL.py:410][0m critic loss: 0.18815353080990113 actor loss: -160.84281448758114
+[32m[01-27 18:16:59 MainThread @ETG_RL.py:407][0m Total Steps: 96080 Reward: 0.0694807265937778
+[32m[01-27 18:16:59 MainThread @ETG_RL.py:409][0m distance: 0.0694807265937778
+[32m[01-27 18:16:59 MainThread @ETG_RL.py:410][0m critic loss: 0.015225558071013395 actor loss: -160.99371301045923
+[32m[01-27 18:17:16 MainThread @ETG_RL.py:407][0m Total Steps: 97281 Reward: 0.06645495602735518
+[32m[01-27 18:17:16 MainThread @ETG_RL.py:409][0m distance: 0.06645495602735518
+[32m[01-27 18:17:16 MainThread @ETG_RL.py:410][0m critic loss: 0.18742156946809838 actor loss: -161.14161907008645
+[32m[01-27 18:17:31 MainThread @ETG_RL.py:407][0m Total Steps: 98482 Reward: 0.06795733238575144
+[32m[01-27 18:17:31 MainThread @ETG_RL.py:409][0m distance: 0.06795733238575144
+[32m[01-27 18:17:31 MainThread @ETG_RL.py:410][0m critic loss: 0.015391558312580647 actor loss: -161.27142758333713
+[32m[01-27 18:17:47 MainThread @ETG_RL.py:407][0m Total Steps: 99683 Reward: 0.05554930717341874
+[32m[01-27 18:17:47 MainThread @ETG_RL.py:409][0m distance: 0.05554930717341874
+[32m[01-27 18:17:47 MainThread @ETG_RL.py:410][0m critic loss: 0.18595078452602712 actor loss: -161.38927811011982
+[32m[01-27 18:18:03 MainThread @ETG_RL.py:407][0m Total Steps: 100884 Reward: 0.06787853924989139
+[32m[01-27 18:18:03 MainThread @ETG_RL.py:409][0m distance: 0.06787853924989139
+[32m[01-27 18:18:03 MainThread @ETG_RL.py:410][0m critic loss: 0.015912513142384954 actor loss: -161.49837617770916
+[32m[01-27 18:18:09 MainThread @ETG_RL.py:416][0m Evaluation over: 1 episodes, Reward: 0.05662769533404767 Steps: 5001 
+[32m[01-27 18:18:09 MainThread @ETG_RL.py:418][0m distance: 0.05662769533404767
+[32m[01-27 18:19:12 MainThread @ETG_RL.py:468][0m ESSteps: 21 Reward: 0.09456350485962556 step: 1201.0  sigma:0.01619455736442517
+[32m[01-27 18:19:12 MainThread @ETG_RL.py:470][0m average distance: -0.05176447441982233  max distance: 0.09456350485962556
+[32m[01-27 18:20:13 MainThread @ETG_RL.py:468][0m ESSteps: 22 Reward: 0.09192723656125232 step: 1201.0  sigma:0.01603261179078092
+[32m[01-27 18:20:13 MainThread @ETG_RL.py:470][0m average distance: -0.0664974808102889  max distance: 0.09192723656125232
+[32m[01-27 18:21:15 MainThread @ETG_RL.py:468][0m ESSteps: 23 Reward: 0.09606599877563192 step: 1201.0  sigma:0.015872285672873108
+[32m[01-27 18:21:15 MainThread @ETG_RL.py:470][0m average distance: -0.014223458942020067  max distance: 0.09606599877563192
+[32m[01-27 18:22:15 MainThread @ETG_RL.py:468][0m ESSteps: 24 Reward: 0.10527413719209672 step: 1201.0  sigma:0.015713562816144378
+[32m[01-27 18:22:15 MainThread @ETG_RL.py:470][0m average distance: -0.06821585634276604  max distance: 0.10527413719209672
+[32m[01-27 18:23:17 MainThread @ETG_RL.py:468][0m ESSteps: 25 Reward: 0.09402086515733507 step: 1201.0  sigma:0.015556427187982934
+[32m[01-27 18:23:17 MainThread @ETG_RL.py:470][0m average distance: -0.05168250271428911  max distance: 0.09402086515733507
+[32m[01-27 18:24:20 MainThread @ETG_RL.py:468][0m ESSteps: 26 Reward: 0.09805806225480174 step: 1201.0  sigma:0.015400862916103104
+[32m[01-27 18:24:20 MainThread @ETG_RL.py:470][0m average distance: -0.0460329298201604  max distance: 0.09805806225480174
+[32m[01-27 18:25:21 MainThread @ETG_RL.py:468][0m ESSteps: 27 Reward: 0.09976167322261426 step: 1201.0  sigma:0.015246854286942073
+[32m[01-27 18:25:21 MainThread @ETG_RL.py:470][0m average distance: -0.03584446091817737  max distance: 0.09976167322261426
+[32m[01-27 18:26:23 MainThread @ETG_RL.py:468][0m ESSteps: 28 Reward: 0.10887583347494337 step: 1201.0  sigma:0.015094385744072653
+[32m[01-27 18:26:23 MainThread @ETG_RL.py:470][0m average distance: 0.005087388386207538  max distance: 0.10887583347494337
+[32m[01-27 18:27:25 MainThread @ETG_RL.py:468][0m ESSteps: 29 Reward: 0.09215489553515938 step: 1201.0  sigma:0.014943441886631926
+[32m[01-27 18:27:25 MainThread @ETG_RL.py:470][0m average distance: -0.04893670284236681  max distance: 0.09215489553515938
+[32m[01-27 18:28:26 MainThread @ETG_RL.py:468][0m ESSteps: 30 Reward: 0.09982373525616063 step: 1201.0  sigma:0.014794007467765607
+[32m[01-27 18:28:26 MainThread @ETG_RL.py:470][0m average distance: -0.03030706923837028  max distance: 0.09982373525616063
+[32m[01-27 18:28:41 MainThread @ETG_RL.py:407][0m Total Steps: 102085 Reward: -0.03716569652771205
+[32m[01-27 18:28:41 MainThread @ETG_RL.py:409][0m distance: -0.03716569652771205
+[32m[01-27 18:28:41 MainThread @ETG_RL.py:410][0m critic loss: 0.015967472125275942 actor loss: -161.67883545989102
+[32m[01-27 18:28:57 MainThread @ETG_RL.py:407][0m Total Steps: 103286 Reward: 0.0613522165723347
+[32m[01-27 18:28:57 MainThread @ETG_RL.py:409][0m distance: 0.0613522165723347
+[32m[01-27 18:28:57 MainThread @ETG_RL.py:410][0m critic loss: 0.016220085950200754 actor loss: -161.77446427293663
+[32m[01-27 18:29:13 MainThread @ETG_RL.py:407][0m Total Steps: 104487 Reward: 0.059302657836625965
+[32m[01-27 18:29:13 MainThread @ETG_RL.py:409][0m distance: 0.059302657836625965
+[32m[01-27 18:29:13 MainThread @ETG_RL.py:410][0m critic loss: 0.01664572633837011 actor loss: -161.86780624961378
+[32m[01-27 18:29:29 MainThread @ETG_RL.py:407][0m Total Steps: 105688 Reward: 0.0552836069896902
+[32m[01-27 18:29:29 MainThread @ETG_RL.py:409][0m distance: 0.0552836069896902
+[32m[01-27 18:29:29 MainThread @ETG_RL.py:410][0m critic loss: 0.016479194603184182 actor loss: -161.96744238149117
+[32m[01-27 18:29:45 MainThread @ETG_RL.py:407][0m Total Steps: 106889 Reward: 0.05067392236472521
+[32m[01-27 18:29:45 MainThread @ETG_RL.py:409][0m distance: 0.05067392236472521
+[32m[01-27 18:29:45 MainThread @ETG_RL.py:410][0m critic loss: 0.016336869980386155 actor loss: -162.05749859837667
+[32m[01-27 18:30:01 MainThread @ETG_RL.py:407][0m Total Steps: 108090 Reward: 0.05032079140165137
+[32m[01-27 18:30:01 MainThread @ETG_RL.py:409][0m distance: 0.05032079140165137
+[32m[01-27 18:30:01 MainThread @ETG_RL.py:410][0m critic loss: 0.016373430398121464 actor loss: -162.15042926111786
+[32m[01-27 18:30:16 MainThread @ETG_RL.py:407][0m Total Steps: 109291 Reward: 0.06477758025046289
+[32m[01-27 18:30:16 MainThread @ETG_RL.py:409][0m distance: 0.06477758025046289
+[32m[01-27 18:30:16 MainThread @ETG_RL.py:410][0m critic loss: 0.016322993611347716 actor loss: -162.24720388090086
+[32m[01-27 18:30:32 MainThread @ETG_RL.py:407][0m Total Steps: 110492 Reward: 0.0586079989243083
+[32m[01-27 18:30:32 MainThread @ETG_RL.py:409][0m distance: 0.0586079989243083
+[32m[01-27 18:30:32 MainThread @ETG_RL.py:410][0m critic loss: 0.0160331525711915 actor loss: -162.33770449572458
+[32m[01-27 18:30:39 MainThread @ETG_RL.py:416][0m Evaluation over: 1 episodes, Reward: 0.0432213340555703 Steps: 5001 
+[32m[01-27 18:30:39 MainThread @ETG_RL.py:418][0m distance: 0.0432213340555703
+[32m[01-27 18:30:55 MainThread @ETG_RL.py:407][0m Total Steps: 111693 Reward: 0.033212873289381266
+[32m[01-27 18:30:55 MainThread @ETG_RL.py:409][0m distance: 0.033212873289381266
+[32m[01-27 18:30:55 MainThread @ETG_RL.py:410][0m critic loss: 0.015891680356695144 actor loss: -162.4282440388828
+[32m[01-27 18:31:11 MainThread @ETG_RL.py:407][0m Total Steps: 112894 Reward: 0.04952832166882203
+[32m[01-27 18:31:11 MainThread @ETG_RL.py:409][0m distance: 0.04952832166882203
+[32m[01-27 18:31:11 MainThread @ETG_RL.py:410][0m critic loss: 0.015972285635372334 actor loss: -162.51455378472855
+[32m[01-27 18:31:26 MainThread @ETG_RL.py:407][0m Total Steps: 114095 Reward: 0.06678056420303019
+[32m[01-27 18:31:26 MainThread @ETG_RL.py:409][0m distance: 0.06678056420303019
+[32m[01-27 18:31:26 MainThread @ETG_RL.py:410][0m critic loss: 0.015944984095554168 actor loss: -162.5978981545327
+[32m[01-27 18:31:41 MainThread @ETG_RL.py:407][0m Total Steps: 115296 Reward: 0.06409479745886934
+[32m[01-27 18:31:41 MainThread @ETG_RL.py:409][0m distance: 0.06409479745886934
+[32m[01-27 18:31:41 MainThread @ETG_RL.py:410][0m critic loss: 0.015736330508391724 actor loss: -162.6739602831381
+[32m[01-27 18:31:57 MainThread @ETG_RL.py:407][0m Total Steps: 116497 Reward: 0.06921535111620214
+[32m[01-27 18:31:57 MainThread @ETG_RL.py:409][0m distance: 0.06921535111620214
+[32m[01-27 18:31:57 MainThread @ETG_RL.py:410][0m critic loss: 0.01574028733897517 actor loss: -162.7410669255316
+[32m[01-27 18:32:13 MainThread @ETG_RL.py:407][0m Total Steps: 117698 Reward: -0.0304405913970738
+[32m[01-27 18:32:13 MainThread @ETG_RL.py:409][0m distance: -0.0304405913970738
+[32m[01-27 18:32:13 MainThread @ETG_RL.py:410][0m critic loss: 0.015826495645798862 actor loss: -162.80598532289986
+[32m[01-27 18:32:28 MainThread @ETG_RL.py:407][0m Total Steps: 118899 Reward: 0.05735915359801869
+[32m[01-27 18:32:28 MainThread @ETG_RL.py:409][0m distance: 0.05735915359801869
+[32m[01-27 18:32:28 MainThread @ETG_RL.py:410][0m critic loss: 0.015676145747359795 actor loss: -162.8688407218228
+[32m[01-27 18:32:44 MainThread @ETG_RL.py:407][0m Total Steps: 120100 Reward: 0.054195786016133965
+[32m[01-27 18:32:44 MainThread @ETG_RL.py:409][0m distance: 0.054195786016133965
+[32m[01-27 18:32:44 MainThread @ETG_RL.py:410][0m critic loss: 0.015806127055784644 actor loss: -162.92493885303912
+[32m[01-27 18:32:50 MainThread @ETG_RL.py:416][0m Evaluation over: 1 episodes, Reward: -0.1008475807585943 Steps: 5001 
+[32m[01-27 18:32:50 MainThread @ETG_RL.py:418][0m distance: -0.1008475807585943
+[32m[01-27 18:33:06 MainThread @ETG_RL.py:407][0m Total Steps: 121301 Reward: 0.04703356658329994
+[32m[01-27 18:33:06 MainThread @ETG_RL.py:409][0m distance: 0.04703356658329994
+[32m[01-27 18:33:06 MainThread @ETG_RL.py:410][0m critic loss: 0.01573006652425866 actor loss: -162.980743929111
+[32m[01-27 18:33:21 MainThread @ETG_RL.py:407][0m Total Steps: 122502 Reward: 0.04918832787827865
+[32m[01-27 18:33:21 MainThread @ETG_RL.py:409][0m distance: 0.04918832787827865
+[32m[01-27 18:33:21 MainThread @ETG_RL.py:410][0m critic loss: 0.01560229335761909 actor loss: -163.0352076547132
+[32m[01-27 18:33:36 MainThread @ETG_RL.py:407][0m Total Steps: 123703 Reward: 0.0057472806074415
+[32m[01-27 18:33:36 MainThread @ETG_RL.py:409][0m distance: 0.0057472806074415
+[32m[01-27 18:33:36 MainThread @ETG_RL.py:410][0m critic loss: 0.015640397240515552 actor loss: -163.0821387475972
+[32m[01-27 18:33:52 MainThread @ETG_RL.py:407][0m Total Steps: 124904 Reward: 0.048808213862685836
+[32m[01-27 18:33:52 MainThread @ETG_RL.py:409][0m distance: 0.048808213862685836
+[32m[01-27 18:33:52 MainThread @ETG_RL.py:410][0m critic loss: 0.015630641299223126 actor loss: -163.12909019400337
+[32m[01-27 18:34:08 MainThread @ETG_RL.py:407][0m Total Steps: 126105 Reward: 0.0626189243998351
+[32m[01-27 18:34:08 MainThread @ETG_RL.py:409][0m distance: 0.0626189243998351
+[32m[01-27 18:34:08 MainThread @ETG_RL.py:410][0m critic loss: 0.015512213883277875 actor loss: -163.171518317865
+[32m[01-27 18:34:23 MainThread @ETG_RL.py:407][0m Total Steps: 127306 Reward: 0.068119397396117
+[32m[01-27 18:34:23 MainThread @ETG_RL.py:409][0m distance: 0.068119397396117
+[32m[01-27 18:34:23 MainThread @ETG_RL.py:410][0m critic loss: 0.015525884809225277 actor loss: -163.2050466291315
+[32m[01-27 18:34:39 MainThread @ETG_RL.py:407][0m Total Steps: 128507 Reward: 0.0608900067305699
+[32m[01-27 18:34:39 MainThread @ETG_RL.py:409][0m distance: 0.0608900067305699
+[32m[01-27 18:34:39 MainThread @ETG_RL.py:410][0m critic loss: 0.015719249480086798 actor loss: -163.2426168424303
+[32m[01-27 18:34:54 MainThread @ETG_RL.py:407][0m Total Steps: 129708 Reward: 0.049564798930006086
+[32m[01-27 18:34:54 MainThread @ETG_RL.py:409][0m distance: 0.049564798930006086
+[32m[01-27 18:34:54 MainThread @ETG_RL.py:410][0m critic loss: 0.015645370957481176 actor loss: -163.2701286550962
+[32m[01-27 18:35:10 MainThread @ETG_RL.py:407][0m Total Steps: 130909 Reward: 0.05165880641996227
+[32m[01-27 18:35:10 MainThread @ETG_RL.py:409][0m distance: 0.05165880641996227
+[32m[01-27 18:35:10 MainThread @ETG_RL.py:410][0m critic loss: 0.015552592269151932 actor loss: -163.30872317654803
+[32m[01-27 18:35:17 MainThread @ETG_RL.py:416][0m Evaluation over: 1 episodes, Reward: 0.0944841003129505 Steps: 5001 
+[32m[01-27 18:35:17 MainThread @ETG_RL.py:418][0m distance: 0.0944841003129505
+[32m[01-27 18:35:32 MainThread @ETG_RL.py:407][0m Total Steps: 132110 Reward: 0.052588248970065456
+[32m[01-27 18:35:32 MainThread @ETG_RL.py:409][0m distance: 0.052588248970065456
+[32m[01-27 18:35:32 MainThread @ETG_RL.py:410][0m critic loss: 0.01546768748048665 actor loss: -163.34470910573384
+[32m[01-27 18:35:48 MainThread @ETG_RL.py:407][0m Total Steps: 133311 Reward: 0.050155675882557926
+[32m[01-27 18:35:48 MainThread @ETG_RL.py:409][0m distance: 0.050155675882557926
+[32m[01-27 18:35:48 MainThread @ETG_RL.py:410][0m critic loss: 0.015673330409621367 actor loss: -163.37478478881937
+[32m[01-27 18:36:03 MainThread @ETG_RL.py:407][0m Total Steps: 134512 Reward: -0.06737155706337501
+[32m[01-27 18:36:03 MainThread @ETG_RL.py:409][0m distance: -0.06737155706337501
+[32m[01-27 18:36:03 MainThread @ETG_RL.py:410][0m critic loss: 0.015449527197429829 actor loss: -163.41019641072626
+[32m[01-27 18:36:20 MainThread @ETG_RL.py:407][0m Total Steps: 135713 Reward: 0.051492789922809486
+[32m[01-27 18:36:20 MainThread @ETG_RL.py:409][0m distance: 0.051492789922809486
+[32m[01-27 18:36:20 MainThread @ETG_RL.py:410][0m critic loss: 0.015573141282946987 actor loss: -163.438375455553
+[32m[01-27 18:36:36 MainThread @ETG_RL.py:407][0m Total Steps: 136914 Reward: 0.08671378052154309
+[32m[01-27 18:36:36 MainThread @ETG_RL.py:409][0m distance: 0.08671378052154309
+[32m[01-27 18:36:36 MainThread @ETG_RL.py:410][0m critic loss: 0.015486057481723065 actor loss: -163.47030639648438
+[32m[01-27 18:36:51 MainThread @ETG_RL.py:407][0m Total Steps: 138115 Reward: 0.0656000619685044
+[32m[01-27 18:36:51 MainThread @ETG_RL.py:409][0m distance: 0.0656000619685044
+[32m[01-27 18:36:51 MainThread @ETG_RL.py:410][0m critic loss: 0.015368356445430468 actor loss: -163.4997022439796
+[32m[01-27 18:37:07 MainThread @ETG_RL.py:407][0m Total Steps: 139316 Reward: 0.056439985914969446
+[32m[01-27 18:37:07 MainThread @ETG_RL.py:409][0m distance: 0.056439985914969446
+[32m[01-27 18:37:07 MainThread @ETG_RL.py:410][0m critic loss: 0.01552350988082718 actor loss: -163.52878915499292
+[32m[01-27 18:37:22 MainThread @ETG_RL.py:407][0m Total Steps: 140517 Reward: 0.054621569749926095
+[32m[01-27 18:37:22 MainThread @ETG_RL.py:409][0m distance: 0.054621569749926095
+[32m[01-27 18:37:22 MainThread @ETG_RL.py:410][0m critic loss: 0.015512245500167145 actor loss: -163.55237267436235
+[32m[01-27 18:37:29 MainThread @ETG_RL.py:416][0m Evaluation over: 1 episodes, Reward: 0.04410249200892309 Steps: 5001 
+[32m[01-27 18:37:29 MainThread @ETG_RL.py:418][0m distance: 0.04410249200892309
+[32m[01-27 18:37:45 MainThread @ETG_RL.py:407][0m Total Steps: 141718 Reward: 0.06895974919129583
+[32m[01-27 18:37:45 MainThread @ETG_RL.py:409][0m distance: 0.06895974919129583
+[32m[01-27 18:37:45 MainThread @ETG_RL.py:410][0m critic loss: 0.015609872309517403 actor loss: -163.5760724959425
+[32m[01-27 18:38:00 MainThread @ETG_RL.py:407][0m Total Steps: 142919 Reward: 0.052734473462732794
+[32m[01-27 18:38:00 MainThread @ETG_RL.py:409][0m distance: 0.052734473462732794
+[32m[01-27 18:38:00 MainThread @ETG_RL.py:410][0m critic loss: 0.015664834006504154 actor loss: -163.59822524655968
+[32m[01-27 18:38:17 MainThread @ETG_RL.py:407][0m Total Steps: 144120 Reward: 0.05717327909754171
+[32m[01-27 18:38:17 MainThread @ETG_RL.py:409][0m distance: 0.05717327909754171
+[32m[01-27 18:38:17 MainThread @ETG_RL.py:410][0m critic loss: 0.015391968773812874 actor loss: -163.6192370437762
+[32m[01-27 18:38:33 MainThread @ETG_RL.py:407][0m Total Steps: 145321 Reward: -0.010906754330637827
+[32m[01-27 18:38:33 MainThread @ETG_RL.py:409][0m distance: -0.010906754330637827
+[32m[01-27 18:38:33 MainThread @ETG_RL.py:410][0m critic loss: 0.015451155470329011 actor loss: -163.63706920665072
+[32m[01-27 18:38:49 MainThread @ETG_RL.py:407][0m Total Steps: 146522 Reward: 0.02715438051713598
+[32m[01-27 18:38:49 MainThread @ETG_RL.py:409][0m distance: 0.02715438051713598
+[32m[01-27 18:38:49 MainThread @ETG_RL.py:410][0m critic loss: 0.01552291989766936 actor loss: -163.65396020335024
+[32m[01-27 18:39:05 MainThread @ETG_RL.py:407][0m Total Steps: 147723 Reward: 0.05259359150114686
+[32m[01-27 18:39:05 MainThread @ETG_RL.py:409][0m distance: 0.05259359150114686
+[32m[01-27 18:39:05 MainThread @ETG_RL.py:410][0m critic loss: 0.015571461708209696 actor loss: -163.6732558759424
+[32m[01-27 18:39:21 MainThread @ETG_RL.py:407][0m Total Steps: 148924 Reward: 0.06011097172420954
+[32m[01-27 18:39:21 MainThread @ETG_RL.py:409][0m distance: 0.06011097172420954
+[32m[01-27 18:39:21 MainThread @ETG_RL.py:410][0m critic loss: 0.015374074595438303 actor loss: -163.69162551409795
+[32m[01-27 18:39:37 MainThread @ETG_RL.py:407][0m Total Steps: 150125 Reward: 0.04266065148169219
+[32m[01-27 18:39:37 MainThread @ETG_RL.py:409][0m distance: 0.04266065148169219
+[32m[01-27 18:39:37 MainThread @ETG_RL.py:410][0m critic loss: 0.015418333146445062 actor loss: -163.70576384303772
+[32m[01-27 18:39:43 MainThread @ETG_RL.py:416][0m Evaluation over: 1 episodes, Reward: 0.22760178424420283 Steps: 5001 
+[32m[01-27 18:39:43 MainThread @ETG_RL.py:418][0m distance: 0.22760178424420283
+[32m[01-27 18:40:47 MainThread @ETG_RL.py:468][0m ESSteps: 31 Reward: 0.08409081130715121 step: 1201.0  sigma:0.014646067393087952
+[32m[01-27 18:40:47 MainThread @ETG_RL.py:470][0m average distance: -0.022175091164009196  max distance: 0.08409081130715121
+[32m[01-27 18:41:49 MainThread @ETG_RL.py:468][0m ESSteps: 32 Reward: 0.09524777369704934 step: 1201.0  sigma:0.014499606719157072
+[32m[01-27 18:41:49 MainThread @ETG_RL.py:470][0m average distance: -0.04000213448165839  max distance: 0.09524777369704934
+[32m[01-27 18:42:50 MainThread @ETG_RL.py:468][0m ESSteps: 33 Reward: 0.09424994811997764 step: 1201.0  sigma:0.014354610651965501
+[32m[01-27 18:42:50 MainThread @ETG_RL.py:470][0m average distance: -0.03102798000081457  max distance: 0.09424994811997764
+[32m[01-27 18:43:53 MainThread @ETG_RL.py:468][0m ESSteps: 34 Reward: 0.12526225803402505 step: 1201.0  sigma:0.014211064545445845
+[32m[01-27 18:43:53 MainThread @ETG_RL.py:470][0m average distance: -0.026418010566060378  max distance: 0.12526225803402505
+[32m[01-27 18:44:53 MainThread @ETG_RL.py:468][0m ESSteps: 35 Reward: 0.09293380686257022 step: 1201.0  sigma:0.014068953899991387
+[32m[01-27 18:44:53 MainThread @ETG_RL.py:470][0m average distance: -0.04062424404894286  max distance: 0.09293380686257022
+[32m[01-27 18:45:57 MainThread @ETG_RL.py:468][0m ESSteps: 36 Reward: 0.0873521285444093 step: 1201.0  sigma:0.013928264360991474
+[32m[01-27 18:45:57 MainThread @ETG_RL.py:470][0m average distance: -0.05775707326853431  max distance: 0.0873521285444093
+[32m[01-27 18:47:00 MainThread @ETG_RL.py:468][0m ESSteps: 37 Reward: 0.11870185974668163 step: 1201.0  sigma:0.01378898171738156
+[32m[01-27 18:47:00 MainThread @ETG_RL.py:470][0m average distance: -0.044950034043782304  max distance: 0.11870185974668163
+[32m[01-27 18:48:01 MainThread @ETG_RL.py:468][0m ESSteps: 38 Reward: 0.09224007217062287 step: 1201.0  sigma:0.013651091900207744
+[32m[01-27 18:48:01 MainThread @ETG_RL.py:470][0m average distance: -0.04591364425272506  max distance: 0.09224007217062287
+[32m[01-27 18:49:04 MainThread @ETG_RL.py:468][0m ESSteps: 39 Reward: 0.10363762713952199 step: 1201.0  sigma:0.013514580981205667
+[32m[01-27 18:49:04 MainThread @ETG_RL.py:470][0m average distance: -0.04643960434095364  max distance: 0.10363762713952199
+[32m[01-27 18:50:05 MainThread @ETG_RL.py:468][0m ESSteps: 40 Reward: 0.09545777277121949 step: 1201.0  sigma:0.01337943517139361
+[32m[01-27 18:50:05 MainThread @ETG_RL.py:470][0m average distance: -0.06705189915564007  max distance: 0.09545777277121949
+[32m[01-27 18:50:21 MainThread @ETG_RL.py:407][0m Total Steps: 151326 Reward: -0.08196667994432708
+[32m[01-27 18:50:21 MainThread @ETG_RL.py:409][0m distance: -0.08196667994432708
+[32m[01-27 18:50:21 MainThread @ETG_RL.py:410][0m critic loss: 0.015477775083505839 actor loss: -163.7270636133707
+[32m[01-27 18:50:37 MainThread @ETG_RL.py:407][0m Total Steps: 152527 Reward: -0.057357228326181155
+[32m[01-27 18:50:37 MainThread @ETG_RL.py:409][0m distance: -0.057357228326181155
+[32m[01-27 18:50:37 MainThread @ETG_RL.py:410][0m critic loss: 0.0154956028813017 actor loss: -163.7442517689523
+[32m[01-27 18:50:54 MainThread @ETG_RL.py:407][0m Total Steps: 153728 Reward: 0.006382208502819953
+[32m[01-27 18:50:54 MainThread @ETG_RL.py:409][0m distance: 0.006382208502819953
+[32m[01-27 18:50:54 MainThread @ETG_RL.py:410][0m critic loss: 0.01547045269430453 actor loss: -163.74971912901765
+[32m[01-27 18:51:09 MainThread @ETG_RL.py:407][0m Total Steps: 154929 Reward: -0.07061500059961157
+[32m[01-27 18:51:09 MainThread @ETG_RL.py:409][0m distance: -0.07061500059961157
+[32m[01-27 18:51:09 MainThread @ETG_RL.py:410][0m critic loss: 0.015519051849811054 actor loss: -163.75741095626285
+[32m[01-27 18:51:25 MainThread @ETG_RL.py:407][0m Total Steps: 156130 Reward: -0.06687533239195784
+[32m[01-27 18:51:25 MainThread @ETG_RL.py:409][0m distance: -0.06687533239195784
+[32m[01-27 18:51:25 MainThread @ETG_RL.py:410][0m critic loss: 0.015464661857710343 actor loss: -163.76849597737157
+[32m[01-27 18:51:40 MainThread @ETG_RL.py:407][0m Total Steps: 157331 Reward: -0.0011202289880920119
+[32m[01-27 18:51:40 MainThread @ETG_RL.py:409][0m distance: -0.0011202289880920119
+[32m[01-27 18:51:40 MainThread @ETG_RL.py:410][0m critic loss: 0.015474455521056595 actor loss: -163.7772830705857
+[32m[01-27 18:51:56 MainThread @ETG_RL.py:407][0m Total Steps: 158532 Reward: -0.010249748927462818
+[32m[01-27 18:51:56 MainThread @ETG_RL.py:409][0m distance: -0.010249748927462818
+[32m[01-27 18:51:56 MainThread @ETG_RL.py:410][0m critic loss: 0.015496724689973334 actor loss: -163.78828571202058
+[32m[01-27 18:52:11 MainThread @ETG_RL.py:407][0m Total Steps: 159733 Reward: -0.02451516870959449
+[32m[01-27 18:52:11 MainThread @ETG_RL.py:409][0m distance: -0.02451516870959449
+[32m[01-27 18:52:11 MainThread @ETG_RL.py:410][0m critic loss: 0.01550068446186113 actor loss: -163.79807932628978
+[32m[01-27 18:52:27 MainThread @ETG_RL.py:407][0m Total Steps: 160934 Reward: -0.07834522477361758
+[32m[01-27 18:52:27 MainThread @ETG_RL.py:409][0m distance: -0.07834522477361758
+[32m[01-27 18:52:27 MainThread @ETG_RL.py:410][0m critic loss: 0.015495283187961797 actor loss: -163.8002335598427
+[32m[01-27 18:52:33 MainThread @ETG_RL.py:416][0m Evaluation over: 1 episodes, Reward: 0.5626835796818712 Steps: 5001 
+[32m[01-27 18:52:33 MainThread @ETG_RL.py:418][0m distance: 0.5626835796818712
+[32m[01-27 18:52:50 MainThread @ETG_RL.py:407][0m Total Steps: 162135 Reward: 0.03404928098910701
+[32m[01-27 18:52:50 MainThread @ETG_RL.py:409][0m distance: 0.03404928098910701
+[32m[01-27 18:52:50 MainThread @ETG_RL.py:410][0m critic loss: 0.015430924804457817 actor loss: -163.8059546909761
+[32m[01-27 18:53:06 MainThread @ETG_RL.py:407][0m Total Steps: 163336 Reward: -0.06889396415402099
+[32m[01-27 18:53:06 MainThread @ETG_RL.py:409][0m distance: -0.06889396415402099
+[32m[01-27 18:53:06 MainThread @ETG_RL.py:410][0m critic loss: 0.015545344578845119 actor loss: -163.8081657543071
+[32m[01-27 18:53:22 MainThread @ETG_RL.py:407][0m Total Steps: 164537 Reward: -0.07741729707534259
+[32m[01-27 18:53:22 MainThread @ETG_RL.py:409][0m distance: -0.07741729707534259
+[32m[01-27 18:53:22 MainThread @ETG_RL.py:410][0m critic loss: 0.015477110938069027 actor loss: -163.81611666333964
+[32m[01-27 18:53:37 MainThread @ETG_RL.py:407][0m Total Steps: 165738 Reward: -0.0800914185460493
+[32m[01-27 18:53:37 MainThread @ETG_RL.py:409][0m distance: -0.0800914185460493
+[32m[01-27 18:53:37 MainThread @ETG_RL.py:410][0m critic loss: 0.015371453789350491 actor loss: -163.81558075078223
+[32m[01-27 18:53:54 MainThread @ETG_RL.py:407][0m Total Steps: 166939 Reward: 0.018985448016406406
+[32m[01-27 18:53:54 MainThread @ETG_RL.py:409][0m distance: 0.018985448016406406
+[32m[01-27 18:53:54 MainThread @ETG_RL.py:410][0m critic loss: 0.015373288607263594 actor loss: -163.81727321856624
+[32m[01-27 18:54:10 MainThread @ETG_RL.py:407][0m Total Steps: 168140 Reward: -0.042387101708187234
+[32m[01-27 18:54:10 MainThread @ETG_RL.py:409][0m distance: -0.042387101708187234
+[32m[01-27 18:54:10 MainThread @ETG_RL.py:410][0m critic loss: 0.01551348839395623 actor loss: -163.8267697247736
+[32m[01-27 18:54:25 MainThread @ETG_RL.py:407][0m Total Steps: 169341 Reward: -0.0729711854323118
+[32m[01-27 18:54:25 MainThread @ETG_RL.py:409][0m distance: -0.0729711854323118
+[32m[01-27 18:54:25 MainThread @ETG_RL.py:410][0m critic loss: 0.01524340401602898 actor loss: -163.83336773442787
+[32m[01-27 18:54:40 MainThread @ETG_RL.py:407][0m Total Steps: 170542 Reward: -0.08295472405450638
+[32m[01-27 18:54:40 MainThread @ETG_RL.py:409][0m distance: -0.08295472405450638
+[32m[01-27 18:54:40 MainThread @ETG_RL.py:410][0m critic loss: 0.015211577894015673 actor loss: -163.83605136283728
+[32m[01-27 18:54:46 MainThread @ETG_RL.py:416][0m Evaluation over: 1 episodes, Reward: 0.49200439380624367 Steps: 5001 
+[32m[01-27 18:54:46 MainThread @ETG_RL.py:418][0m distance: 0.49200439380624367
+[32m[01-27 18:55:02 MainThread @ETG_RL.py:407][0m Total Steps: 171743 Reward: 0.0450000888777297
+[32m[01-27 18:55:02 MainThread @ETG_RL.py:409][0m distance: 0.0450000888777297
+[32m[01-27 18:55:02 MainThread @ETG_RL.py:410][0m critic loss: 0.015303495979024955 actor loss: -163.83860199457402
+[32m[01-27 18:55:17 MainThread @ETG_RL.py:407][0m Total Steps: 172944 Reward: 0.054881214478835254
+[32m[01-27 18:55:17 MainThread @ETG_RL.py:409][0m distance: 0.054881214478835254
+[32m[01-27 18:55:17 MainThread @ETG_RL.py:410][0m critic loss: 0.015591109131961491 actor loss: -163.84241858489509
+[32m[01-27 18:55:33 MainThread @ETG_RL.py:407][0m Total Steps: 174145 Reward: -0.07779865849661209
+[32m[01-27 18:55:33 MainThread @ETG_RL.py:409][0m distance: -0.07779865849661209
+[32m[01-27 18:55:33 MainThread @ETG_RL.py:410][0m critic loss: 0.015448947119170631 actor loss: -163.84284405227902
+[32m[01-27 18:55:47 MainThread @ETG_RL.py:407][0m Total Steps: 175346 Reward: -0.03059742434637052
+[32m[01-27 18:55:47 MainThread @ETG_RL.py:409][0m distance: -0.03059742434637052
+[32m[01-27 18:55:47 MainThread @ETG_RL.py:410][0m critic loss: 0.015534649164936227 actor loss: -163.8518488976878
+[32m[01-27 18:56:03 MainThread @ETG_RL.py:407][0m Total Steps: 176547 Reward: -0.07928604683401164
+[32m[01-27 18:56:03 MainThread @ETG_RL.py:409][0m distance: -0.07928604683401164
+[32m[01-27 18:56:03 MainThread @ETG_RL.py:410][0m critic loss: 0.01549786601144259 actor loss: -163.85442782361542
+[32m[01-27 18:56:19 MainThread @ETG_RL.py:407][0m Total Steps: 177748 Reward: -0.07790072857311756
+[32m[01-27 18:56:19 MainThread @ETG_RL.py:409][0m distance: -0.07790072857311756
+[32m[01-27 18:56:19 MainThread @ETG_RL.py:410][0m critic loss: 0.01555112953515697 actor loss: -163.86409854174255
+[32m[01-27 18:56:34 MainThread @ETG_RL.py:407][0m Total Steps: 178949 Reward: -0.02524393705960893
+[32m[01-27 18:56:34 MainThread @ETG_RL.py:409][0m distance: -0.02524393705960893
+[32m[01-27 18:56:34 MainThread @ETG_RL.py:410][0m critic loss: 0.01526056741869122 actor loss: -163.86769631264312
+[32m[01-27 18:56:50 MainThread @ETG_RL.py:407][0m Total Steps: 180150 Reward: 0.0008211022436947074
+[32m[01-27 18:56:50 MainThread @ETG_RL.py:409][0m distance: 0.0008211022436947074
+[32m[01-27 18:56:50 MainThread @ETG_RL.py:410][0m critic loss: 0.015181104913912249 actor loss: -163.87265391989015
+[32m[01-27 18:56:57 MainThread @ETG_RL.py:416][0m Evaluation over: 1 episodes, Reward: 0.6446593667255114 Steps: 5001 
+[32m[01-27 18:56:57 MainThread @ETG_RL.py:418][0m distance: 0.6446593667255114
+[32m[01-27 18:57:12 MainThread @ETG_RL.py:407][0m Total Steps: 181351 Reward: 0.06091328077247226
+[32m[01-27 18:57:12 MainThread @ETG_RL.py:409][0m distance: 0.06091328077247226
+[32m[01-27 18:57:12 MainThread @ETG_RL.py:410][0m critic loss: 0.015333146156958745 actor loss: -163.88047841347623
+[32m[01-27 18:57:28 MainThread @ETG_RL.py:407][0m Total Steps: 182552 Reward: -0.07315666959601773
+[32m[01-27 18:57:28 MainThread @ETG_RL.py:409][0m distance: -0.07315666959601773
+[32m[01-27 18:57:28 MainThread @ETG_RL.py:410][0m critic loss: 0.0156579939842373 actor loss: -163.8860143173942
+[32m[01-27 18:57:43 MainThread @ETG_RL.py:407][0m Total Steps: 183753 Reward: -0.03840685762059603
+[32m[01-27 18:57:43 MainThread @ETG_RL.py:409][0m distance: -0.03840685762059603
+[32m[01-27 18:57:43 MainThread @ETG_RL.py:410][0m critic loss: 0.015202887360934015 actor loss: -163.89173429236624
+[32m[01-27 18:57:59 MainThread @ETG_RL.py:407][0m Total Steps: 184954 Reward: -0.021546161373804305
+[32m[01-27 18:57:59 MainThread @ETG_RL.py:409][0m distance: -0.021546161373804305
+[32m[01-27 18:57:59 MainThread @ETG_RL.py:410][0m critic loss: 0.015349023355067173 actor loss: -163.89520075636838
+[32m[01-27 18:58:14 MainThread @ETG_RL.py:407][0m Total Steps: 186155 Reward: -0.04302428812361348
+[32m[01-27 18:58:14 MainThread @ETG_RL.py:409][0m distance: -0.04302428812361348
+[32m[01-27 18:58:14 MainThread @ETG_RL.py:410][0m critic loss: 0.015482311112205998 actor loss: -163.89556368939785
+[32m[01-27 18:58:30 MainThread @ETG_RL.py:407][0m Total Steps: 187356 Reward: 0.04616786607922345
+[32m[01-27 18:58:30 MainThread @ETG_RL.py:409][0m distance: 0.04616786607922345
+[32m[01-27 18:58:30 MainThread @ETG_RL.py:410][0m critic loss: 0.015500788238026716 actor loss: -163.90247125808247
+[32m[01-27 18:58:45 MainThread @ETG_RL.py:407][0m Total Steps: 188557 Reward: -0.08216120542657947
+[32m[01-27 18:58:45 MainThread @ETG_RL.py:409][0m distance: -0.08216120542657947
+[32m[01-27 18:58:45 MainThread @ETG_RL.py:410][0m critic loss: 0.015523336826204062 actor loss: -163.9084792696963
+[32m[01-27 18:59:01 MainThread @ETG_RL.py:407][0m Total Steps: 189758 Reward: -0.07215028025384793
+[32m[01-27 18:59:01 MainThread @ETG_RL.py:409][0m distance: -0.07215028025384793
+[32m[01-27 18:59:01 MainThread @ETG_RL.py:410][0m critic loss: 0.015207840584150261 actor loss: -163.91290785053388
+[32m[01-27 18:59:15 MainThread @ETG_RL.py:407][0m Total Steps: 190959 Reward: -0.0734212306626141
+[32m[01-27 18:59:15 MainThread @ETG_RL.py:409][0m distance: -0.0734212306626141
+[32m[01-27 18:59:15 MainThread @ETG_RL.py:410][0m critic loss: 0.015480104810577646 actor loss: -163.91870538995823
+[32m[01-27 18:59:21 MainThread @ETG_RL.py:416][0m Evaluation over: 1 episodes, Reward: 0.511922220485581 Steps: 5001 
+[32m[01-27 18:59:21 MainThread @ETG_RL.py:418][0m distance: 0.511922220485581
+[32m[01-27 18:59:37 MainThread @ETG_RL.py:407][0m Total Steps: 192160 Reward: 0.06411863883846686
+[32m[01-27 18:59:37 MainThread @ETG_RL.py:409][0m distance: 0.06411863883846686
+[32m[01-27 18:59:37 MainThread @ETG_RL.py:410][0m critic loss: 0.015466441746202486 actor loss: -163.92720039361322
+[32m[01-27 18:59:53 MainThread @ETG_RL.py:407][0m Total Steps: 193361 Reward: 0.051673585583109576
+[32m[01-27 18:59:53 MainThread @ETG_RL.py:409][0m distance: 0.051673585583109576
+[32m[01-27 18:59:53 MainThread @ETG_RL.py:410][0m critic loss: 0.015448324111671024 actor loss: -163.9342600801009
+[32m[01-27 19:00:08 MainThread @ETG_RL.py:407][0m Total Steps: 194562 Reward: -0.08319313007208731
+[32m[01-27 19:00:08 MainThread @ETG_RL.py:409][0m distance: -0.08319313007208731
+[32m[01-27 19:00:08 MainThread @ETG_RL.py:410][0m critic loss: 0.015359447152353047 actor loss: -163.9406343280624
+[32m[01-27 19:00:24 MainThread @ETG_RL.py:407][0m Total Steps: 195763 Reward: 0.02760436773758329
+[32m[01-27 19:00:24 MainThread @ETG_RL.py:409][0m distance: 0.02760436773758329
+[32m[01-27 19:00:24 MainThread @ETG_RL.py:410][0m critic loss: 0.015352422556065204 actor loss: -163.94102518683567
+[32m[01-27 19:00:39 MainThread @ETG_RL.py:407][0m Total Steps: 196964 Reward: -0.10789231727194128
+[32m[01-27 19:00:39 MainThread @ETG_RL.py:409][0m distance: -0.10789231727194128
+[32m[01-27 19:00:39 MainThread @ETG_RL.py:410][0m critic loss: 0.015405068542346122 actor loss: -163.94482348185593
+[32m[01-27 19:00:55 MainThread @ETG_RL.py:407][0m Total Steps: 198165 Reward: 0.06015431327587133
+[32m[01-27 19:00:55 MainThread @ETG_RL.py:409][0m distance: 0.06015431327587133
+[32m[01-27 19:00:55 MainThread @ETG_RL.py:410][0m critic loss: 0.015520525105192104 actor loss: -163.94777550486899
+[32m[01-27 19:01:10 MainThread @ETG_RL.py:407][0m Total Steps: 199366 Reward: 0.06803513079892723
+[32m[01-27 19:01:10 MainThread @ETG_RL.py:409][0m distance: 0.06803513079892723
+[32m[01-27 19:01:10 MainThread @ETG_RL.py:410][0m critic loss: 0.015432884894950405 actor loss: -163.95149302105423
+[32m[01-27 19:01:26 MainThread @ETG_RL.py:407][0m Total Steps: 200567 Reward: -0.0887986325505751
+[32m[01-27 19:01:26 MainThread @ETG_RL.py:409][0m distance: -0.0887986325505751
+[32m[01-27 19:01:26 MainThread @ETG_RL.py:410][0m critic loss: 0.015280722262032274 actor loss: -163.9549302252802
+[32m[01-27 19:01:32 MainThread @ETG_RL.py:416][0m Evaluation over: 1 episodes, Reward: 0.1624588831678007 Steps: 5001 
+[32m[01-27 19:01:32 MainThread @ETG_RL.py:418][0m distance: 0.1624588831678007
+[32m[01-27 19:02:35 MainThread @ETG_RL.py:468][0m ESSteps: 41 Reward: 0.06693803366337103 step: 1201.0  sigma:0.013245640819679673
+[32m[01-27 19:02:35 MainThread @ETG_RL.py:470][0m average distance: -0.06308667019814121  max distance: 0.06693803366337103
+[32m[01-27 19:03:39 MainThread @ETG_RL.py:468][0m ESSteps: 42 Reward: 0.07124656286062483 step: 1201.0  sigma:0.013113184411482876
+[32m[01-27 19:03:39 MainThread @ETG_RL.py:470][0m average distance: -0.03516745376767374  max distance: 0.07124656286062483
+[32m[01-27 19:04:40 MainThread @ETG_RL.py:468][0m ESSteps: 43 Reward: 0.0940100835724581 step: 1201.0  sigma:0.012982052567368046
+[32m[01-27 19:04:40 MainThread @ETG_RL.py:470][0m average distance: -0.033653673490109684  max distance: 0.0940100835724581
+[32m[01-27 19:05:42 MainThread @ETG_RL.py:468][0m ESSteps: 44 Reward: 0.08050771811492295 step: 1201.0  sigma:0.012852232041694365
+[32m[01-27 19:05:42 MainThread @ETG_RL.py:470][0m average distance: -0.021287096804546168  max distance: 0.08050771811492295
+[32m[01-27 19:06:43 MainThread @ETG_RL.py:468][0m ESSteps: 45 Reward: 0.09646390836385528 step: 1201.0  sigma:0.012723709721277421
+[32m[01-27 19:06:43 MainThread @ETG_RL.py:470][0m average distance: -0.038587420435255274  max distance: 0.09646390836385528
+[32m[01-27 19:07:43 MainThread @ETG_RL.py:468][0m ESSteps: 46 Reward: 0.07666090574111138 step: 1201.0  sigma:0.012596472624064646
+[32m[01-27 19:07:43 MainThread @ETG_RL.py:470][0m average distance: -0.02035266924235283  max distance: 0.07666090574111138
+[32m[01-27 19:08:43 MainThread @ETG_RL.py:468][0m ESSteps: 47 Reward: 0.10280478259712221 step: 1201.0  sigma:0.012470507897824
+[32m[01-27 19:08:43 MainThread @ETG_RL.py:470][0m average distance: -0.021615563256653997  max distance: 0.10280478259712221
+[32m[01-27 19:09:45 MainThread @ETG_RL.py:468][0m ESSteps: 48 Reward: 0.09210222154954198 step: 1201.0  sigma:0.01234580281884576
+[32m[01-27 19:09:45 MainThread @ETG_RL.py:470][0m average distance: -0.01849882057871657  max distance: 0.09210222154954198
+[32m[01-27 19:10:46 MainThread @ETG_RL.py:468][0m ESSteps: 49 Reward: 0.10312839026083861 step: 1201.0  sigma:0.012222344790657301
+[32m[01-27 19:10:46 MainThread @ETG_RL.py:470][0m average distance: -0.0029978685703817903  max distance: 0.10312839026083861
+[32m[01-27 19:11:47 MainThread @ETG_RL.py:468][0m ESSteps: 50 Reward: 0.09706548953362173 step: 1201.0  sigma:0.012100121342750729
+[32m[01-27 19:11:47 MainThread @ETG_RL.py:470][0m average distance: -0.046774140556326387  max distance: 0.09706548953362173
+[32m[01-27 19:12:03 MainThread @ETG_RL.py:407][0m Total Steps: 201768 Reward: -0.07797334676736178
+[32m[01-27 19:12:03 MainThread @ETG_RL.py:409][0m distance: -0.07797334676736178
+[32m[01-27 19:12:03 MainThread @ETG_RL.py:410][0m critic loss: 0.014832465811713996 actor loss: -163.9631650418068
+[32m[01-27 19:12:18 MainThread @ETG_RL.py:407][0m Total Steps: 202969 Reward: -0.09803750257362692
+[32m[01-27 19:12:18 MainThread @ETG_RL.py:409][0m distance: -0.09803750257362692
+[32m[01-27 19:12:18 MainThread @ETG_RL.py:410][0m critic loss: 0.015159143803394604 actor loss: -163.95732838347195
+[32m[01-27 19:12:34 MainThread @ETG_RL.py:407][0m Total Steps: 204170 Reward: -0.09707952331968908
+[32m[01-27 19:12:34 MainThread @ETG_RL.py:409][0m distance: -0.09707952331968908
+[32m[01-27 19:12:34 MainThread @ETG_RL.py:410][0m critic loss: 0.01542408912319327 actor loss: -163.94715844502954
+[32m[01-27 19:12:50 MainThread @ETG_RL.py:407][0m Total Steps: 205371 Reward: -0.0812580376596852
+[32m[01-27 19:12:50 MainThread @ETG_RL.py:409][0m distance: -0.0812580376596852
+[32m[01-27 19:12:50 MainThread @ETG_RL.py:410][0m critic loss: 0.015473183726024915 actor loss: -163.9355820172236
+[32m[01-27 19:13:06 MainThread @ETG_RL.py:407][0m Total Steps: 206572 Reward: -0.12271232400132266
+[32m[01-27 19:13:06 MainThread @ETG_RL.py:409][0m distance: -0.12271232400132266
+[32m[01-27 19:13:06 MainThread @ETG_RL.py:410][0m critic loss: 0.01536600278856405 actor loss: -163.92273247787895
+[32m[01-27 19:13:22 MainThread @ETG_RL.py:407][0m Total Steps: 207773 Reward: -0.08735346655918991
+[32m[01-27 19:13:22 MainThread @ETG_RL.py:409][0m distance: -0.08735346655918991
+[32m[01-27 19:13:22 MainThread @ETG_RL.py:410][0m critic loss: 0.015324290473476289 actor loss: -163.91174088985497
+[32m[01-27 19:13:37 MainThread @ETG_RL.py:407][0m Total Steps: 208974 Reward: -0.13483688598787646
+[32m[01-27 19:13:37 MainThread @ETG_RL.py:409][0m distance: -0.13483688598787646
+[32m[01-27 19:13:37 MainThread @ETG_RL.py:410][0m critic loss: 0.015396285440763467 actor loss: -163.90565382729562
+[32m[01-27 19:13:52 MainThread @ETG_RL.py:407][0m Total Steps: 210175 Reward: -0.08539967455780018
+[32m[01-27 19:13:52 MainThread @ETG_RL.py:409][0m distance: -0.08539967455780018
+[32m[01-27 19:13:52 MainThread @ETG_RL.py:410][0m critic loss: 0.015141110536142203 actor loss: -163.90422459585682
+[32m[01-27 19:13:58 MainThread @ETG_RL.py:416][0m Evaluation over: 1 episodes, Reward: 0.10167081688748955 Steps: 5001 
+[32m[01-27 19:13:58 MainThread @ETG_RL.py:418][0m distance: 0.10167081688748955
+[32m[01-27 19:14:14 MainThread @ETG_RL.py:407][0m Total Steps: 211376 Reward: -0.07118410882221124
+[32m[01-27 19:14:14 MainThread @ETG_RL.py:409][0m distance: -0.07118410882221124
+[32m[01-27 19:14:14 MainThread @ETG_RL.py:410][0m critic loss: 0.01527856256918273 actor loss: -163.90117452781863
+[32m[01-27 19:14:30 MainThread @ETG_RL.py:407][0m Total Steps: 212577 Reward: -0.08663492996791645
+[32m[01-27 19:14:30 MainThread @ETG_RL.py:409][0m distance: -0.08663492996791645
+[32m[01-27 19:14:30 MainThread @ETG_RL.py:410][0m critic loss: 0.015292010567834186 actor loss: -163.90398665530597
+[32m[01-27 19:14:45 MainThread @ETG_RL.py:407][0m Total Steps: 213778 Reward: -0.05449808377376357
+[32m[01-27 19:14:45 MainThread @ETG_RL.py:409][0m distance: -0.05449808377376357
+[32m[01-27 19:14:45 MainThread @ETG_RL.py:410][0m critic loss: 0.015209829251744864 actor loss: -163.90894997983452
+[32m[01-27 19:15:01 MainThread @ETG_RL.py:407][0m Total Steps: 214979 Reward: -0.11834479251208843
+[32m[01-27 19:15:01 MainThread @ETG_RL.py:409][0m distance: -0.11834479251208843
+[32m[01-27 19:15:01 MainThread @ETG_RL.py:410][0m critic loss: 0.015338413211068047 actor loss: -163.91268842127005
+[32m[01-27 19:15:17 MainThread @ETG_RL.py:407][0m Total Steps: 216180 Reward: -0.085644335090891
+[32m[01-27 19:15:17 MainThread @ETG_RL.py:409][0m distance: -0.085644335090891
+[32m[01-27 19:15:17 MainThread @ETG_RL.py:410][0m critic loss: 0.015454020532628182 actor loss: -163.91666646762056
+[32m[01-27 19:15:33 MainThread @ETG_RL.py:407][0m Total Steps: 217381 Reward: -0.07206184637621141
+[32m[01-27 19:15:33 MainThread @ETG_RL.py:409][0m distance: -0.07206184637621141
+[32m[01-27 19:15:33 MainThread @ETG_RL.py:410][0m critic loss: 0.015117052777342306 actor loss: -163.92235634428178
+[32m[01-27 19:15:49 MainThread @ETG_RL.py:407][0m Total Steps: 218582 Reward: -0.08554565729241465
+[32m[01-27 19:15:49 MainThread @ETG_RL.py:409][0m distance: -0.08554565729241465
+[32m[01-27 19:15:49 MainThread @ETG_RL.py:410][0m critic loss: 0.015371182303004072 actor loss: -163.93004986130128
+[32m[01-27 19:16:04 MainThread @ETG_RL.py:407][0m Total Steps: 219783 Reward: -0.0859783811488332
+[32m[01-27 19:16:04 MainThread @ETG_RL.py:409][0m distance: -0.0859783811488332
+[32m[01-27 19:16:04 MainThread @ETG_RL.py:410][0m critic loss: 0.015275170106896751 actor loss: -163.9389509571085
+[32m[01-27 19:16:19 MainThread @ETG_RL.py:407][0m Total Steps: 220984 Reward: -0.0735810773719337
+[32m[01-27 19:16:19 MainThread @ETG_RL.py:409][0m distance: -0.0735810773719337
+[32m[01-27 19:16:19 MainThread @ETG_RL.py:410][0m critic loss: 0.015160659362223126 actor loss: -163.94404300940622
+[32m[01-27 19:16:25 MainThread @ETG_RL.py:416][0m Evaluation over: 1 episodes, Reward: 0.1908389108924218 Steps: 5001 
+[32m[01-27 19:16:25 MainThread @ETG_RL.py:418][0m distance: 0.1908389108924218
+[32m[01-27 19:16:41 MainThread @ETG_RL.py:407][0m Total Steps: 222185 Reward: -0.07492084855074738
+[32m[01-27 19:16:41 MainThread @ETG_RL.py:409][0m distance: -0.07492084855074738
+[32m[01-27 19:16:41 MainThread @ETG_RL.py:410][0m critic loss: 0.015268090953406793 actor loss: -163.9513135492355
+[32m[01-27 19:16:57 MainThread @ETG_RL.py:407][0m Total Steps: 223386 Reward: -0.07862598935419879
+[32m[01-27 19:16:57 MainThread @ETG_RL.py:409][0m distance: -0.07862598935419879
+[32m[01-27 19:16:57 MainThread @ETG_RL.py:410][0m critic loss: 0.015263207257569432 actor loss: -163.95606035396122
+[32m[01-27 19:17:14 MainThread @ETG_RL.py:407][0m Total Steps: 224587 Reward: -0.06564174282255225
+[32m[01-27 19:17:14 MainThread @ETG_RL.py:409][0m distance: -0.06564174282255225
+[32m[01-27 19:17:14 MainThread @ETG_RL.py:410][0m critic loss: 0.015297065328474744 actor loss: -163.95820599888683
+[32m[01-27 19:17:29 MainThread @ETG_RL.py:407][0m Total Steps: 225788 Reward: -0.10464497725236785
+[32m[01-27 19:17:29 MainThread @ETG_RL.py:409][0m distance: -0.10464497725236785
+[32m[01-27 19:17:29 MainThread @ETG_RL.py:410][0m critic loss: 0.01526832270073851 actor loss: -163.9603439572451
+[32m[01-27 19:17:45 MainThread @ETG_RL.py:407][0m Total Steps: 226989 Reward: 0.016439521954593035
+[32m[01-27 19:17:45 MainThread @ETG_RL.py:409][0m distance: 0.016439521954593035
+[32m[01-27 19:17:45 MainThread @ETG_RL.py:410][0m critic loss: 0.015247724730084084 actor loss: -163.96218249521883
+[32m[01-27 19:18:00 MainThread @ETG_RL.py:407][0m Total Steps: 228190 Reward: -0.07862281831010354
+[32m[01-27 19:18:00 MainThread @ETG_RL.py:409][0m distance: -0.07862281831010354
+[32m[01-27 19:18:00 MainThread @ETG_RL.py:410][0m critic loss: 0.015613725919161709 actor loss: -163.96603008591066
+[32m[01-27 19:18:17 MainThread @ETG_RL.py:407][0m Total Steps: 229391 Reward: -0.10600488474916667
+[32m[01-27 19:18:17 MainThread @ETG_RL.py:409][0m distance: -0.10600488474916667
+[32m[01-27 19:18:17 MainThread @ETG_RL.py:410][0m critic loss: 0.015225796463226995 actor loss: -163.96823511433342
+[32m[01-27 19:18:33 MainThread @ETG_RL.py:407][0m Total Steps: 230592 Reward: 0.012681006715335043
+[32m[01-27 19:18:33 MainThread @ETG_RL.py:409][0m distance: 0.012681006715335043
+[32m[01-27 19:18:33 MainThread @ETG_RL.py:410][0m critic loss: 0.015388321761138036 actor loss: -163.97180438776198
+[32m[01-27 19:18:39 MainThread @ETG_RL.py:416][0m Evaluation over: 1 episodes, Reward: 0.18007228596804647 Steps: 5001 
+[32m[01-27 19:18:39 MainThread @ETG_RL.py:418][0m distance: 0.18007228596804647
+[32m[01-27 19:18:54 MainThread @ETG_RL.py:407][0m Total Steps: 231793 Reward: -0.07008211804752515
+[32m[01-27 19:18:54 MainThread @ETG_RL.py:409][0m distance: -0.07008211804752515
+[32m[01-27 19:18:54 MainThread @ETG_RL.py:410][0m critic loss: 0.015213661938037205 actor loss: -163.97664818299205
+[32m[01-27 19:19:10 MainThread @ETG_RL.py:407][0m Total Steps: 232994 Reward: -0.1131798261046196
+[32m[01-27 19:19:10 MainThread @ETG_RL.py:409][0m distance: -0.1131798261046196
+[32m[01-27 19:19:10 MainThread @ETG_RL.py:410][0m critic loss: 0.015469633425112123 actor loss: -163.978871036628
+[32m[01-27 19:19:25 MainThread @ETG_RL.py:407][0m Total Steps: 234195 Reward: -0.04150652780025878
+[32m[01-27 19:19:25 MainThread @ETG_RL.py:409][0m distance: -0.04150652780025878
+[32m[01-27 19:19:25 MainThread @ETG_RL.py:410][0m critic loss: 0.015026758738997378 actor loss: -163.98420179178078
+[32m[01-27 19:19:40 MainThread @ETG_RL.py:407][0m Total Steps: 235396 Reward: -0.08529674470436108
+[32m[01-27 19:19:40 MainThread @ETG_RL.py:409][0m distance: -0.08529674470436108
+[32m[01-27 19:19:40 MainThread @ETG_RL.py:410][0m critic loss: 0.015525358936886655 actor loss: -163.98429843924822
+[32m[01-27 19:19:56 MainThread @ETG_RL.py:407][0m Total Steps: 236597 Reward: -0.08224814643048481
+[32m[01-27 19:19:56 MainThread @ETG_RL.py:409][0m distance: -0.08224814643048481
+[32m[01-27 19:19:56 MainThread @ETG_RL.py:410][0m critic loss: 0.01489613542827986 actor loss: -163.98729504435187
+[32m[01-27 19:20:12 MainThread @ETG_RL.py:407][0m Total Steps: 237798 Reward: -0.09728167020173896
+[32m[01-27 19:20:12 MainThread @ETG_RL.py:409][0m distance: -0.09728167020173896
+[32m[01-27 19:20:12 MainThread @ETG_RL.py:410][0m critic loss: 0.015196554909470328 actor loss: -163.989436242503
+[32m[01-27 19:20:27 MainThread @ETG_RL.py:407][0m Total Steps: 238999 Reward: -0.06896418248045869
+[32m[01-27 19:20:27 MainThread @ETG_RL.py:409][0m distance: -0.06896418248045869
+[32m[01-27 19:20:27 MainThread @ETG_RL.py:410][0m critic loss: 0.015308136653952257 actor loss: -163.99671979232394
+[32m[01-27 19:20:42 MainThread @ETG_RL.py:407][0m Total Steps: 240200 Reward: -0.09547766571816502
+[32m[01-27 19:20:42 MainThread @ETG_RL.py:409][0m distance: -0.09547766571816502
+[32m[01-27 19:20:42 MainThread @ETG_RL.py:410][0m critic loss: 0.015082384988535305 actor loss: -163.99992009781482
+[32m[01-27 19:20:48 MainThread @ETG_RL.py:416][0m Evaluation over: 1 episodes, Reward: 0.06846798872428217 Steps: 5001 
+[32m[01-27 19:20:48 MainThread @ETG_RL.py:418][0m distance: 0.06846798872428217
+[32m[01-27 19:21:05 MainThread @ETG_RL.py:407][0m Total Steps: 241401 Reward: 0.012221790205324108
+[32m[01-27 19:21:05 MainThread @ETG_RL.py:409][0m distance: 0.012221790205324108
+[32m[01-27 19:21:05 MainThread @ETG_RL.py:410][0m critic loss: 0.015023721745710737 actor loss: -164.00486285283503
+[32m[01-27 19:21:20 MainThread @ETG_RL.py:407][0m Total Steps: 242602 Reward: -0.0734840897865508
+[32m[01-27 19:21:20 MainThread @ETG_RL.py:409][0m distance: -0.0734840897865508
+[32m[01-27 19:21:20 MainThread @ETG_RL.py:410][0m critic loss: 0.01517207558568471 actor loss: -164.0118870921774
+[32m[01-27 19:21:36 MainThread @ETG_RL.py:407][0m Total Steps: 243803 Reward: -0.07707333035336938
+[32m[01-27 19:21:36 MainThread @ETG_RL.py:409][0m distance: -0.07707333035336938
+[32m[01-27 19:21:36 MainThread @ETG_RL.py:410][0m critic loss: 0.015521443949129857 actor loss: -164.01580350623342
+[32m[01-27 19:21:52 MainThread @ETG_RL.py:407][0m Total Steps: 245004 Reward: -0.11113693574531629
+[32m[01-27 19:21:52 MainThread @ETG_RL.py:409][0m distance: -0.11113693574531629
+[32m[01-27 19:21:52 MainThread @ETG_RL.py:410][0m critic loss: 0.015175175160591449 actor loss: -164.01612782855514
+[32m[01-27 19:22:08 MainThread @ETG_RL.py:407][0m Total Steps: 246205 Reward: -0.09100860148311776
+[32m[01-27 19:22:08 MainThread @ETG_RL.py:409][0m distance: -0.09100860148311776
+[32m[01-27 19:22:08 MainThread @ETG_RL.py:410][0m critic loss: 0.015345301453511135 actor loss: -164.02232099115403
+[32m[01-27 19:22:23 MainThread @ETG_RL.py:407][0m Total Steps: 247406 Reward: -0.09946488153336863
+[32m[01-27 19:22:23 MainThread @ETG_RL.py:409][0m distance: -0.09946488153336863
+[32m[01-27 19:22:23 MainThread @ETG_RL.py:410][0m critic loss: 0.015309691071652998 actor loss: -164.0265025600208
+[32m[01-27 19:22:39 MainThread @ETG_RL.py:407][0m Total Steps: 248607 Reward: -0.06515354302591947
+[32m[01-27 19:22:39 MainThread @ETG_RL.py:409][0m distance: -0.06515354302591947
+[32m[01-27 19:22:39 MainThread @ETG_RL.py:410][0m critic loss: 0.015155505373466025 actor loss: -164.02909065900894
+[32m[01-27 19:22:54 MainThread @ETG_RL.py:407][0m Total Steps: 249808 Reward: -0.09859206256566519
+[32m[01-27 19:22:54 MainThread @ETG_RL.py:409][0m distance: -0.09859206256566519
+[32m[01-27 19:22:54 MainThread @ETG_RL.py:410][0m critic loss: 0.015134880164146523 actor loss: -164.0319579900254
+[32m[01-27 19:23:10 MainThread @ETG_RL.py:407][0m Total Steps: 251009 Reward: -0.08586272565856531
+[32m[01-27 19:23:10 MainThread @ETG_RL.py:409][0m distance: -0.08586272565856531
+[32m[01-27 19:23:10 MainThread @ETG_RL.py:410][0m critic loss: 0.015315634500914619 actor loss: -164.03453063964844
+[32m[01-27 19:23:17 MainThread @ETG_RL.py:416][0m Evaluation over: 1 episodes, Reward: 0.3584910230711349 Steps: 5001 
+[32m[01-27 19:23:17 MainThread @ETG_RL.py:418][0m distance: 0.3584910230711349
+[32m[01-27 19:24:19 MainThread @ETG_RL.py:468][0m ESSteps: 51 Reward: 0.11324133704371309 step: 1201.0  sigma:0.011979120129323222
+[32m[01-27 19:24:19 MainThread @ETG_RL.py:470][0m average distance: -0.013463847277029086  max distance: 0.11324133704371309
+[32m[01-27 19:25:21 MainThread @ETG_RL.py:468][0m ESSteps: 52 Reward: 0.10292660716524876 step: 1201.0  sigma:0.011859328928029989
+[32m[01-27 19:25:21 MainThread @ETG_RL.py:470][0m average distance: 0.004188508714410505  max distance: 0.10292660716524876
+[32m[01-27 19:26:21 MainThread @ETG_RL.py:468][0m ESSteps: 53 Reward: 0.09034660290230029 step: 1201.0  sigma:0.011740735638749689
+[32m[01-27 19:26:21 MainThread @ETG_RL.py:470][0m average distance: -0.026419435284085496  max distance: 0.09034660290230029
+[32m[01-27 19:27:21 MainThread @ETG_RL.py:468][0m ESSteps: 54 Reward: 0.09842087044497172 step: 1201.0  sigma:0.011623328282362191
+[32m[01-27 19:27:21 MainThread @ETG_RL.py:470][0m average distance: -0.03495459483719833  max distance: 0.09842087044497172
+[32m[01-27 19:28:23 MainThread @ETG_RL.py:468][0m ESSteps: 55 Reward: 0.14284848618007953 step: 1201.0  sigma:0.011507094999538569
+[32m[01-27 19:28:23 MainThread @ETG_RL.py:470][0m average distance: -0.023604890578828343  max distance: 0.14284848618007953
+[32m[01-27 19:29:24 MainThread @ETG_RL.py:468][0m ESSteps: 56 Reward: 0.11864574035130472 step: 1201.0  sigma:0.011392024049543183
+[32m[01-27 19:29:24 MainThread @ETG_RL.py:470][0m average distance: 0.01903761404064928  max distance: 0.11864574035130472
+[32m[01-27 19:30:25 MainThread @ETG_RL.py:468][0m ESSteps: 57 Reward: 0.08201385666320479 step: 1201.0  sigma:0.01127810380904775
+[32m[01-27 19:30:25 MainThread @ETG_RL.py:470][0m average distance: -0.010727332589075057  max distance: 0.08201385666320479
+[32m[01-27 19:31:27 MainThread @ETG_RL.py:468][0m ESSteps: 58 Reward: 0.1080570870839464 step: 1201.0  sigma:0.011165322770957272
+[32m[01-27 19:31:27 MainThread @ETG_RL.py:470][0m average distance: -0.0054337863070604234  max distance: 0.1080570870839464
+[32m[01-27 19:32:27 MainThread @ETG_RL.py:468][0m ESSteps: 59 Reward: 0.1121163347433625 step: 1201.0  sigma:0.011053669543247699
+[32m[01-27 19:32:27 MainThread @ETG_RL.py:470][0m average distance: 0.0017104278956952767  max distance: 0.1121163347433625
+[32m[01-27 19:33:29 MainThread @ETG_RL.py:468][0m ESSteps: 60 Reward: 0.09444434166742521 step: 1201.0  sigma:0.010943132847815222
+[32m[01-27 19:33:29 MainThread @ETG_RL.py:470][0m average distance: -0.028909483934042614  max distance: 0.09444434166742521
+[32m[01-27 19:33:44 MainThread @ETG_RL.py:407][0m Total Steps: 252210 Reward: -0.0635036144282348
+[32m[01-27 19:33:44 MainThread @ETG_RL.py:409][0m distance: -0.0635036144282348
+[32m[01-27 19:33:44 MainThread @ETG_RL.py:410][0m critic loss: 0.014433624537709749 actor loss: -164.04266030901576
+[32m[01-27 19:33:59 MainThread @ETG_RL.py:407][0m Total Steps: 253411 Reward: 0.04395460160447141
+[32m[01-27 19:33:59 MainThread @ETG_RL.py:409][0m distance: 0.04395460160447141
+[32m[01-27 19:33:59 MainThread @ETG_RL.py:410][0m critic loss: 0.014969408653248459 actor loss: -164.04658067434852
+[32m[01-27 19:34:16 MainThread @ETG_RL.py:407][0m Total Steps: 254612 Reward: 0.029278774081558948
+[32m[01-27 19:34:16 MainThread @ETG_RL.py:409][0m distance: 0.029278774081558948
+[32m[01-27 19:34:16 MainThread @ETG_RL.py:410][0m critic loss: 0.015001077981174091 actor loss: -164.0499750624886
+[32m[01-27 19:34:31 MainThread @ETG_RL.py:407][0m Total Steps: 255813 Reward: -0.010725409465804067
+[32m[01-27 19:34:31 MainThread @ETG_RL.py:409][0m distance: -0.010725409465804067
+[32m[01-27 19:34:31 MainThread @ETG_RL.py:410][0m critic loss: 0.015142395897775418 actor loss: -164.05164360662582
+[32m[01-27 19:34:46 MainThread @ETG_RL.py:407][0m Total Steps: 257014 Reward: -0.08383699501122292
+[32m[01-27 19:34:46 MainThread @ETG_RL.py:409][0m distance: -0.08383699501122292
+[32m[01-27 19:34:46 MainThread @ETG_RL.py:410][0m critic loss: 0.014967804838229378 actor loss: -164.05435171770515
+[32m[01-27 19:35:01 MainThread @ETG_RL.py:407][0m Total Steps: 258215 Reward: 0.021697568468281893
+[32m[01-27 19:35:01 MainThread @ETG_RL.py:409][0m distance: 0.021697568468281893
+[32m[01-27 19:35:01 MainThread @ETG_RL.py:410][0m critic loss: 0.015098824832653573 actor loss: -164.0543263710905
+[32m[01-27 19:35:17 MainThread @ETG_RL.py:407][0m Total Steps: 259416 Reward: -0.0370356357719899
+[32m[01-27 19:35:17 MainThread @ETG_RL.py:409][0m distance: -0.0370356357719899
+[32m[01-27 19:35:17 MainThread @ETG_RL.py:410][0m critic loss: 0.014931999707592963 actor loss: -164.05846041029042
+[32m[01-27 19:35:33 MainThread @ETG_RL.py:407][0m Total Steps: 260617 Reward: -0.08192682576577898
+[32m[01-27 19:35:33 MainThread @ETG_RL.py:409][0m distance: -0.08192682576577898
+[32m[01-27 19:35:33 MainThread @ETG_RL.py:410][0m critic loss: 0.014851472821306874 actor loss: -164.06208031342288
+[32m[01-27 19:35:39 MainThread @ETG_RL.py:416][0m Evaluation over: 1 episodes, Reward: 0.28021330751898593 Steps: 5001 
+[32m[01-27 19:35:39 MainThread @ETG_RL.py:418][0m distance: 0.28021330751898593
+[32m[01-27 19:35:54 MainThread @ETG_RL.py:407][0m Total Steps: 261818 Reward: -0.015196908603474498
+[32m[01-27 19:35:54 MainThread @ETG_RL.py:409][0m distance: -0.015196908603474498
+[32m[01-27 19:35:54 MainThread @ETG_RL.py:410][0m critic loss: 0.014940994844417538 actor loss: -164.06107891251105
+[32m[01-27 19:36:10 MainThread @ETG_RL.py:407][0m Total Steps: 263019 Reward: -0.07699361769080074
+[32m[01-27 19:36:10 MainThread @ETG_RL.py:409][0m distance: -0.07699361769080074
+[32m[01-27 19:36:10 MainThread @ETG_RL.py:410][0m critic loss: 0.015142136633389945 actor loss: -164.06630277990996
+[32m[01-27 19:36:27 MainThread @ETG_RL.py:407][0m Total Steps: 264220 Reward: -0.07639431314146126
+[32m[01-27 19:36:27 MainThread @ETG_RL.py:409][0m distance: -0.07639431314146126
+[32m[01-27 19:36:27 MainThread @ETG_RL.py:410][0m critic loss: 0.015090381637445149 actor loss: -164.0639856800648
+[32m[01-27 19:36:42 MainThread @ETG_RL.py:407][0m Total Steps: 265421 Reward: -0.03962526623175483
+[32m[01-27 19:36:42 MainThread @ETG_RL.py:409][0m distance: -0.03962526623175483
+[32m[01-27 19:36:42 MainThread @ETG_RL.py:410][0m critic loss: 0.014951221185033019 actor loss: -164.0676819152578
+[32m[01-27 19:36:58 MainThread @ETG_RL.py:407][0m Total Steps: 266622 Reward: -0.07346494564784031
+[32m[01-27 19:36:58 MainThread @ETG_RL.py:409][0m distance: -0.07346494564784031
+[32m[01-27 19:36:58 MainThread @ETG_RL.py:410][0m critic loss: 0.015094506960644462 actor loss: -164.06965313227747
+[32m[01-27 19:37:14 MainThread @ETG_RL.py:407][0m Total Steps: 267823 Reward: 0.023508495485913487
+[32m[01-27 19:37:14 MainThread @ETG_RL.py:409][0m distance: 0.023508495485913487
+[32m[01-27 19:37:14 MainThread @ETG_RL.py:410][0m critic loss: 0.014913342756643383 actor loss: -164.07259922202283
+[32m[01-27 19:37:30 MainThread @ETG_RL.py:407][0m Total Steps: 269024 Reward: -0.02013632942530926
+[32m[01-27 19:37:30 MainThread @ETG_RL.py:409][0m distance: -0.02013632942530926
+[32m[01-27 19:37:30 MainThread @ETG_RL.py:410][0m critic loss: 0.014973588218039319 actor loss: -164.0743245197077
+[32m[01-27 19:37:47 MainThread @ETG_RL.py:407][0m Total Steps: 270225 Reward: -0.07365086008577182
+[32m[01-27 19:37:47 MainThread @ETG_RL.py:409][0m distance: -0.07365086008577182
+[32m[01-27 19:37:47 MainThread @ETG_RL.py:410][0m critic loss: 0.015062088536084641 actor loss: -164.07509476457608
+[32m[01-27 19:37:53 MainThread @ETG_RL.py:416][0m Evaluation over: 1 episodes, Reward: 0.28453171906726926 Steps: 5001 
+[32m[01-27 19:37:53 MainThread @ETG_RL.py:418][0m distance: 0.28453171906726926
+[32m[01-27 19:38:09 MainThread @ETG_RL.py:407][0m Total Steps: 271426 Reward: -0.0752999856916148
+[32m[01-27 19:38:09 MainThread @ETG_RL.py:409][0m distance: -0.0752999856916148
+[32m[01-27 19:38:09 MainThread @ETG_RL.py:410][0m critic loss: 0.014953497376953633 actor loss: -164.08009624242982
+[32m[01-27 19:38:25 MainThread @ETG_RL.py:407][0m Total Steps: 272627 Reward: 0.0018737885268743856
+[32m[01-27 19:38:25 MainThread @ETG_RL.py:409][0m distance: 0.0018737885268743856
+[32m[01-27 19:38:25 MainThread @ETG_RL.py:410][0m critic loss: 0.015342305034405236 actor loss: -164.08190843008836
+[32m[01-27 19:38:41 MainThread @ETG_RL.py:407][0m Total Steps: 273828 Reward: -0.08368613898793703
+[32m[01-27 19:38:41 MainThread @ETG_RL.py:409][0m distance: -0.08368613898793703
+[32m[01-27 19:38:41 MainThread @ETG_RL.py:410][0m critic loss: 0.015113114776379808 actor loss: -164.08237638322638
+[32m[01-27 19:38:57 MainThread @ETG_RL.py:407][0m Total Steps: 275029 Reward: 0.02034830187990372
+[32m[01-27 19:38:57 MainThread @ETG_RL.py:409][0m distance: 0.02034830187990372
+[32m[01-27 19:38:57 MainThread @ETG_RL.py:410][0m critic loss: 0.015120781322229316 actor loss: -164.08460161271043
+[32m[01-27 19:39:13 MainThread @ETG_RL.py:407][0m Total Steps: 276230 Reward: 0.027516681984770676
+[32m[01-27 19:39:13 MainThread @ETG_RL.py:409][0m distance: 0.027516681984770676
+[32m[01-27 19:39:13 MainThread @ETG_RL.py:410][0m critic loss: 0.014997532446213458 actor loss: -164.08743911222257
+[32m[01-27 19:39:29 MainThread @ETG_RL.py:407][0m Total Steps: 277431 Reward: -0.07626238072681663
+[32m[01-27 19:39:29 MainThread @ETG_RL.py:409][0m distance: -0.07626238072681663
+[32m[01-27 19:39:29 MainThread @ETG_RL.py:410][0m critic loss: 0.015205133876931558 actor loss: -164.08882986000435
+[32m[01-27 19:39:44 MainThread @ETG_RL.py:407][0m Total Steps: 278632 Reward: -0.07607045293022617
+[32m[01-27 19:39:44 MainThread @ETG_RL.py:409][0m distance: -0.07607045293022617
+[32m[01-27 19:39:44 MainThread @ETG_RL.py:410][0m critic loss: 0.01502619187528272 actor loss: -164.0910483685064
+[32m[01-27 19:39:59 MainThread @ETG_RL.py:407][0m Total Steps: 279833 Reward: -0.06869259364572372
+[32m[01-27 19:39:59 MainThread @ETG_RL.py:409][0m distance: -0.06869259364572372
+[32m[01-27 19:39:59 MainThread @ETG_RL.py:410][0m critic loss: 0.015029089395840847 actor loss: -164.09229885231545
+[32m[01-27 19:40:14 MainThread @ETG_RL.py:407][0m Total Steps: 281034 Reward: -0.0019064580567180744
+[32m[01-27 19:40:14 MainThread @ETG_RL.py:409][0m distance: -0.0019064580567180744
+[32m[01-27 19:40:14 MainThread @ETG_RL.py:410][0m critic loss: 0.015198429852575187 actor loss: -164.0913146032481
+[32m[01-27 19:40:21 MainThread @ETG_RL.py:416][0m Evaluation over: 1 episodes, Reward: 0.4140965293571425 Steps: 5001 
+[32m[01-27 19:40:21 MainThread @ETG_RL.py:418][0m distance: 0.4140965293571425
+[32m[01-27 19:40:36 MainThread @ETG_RL.py:407][0m Total Steps: 282235 Reward: -0.08373822263976574
+[32m[01-27 19:40:36 MainThread @ETG_RL.py:409][0m distance: -0.08373822263976574
+[32m[01-27 19:40:36 MainThread @ETG_RL.py:410][0m critic loss: 0.01499165901968521 actor loss: -164.0942287524475
+[32m[01-27 19:40:52 MainThread @ETG_RL.py:407][0m Total Steps: 283436 Reward: -0.10763202729756305
+[32m[01-27 19:40:52 MainThread @ETG_RL.py:409][0m distance: -0.10763202729756305
+[32m[01-27 19:40:52 MainThread @ETG_RL.py:410][0m critic loss: 0.015208622661700703 actor loss: -164.09671554120752
+[32m[01-27 19:41:07 MainThread @ETG_RL.py:407][0m Total Steps: 284637 Reward: -0.09143223352625178
+[32m[01-27 19:41:07 MainThread @ETG_RL.py:409][0m distance: -0.09143223352625178
+[32m[01-27 19:41:07 MainThread @ETG_RL.py:410][0m critic loss: 0.015184048453902673 actor loss: -164.0959188952037
+[32m[01-27 19:41:22 MainThread @ETG_RL.py:407][0m Total Steps: 285838 Reward: -0.08872580788965193
+[32m[01-27 19:41:22 MainThread @ETG_RL.py:409][0m distance: -0.08872580788965193
+[32m[01-27 19:41:22 MainThread @ETG_RL.py:410][0m critic loss: 0.015076433117660406 actor loss: -164.101465928763
+[32m[01-27 19:41:38 MainThread @ETG_RL.py:407][0m Total Steps: 287039 Reward: 0.029492027226787024
+[32m[01-27 19:41:38 MainThread @ETG_RL.py:409][0m distance: 0.029492027226787024
+[32m[01-27 19:41:38 MainThread @ETG_RL.py:410][0m critic loss: 0.015280154751587371 actor loss: -164.10228191188332
+[32m[01-27 19:41:54 MainThread @ETG_RL.py:407][0m Total Steps: 288240 Reward: -0.07442271253908041
+[32m[01-27 19:41:54 MainThread @ETG_RL.py:409][0m distance: -0.07442271253908041
+[32m[01-27 19:41:54 MainThread @ETG_RL.py:410][0m critic loss: 0.014946409744628512 actor loss: -164.10009098608825
+[32m[01-27 19:42:09 MainThread @ETG_RL.py:407][0m Total Steps: 289441 Reward: 0.02487234479487791
+[32m[01-27 19:42:09 MainThread @ETG_RL.py:409][0m distance: 0.02487234479487791
+[32m[01-27 19:42:09 MainThread @ETG_RL.py:410][0m critic loss: 0.015099666016230626 actor loss: -164.10113647359296
+[32m[01-27 19:42:24 MainThread @ETG_RL.py:407][0m Total Steps: 290642 Reward: -0.009569461981888787
+[32m[01-27 19:42:24 MainThread @ETG_RL.py:409][0m distance: -0.009569461981888787
+[32m[01-27 19:42:24 MainThread @ETG_RL.py:410][0m critic loss: 0.015118876082061182 actor loss: -164.10087816681494
+[32m[01-27 19:42:30 MainThread @ETG_RL.py:416][0m Evaluation over: 1 episodes, Reward: 0.37853625159052673 Steps: 5001 
+[32m[01-27 19:42:30 MainThread @ETG_RL.py:418][0m distance: 0.37853625159052673
+[32m[01-27 19:42:46 MainThread @ETG_RL.py:407][0m Total Steps: 291843 Reward: -0.095280067074648
+[32m[01-27 19:42:46 MainThread @ETG_RL.py:409][0m distance: -0.095280067074648
+[32m[01-27 19:42:46 MainThread @ETG_RL.py:410][0m critic loss: 0.015111879640251869 actor loss: -164.10029796438351
+[32m[01-27 19:43:01 MainThread @ETG_RL.py:407][0m Total Steps: 293044 Reward: -0.07009516540134521
+[32m[01-27 19:43:01 MainThread @ETG_RL.py:409][0m distance: -0.07009516540134521
+[32m[01-27 19:43:01 MainThread @ETG_RL.py:410][0m critic loss: 0.015403398023383207 actor loss: -164.1026762010255
+[32m[01-27 19:43:18 MainThread @ETG_RL.py:407][0m Total Steps: 294245 Reward: 0.021213356799749512
+[32m[01-27 19:43:18 MainThread @ETG_RL.py:409][0m distance: 0.021213356799749512
+[32m[01-27 19:43:18 MainThread @ETG_RL.py:410][0m critic loss: 0.015201783082219186 actor loss: -164.10557149590105
+[32m[01-27 19:43:38 MainThread @ETG_RL.py:407][0m Total Steps: 295446 Reward: 0.041984990250616305
+[32m[01-27 19:43:38 MainThread @ETG_RL.py:409][0m distance: 0.041984990250616305
+[32m[01-27 19:43:38 MainThread @ETG_RL.py:410][0m critic loss: 0.015154700255568926 actor loss: -164.11060130606086
+[32m[01-27 19:43:56 MainThread @ETG_RL.py:407][0m Total Steps: 296647 Reward: -0.08045792432980572
+[32m[01-27 19:43:56 MainThread @ETG_RL.py:409][0m distance: -0.08045792432980572
+[32m[01-27 19:43:56 MainThread @ETG_RL.py:410][0m critic loss: 0.015366395944721693 actor loss: -164.11383595335593
+[32m[01-27 19:44:13 MainThread @ETG_RL.py:407][0m Total Steps: 297848 Reward: -0.07810267333359958
+[32m[01-27 19:44:13 MainThread @ETG_RL.py:409][0m distance: -0.07810267333359958
+[32m[01-27 19:44:13 MainThread @ETG_RL.py:410][0m critic loss: 0.015153793470746373 actor loss: -164.11502777785682
+[32m[01-27 19:44:29 MainThread @ETG_RL.py:407][0m Total Steps: 299049 Reward: -0.047921905456247436
+[32m[01-27 19:44:29 MainThread @ETG_RL.py:409][0m distance: -0.047921905456247436
+[32m[01-27 19:44:29 MainThread @ETG_RL.py:410][0m critic loss: 0.015167130077479532 actor loss: -164.11521779488365
+[32m[01-27 19:44:45 MainThread @ETG_RL.py:407][0m Total Steps: 300250 Reward: -0.09478544882759568
+[32m[01-27 19:44:45 MainThread @ETG_RL.py:409][0m distance: -0.09478544882759568
+[32m[01-27 19:44:45 MainThread @ETG_RL.py:410][0m critic loss: 0.015239614446637384 actor loss: -164.11547259506239
+[32m[01-27 19:44:51 MainThread @ETG_RL.py:416][0m Evaluation over: 1 episodes, Reward: 0.5269904652597386 Steps: 5001 
+[32m[01-27 19:44:51 MainThread @ETG_RL.py:418][0m distance: 0.5269904652597386
+[32m[01-27 19:45:54 MainThread @ETG_RL.py:468][0m ESSteps: 61 Reward: 0.08020392014606673 step: 1201.0  sigma:0.01083370151933707
+[32m[01-27 19:45:54 MainThread @ETG_RL.py:470][0m average distance: -0.018244170587627277  max distance: 0.08020392014606673
+[32m[01-27 19:46:55 MainThread @ETG_RL.py:468][0m ESSteps: 62 Reward: 0.11266578158234804 step: 1201.0  sigma:0.010725364504143698
+[32m[01-27 19:46:55 MainThread @ETG_RL.py:470][0m average distance: 0.002577217904326906  max distance: 0.11266578158234804
+[32m[01-27 19:47:57 MainThread @ETG_RL.py:468][0m ESSteps: 63 Reward: 0.09315144828705622 step: 1201.0  sigma:0.010618110859102262
+[32m[01-27 19:47:57 MainThread @ETG_RL.py:470][0m average distance: 0.002050260413937248  max distance: 0.09315144828705622
+[32m[01-27 19:49:09 MainThread @ETG_RL.py:468][0m ESSteps: 64 Reward: 0.10478802811149107 step: 1201.0  sigma:0.01051192975051124
+[32m[01-27 19:49:09 MainThread @ETG_RL.py:470][0m average distance: -0.009463700156818416  max distance: 0.10478802811149107
+[32m[01-27 19:50:09 MainThread @ETG_RL.py:468][0m ESSteps: 65 Reward: 0.10396867701885557 step: 1201.0  sigma:0.010406810453006126
+[32m[01-27 19:50:09 MainThread @ETG_RL.py:470][0m average distance: -0.024816393914736615  max distance: 0.10396867701885557
+[32m[01-27 19:51:10 MainThread @ETG_RL.py:468][0m ESSteps: 66 Reward: 0.09570642246306466 step: 1201.0  sigma:0.010302742348476066
+[32m[01-27 19:51:10 MainThread @ETG_RL.py:470][0m average distance: -0.03300439666644215  max distance: 0.09570642246306466
+[32m[01-27 19:52:13 MainThread @ETG_RL.py:468][0m ESSteps: 67 Reward: 0.10256923160475499 step: 1201.0  sigma:0.010199714924991304
+[32m[01-27 19:52:13 MainThread @ETG_RL.py:470][0m average distance: -0.03726829852859203  max distance: 0.10256923160475499
+[32m[01-27 19:53:21 MainThread @ETG_RL.py:468][0m ESSteps: 68 Reward: 0.09893081462794455 step: 1201.0  sigma:0.010097717775741392
+[32m[01-27 19:53:21 MainThread @ETG_RL.py:470][0m average distance: -0.054177935324060324  max distance: 0.09893081462794455
+[32m[01-27 19:54:27 MainThread @ETG_RL.py:468][0m ESSteps: 69 Reward: 0.11101199493796723 step: 1201.0  sigma:0.009996740597983979
+[32m[01-27 19:54:27 MainThread @ETG_RL.py:470][0m average distance: -0.024267865501499758  max distance: 0.11101199493796723
+[32m[01-27 19:55:34 MainThread @ETG_RL.py:468][0m ESSteps: 70 Reward: 0.10265194403591849 step: 1201.0  sigma:0.00989677319200414
+[32m[01-27 19:55:34 MainThread @ETG_RL.py:470][0m average distance: -0.021785979183285988  max distance: 0.10265194403591849
+[32m[01-27 19:55:52 MainThread @ETG_RL.py:407][0m Total Steps: 301451 Reward: -0.007558716744213281
+[32m[01-27 19:55:52 MainThread @ETG_RL.py:409][0m distance: -0.007558716744213281
+[32m[01-27 19:55:52 MainThread @ETG_RL.py:410][0m critic loss: 0.014505773407409432 actor loss: -164.110531809328
+[32m[01-27 19:56:11 MainThread @ETG_RL.py:407][0m Total Steps: 302652 Reward: -0.070056743240941
+[32m[01-27 19:56:11 MainThread @ETG_RL.py:409][0m distance: -0.070056743240941
+[32m[01-27 19:56:11 MainThread @ETG_RL.py:410][0m critic loss: 0.01506733126569226 actor loss: -164.1094610895543
+[32m[01-27 19:56:27 MainThread @ETG_RL.py:407][0m Total Steps: 303853 Reward: -0.08247769733920234
+[32m[01-27 19:56:27 MainThread @ETG_RL.py:409][0m distance: -0.08247769733920234
+[32m[01-27 19:56:27 MainThread @ETG_RL.py:410][0m critic loss: 0.01498302452182467 actor loss: -164.1098201729475
+[32m[01-27 19:56:43 MainThread @ETG_RL.py:407][0m Total Steps: 305054 Reward: -0.06164031830013597
+[32m[01-27 19:56:43 MainThread @ETG_RL.py:409][0m distance: -0.06164031830013597
+[32m[01-27 19:56:43 MainThread @ETG_RL.py:410][0m critic loss: 0.014948640570050721 actor loss: -164.1100100756287
+[32m[01-27 19:56:59 MainThread @ETG_RL.py:407][0m Total Steps: 306255 Reward: -0.06219385668513998
+[32m[01-27 19:56:59 MainThread @ETG_RL.py:409][0m distance: -0.06219385668513998
+[32m[01-27 19:56:59 MainThread @ETG_RL.py:410][0m critic loss: 0.01510337408985648 actor loss: -164.10819492768883
+[32m[01-27 19:57:14 MainThread @ETG_RL.py:407][0m Total Steps: 307456 Reward: -0.08202382422378957
+[32m[01-27 19:57:14 MainThread @ETG_RL.py:409][0m distance: -0.08202382422378957
+[32m[01-27 19:57:14 MainThread @ETG_RL.py:410][0m critic loss: 0.015166665793401961 actor loss: -164.10870675143354
+[32m[01-27 19:57:30 MainThread @ETG_RL.py:407][0m Total Steps: 308657 Reward: -0.002042598036832058
+[32m[01-27 19:57:30 MainThread @ETG_RL.py:409][0m distance: -0.002042598036832058
+[32m[01-27 19:57:30 MainThread @ETG_RL.py:410][0m critic loss: 0.014858056737620268 actor loss: -164.10803470405114
+[32m[01-27 19:57:46 MainThread @ETG_RL.py:407][0m Total Steps: 309858 Reward: 0.045529460046387714
+[32m[01-27 19:57:46 MainThread @ETG_RL.py:409][0m distance: 0.045529460046387714
+[32m[01-27 19:57:46 MainThread @ETG_RL.py:410][0m critic loss: 0.015060742671053227 actor loss: -164.11103974532128
+[32m[01-27 19:58:02 MainThread @ETG_RL.py:407][0m Total Steps: 311059 Reward: -0.008782353468560843
+[32m[01-27 19:58:02 MainThread @ETG_RL.py:409][0m distance: -0.008782353468560843
+[32m[01-27 19:58:02 MainThread @ETG_RL.py:410][0m critic loss: 0.015017676219145622 actor loss: -164.11057979637738
+[32m[01-27 19:58:08 MainThread @ETG_RL.py:416][0m Evaluation over: 1 episodes, Reward: 0.29027882982772457 Steps: 5001 
+[32m[01-27 19:58:08 MainThread @ETG_RL.py:418][0m distance: 0.29027882982772457
+[32m[01-27 19:58:24 MainThread @ETG_RL.py:407][0m Total Steps: 312260 Reward: -0.08295383945220633
+[32m[01-27 19:58:24 MainThread @ETG_RL.py:409][0m distance: -0.08295383945220633
+[32m[01-27 19:58:24 MainThread @ETG_RL.py:410][0m critic loss: 0.015180256009895934 actor loss: -164.11036436921054
+[32m[01-27 19:58:40 MainThread @ETG_RL.py:407][0m Total Steps: 313461 Reward: -0.0766821866518213
+[32m[01-27 19:58:40 MainThread @ETG_RL.py:409][0m distance: -0.0766821866518213
+[32m[01-27 19:58:40 MainThread @ETG_RL.py:410][0m critic loss: 0.015040658785031797 actor loss: -164.11113806985796
+[32m[01-27 19:58:56 MainThread @ETG_RL.py:407][0m Total Steps: 314662 Reward: -0.08412347404829557
+[32m[01-27 19:58:56 MainThread @ETG_RL.py:409][0m distance: -0.08412347404829557
+[32m[01-27 19:58:56 MainThread @ETG_RL.py:410][0m critic loss: 0.015169088935772644 actor loss: -164.11168379072942
+[32m[01-27 19:59:11 MainThread @ETG_RL.py:407][0m Total Steps: 315863 Reward: 0.057200003014061085
+[32m[01-27 19:59:11 MainThread @ETG_RL.py:409][0m distance: 0.057200003014061085
+[32m[01-27 19:59:11 MainThread @ETG_RL.py:410][0m critic loss: 0.015070297637431698 actor loss: -164.11099055129026
+[32m[01-27 19:59:27 MainThread @ETG_RL.py:407][0m Total Steps: 317064 Reward: -0.07416183099007054
+[32m[01-27 19:59:27 MainThread @ETG_RL.py:409][0m distance: -0.07416183099007054
+[32m[01-27 19:59:27 MainThread @ETG_RL.py:410][0m critic loss: 0.015105207736831125 actor loss: -164.11114505764647
+[32m[01-27 19:59:43 MainThread @ETG_RL.py:407][0m Total Steps: 318265 Reward: 0.055908771728473805
+[32m[01-27 19:59:43 MainThread @ETG_RL.py:409][0m distance: 0.055908771728473805
+[32m[01-27 19:59:43 MainThread @ETG_RL.py:410][0m critic loss: 0.015281006995492384 actor loss: -164.1124638947321
+[32m[01-27 19:59:59 MainThread @ETG_RL.py:407][0m Total Steps: 319466 Reward: -0.09656148818880816
+[32m[01-27 19:59:59 MainThread @ETG_RL.py:409][0m distance: -0.09656148818880816
+[32m[01-27 19:59:59 MainThread @ETG_RL.py:410][0m critic loss: 0.015064810578719862 actor loss: -164.1113726689754
+[32m[01-27 20:00:15 MainThread @ETG_RL.py:407][0m Total Steps: 320667 Reward: -0.072900354378097
+[32m[01-27 20:00:15 MainThread @ETG_RL.py:409][0m distance: -0.072900354378097
+[32m[01-27 20:00:15 MainThread @ETG_RL.py:410][0m critic loss: 0.015034992943403871 actor loss: -164.1139946650903
+[32m[01-27 20:00:21 MainThread @ETG_RL.py:416][0m Evaluation over: 1 episodes, Reward: 0.4140408339210899 Steps: 5001 
+[32m[01-27 20:00:21 MainThread @ETG_RL.py:418][0m distance: 0.4140408339210899
+[32m[01-27 20:00:36 MainThread @ETG_RL.py:407][0m Total Steps: 321868 Reward: 0.022104367465868434
+[32m[01-27 20:00:36 MainThread @ETG_RL.py:409][0m distance: 0.022104367465868434
+[32m[01-27 20:00:36 MainThread @ETG_RL.py:410][0m critic loss: 0.01523116189710405 actor loss: -164.11231927292036
+[32m[01-27 20:00:51 MainThread @ETG_RL.py:407][0m Total Steps: 323069 Reward: 0.02548420058104845
+[32m[01-27 20:00:51 MainThread @ETG_RL.py:409][0m distance: 0.02548420058104845
+[32m[01-27 20:00:51 MainThread @ETG_RL.py:410][0m critic loss: 0.015138577940493054 actor loss: -164.11281821372407
+[32m[01-27 20:01:07 MainThread @ETG_RL.py:407][0m Total Steps: 324270 Reward: -0.038270512880698916
+[32m[01-27 20:01:07 MainThread @ETG_RL.py:409][0m distance: -0.038270512880698916
+[32m[01-27 20:01:07 MainThread @ETG_RL.py:410][0m critic loss: 0.015332348788192776 actor loss: -164.1133232529614
+[32m[01-27 20:01:22 MainThread @ETG_RL.py:407][0m Total Steps: 325471 Reward: 0.044312471514260855
+[32m[01-27 20:01:22 MainThread @ETG_RL.py:409][0m distance: 0.044312471514260855
+[32m[01-27 20:01:22 MainThread @ETG_RL.py:410][0m critic loss: 0.015085398650679312 actor loss: -164.11198350333055
+[32m[01-27 20:01:37 MainThread @ETG_RL.py:407][0m Total Steps: 326672 Reward: -0.01696759975431335
+[32m[01-27 20:01:37 MainThread @ETG_RL.py:409][0m distance: -0.01696759975431335
+[32m[01-27 20:01:37 MainThread @ETG_RL.py:410][0m critic loss: 0.015068047257337245 actor loss: -164.1112546642853
+[32m[01-27 20:01:52 MainThread @ETG_RL.py:407][0m Total Steps: 327873 Reward: -0.0025103801147549135
+[32m[01-27 20:01:52 MainThread @ETG_RL.py:409][0m distance: -0.0025103801147549135
+[32m[01-27 20:01:52 MainThread @ETG_RL.py:410][0m critic loss: 0.01505674411473698 actor loss: -164.110934776033
+[32m[01-27 20:02:08 MainThread @ETG_RL.py:407][0m Total Steps: 329074 Reward: 0.010300775568475057
+[32m[01-27 20:02:08 MainThread @ETG_RL.py:409][0m distance: 0.010300775568475057
+[32m[01-27 20:02:08 MainThread @ETG_RL.py:410][0m critic loss: 0.015199349715462036 actor loss: -164.11095300780843
+[32m[01-27 20:02:23 MainThread @ETG_RL.py:407][0m Total Steps: 330275 Reward: -0.07971137843306289
+[32m[01-27 20:02:23 MainThread @ETG_RL.py:409][0m distance: -0.07971137843306289
+[32m[01-27 20:02:23 MainThread @ETG_RL.py:410][0m critic loss: 0.015050172014821082 actor loss: -164.10779145278104
+[32m[01-27 20:02:29 MainThread @ETG_RL.py:416][0m Evaluation over: 1 episodes, Reward: 0.10276897298042484 Steps: 5001 
+[32m[01-27 20:02:29 MainThread @ETG_RL.py:418][0m distance: 0.10276897298042484
+[32m[01-27 20:02:47 MainThread @ETG_RL.py:407][0m Total Steps: 331476 Reward: 0.07189605460931747
+[32m[01-27 20:02:47 MainThread @ETG_RL.py:409][0m distance: 0.07189605460931747
+[32m[01-27 20:02:47 MainThread @ETG_RL.py:410][0m critic loss: 0.015038045452012806 actor loss: -164.11011028051576
+[32m[01-27 20:03:05 MainThread @ETG_RL.py:407][0m Total Steps: 332677 Reward: 0.004429891718023965
+[32m[01-27 20:03:05 MainThread @ETG_RL.py:409][0m distance: 0.004429891718023965
+[32m[01-27 20:03:05 MainThread @ETG_RL.py:410][0m critic loss: 0.01521073780305603 actor loss: -164.1096905304133
+[32m[01-27 20:03:24 MainThread @ETG_RL.py:407][0m Total Steps: 333878 Reward: 0.06996227890100717
+[32m[01-27 20:03:24 MainThread @ETG_RL.py:409][0m distance: 0.06996227890100717
+[32m[01-27 20:03:24 MainThread @ETG_RL.py:410][0m critic loss: 0.015169553180301963 actor loss: -164.11182207271122
+[32m[01-27 20:03:40 MainThread @ETG_RL.py:407][0m Total Steps: 335079 Reward: -0.07605772619596608
+[32m[01-27 20:03:40 MainThread @ETG_RL.py:409][0m distance: -0.07605772619596608
+[32m[01-27 20:03:40 MainThread @ETG_RL.py:410][0m critic loss: 0.015158643147331988 actor loss: -164.11080720442519
+[32m[01-27 20:03:56 MainThread @ETG_RL.py:407][0m Total Steps: 336280 Reward: -0.07459946248864686
+[32m[01-27 20:03:56 MainThread @ETG_RL.py:409][0m distance: -0.07459946248864686
+[32m[01-27 20:03:56 MainThread @ETG_RL.py:410][0m critic loss: 0.01528103477387479 actor loss: -164.11346732845513
+[32m[01-27 20:04:11 MainThread @ETG_RL.py:407][0m Total Steps: 337481 Reward: 0.03282619474160929
+[32m[01-27 20:04:11 MainThread @ETG_RL.py:409][0m distance: 0.03282619474160929
+[32m[01-27 20:04:11 MainThread @ETG_RL.py:410][0m critic loss: 0.015044776770091623 actor loss: -164.11261832485786
+[32m[01-27 20:04:27 MainThread @ETG_RL.py:407][0m Total Steps: 338682 Reward: -0.09311421232488647
+[32m[01-27 20:04:27 MainThread @ETG_RL.py:409][0m distance: -0.09311421232488647
+[32m[01-27 20:04:27 MainThread @ETG_RL.py:410][0m critic loss: 0.015093590833904295 actor loss: -164.11349483493166
+[32m[01-27 20:04:42 MainThread @ETG_RL.py:407][0m Total Steps: 339883 Reward: 0.04448790264029065
+[32m[01-27 20:04:42 MainThread @ETG_RL.py:409][0m distance: 0.04448790264029065
+[32m[01-27 20:04:42 MainThread @ETG_RL.py:410][0m critic loss: 0.015336047139152152 actor loss: -164.11390546279387
+[32m[01-27 20:04:58 MainThread @ETG_RL.py:407][0m Total Steps: 341084 Reward: 0.05057780057938343
+[32m[01-27 20:04:58 MainThread @ETG_RL.py:409][0m distance: 0.05057780057938343
+[32m[01-27 20:04:58 MainThread @ETG_RL.py:410][0m critic loss: 0.01502212433130492 actor loss: -164.1146248746772
+[32m[01-27 20:05:04 MainThread @ETG_RL.py:416][0m Evaluation over: 1 episodes, Reward: 0.1818776838923349 Steps: 5001 
+[32m[01-27 20:05:04 MainThread @ETG_RL.py:418][0m distance: 0.1818776838923349
+[32m[01-27 20:05:20 MainThread @ETG_RL.py:407][0m Total Steps: 342285 Reward: 0.016153210053983985
+[32m[01-27 20:05:20 MainThread @ETG_RL.py:409][0m distance: 0.016153210053983985
+[32m[01-27 20:05:20 MainThread @ETG_RL.py:410][0m critic loss: 0.015156218502127707 actor loss: -164.11437151017137
+[32m[01-27 20:05:35 MainThread @ETG_RL.py:407][0m Total Steps: 343486 Reward: 0.02795750209517848
+[32m[01-27 20:05:35 MainThread @ETG_RL.py:409][0m distance: 0.02795750209517848
+[32m[01-27 20:05:35 MainThread @ETG_RL.py:410][0m critic loss: 0.015161364184976319 actor loss: -164.11740109763673
+[32m[01-27 20:05:51 MainThread @ETG_RL.py:407][0m Total Steps: 344687 Reward: 0.035351471919108306
+[32m[01-27 20:05:51 MainThread @ETG_RL.py:409][0m distance: 0.035351471919108306
+[32m[01-27 20:05:51 MainThread @ETG_RL.py:410][0m critic loss: 0.01515509199884586 actor loss: -164.1158742785553
+[32m[01-27 20:06:06 MainThread @ETG_RL.py:407][0m Total Steps: 345888 Reward: 0.011198652491695125
+[32m[01-27 20:06:06 MainThread @ETG_RL.py:409][0m distance: 0.011198652491695125
+[32m[01-27 20:06:06 MainThread @ETG_RL.py:410][0m critic loss: 0.015282085258436143 actor loss: -164.11591808563665
+[32m[01-27 20:06:21 MainThread @ETG_RL.py:407][0m Total Steps: 347089 Reward: -0.08187393043376594
+[32m[01-27 20:06:21 MainThread @ETG_RL.py:409][0m distance: -0.08187393043376594
+[32m[01-27 20:06:21 MainThread @ETG_RL.py:410][0m critic loss: 0.015113090869848873 actor loss: -164.11421394189333
+[32m[01-27 20:06:37 MainThread @ETG_RL.py:407][0m Total Steps: 348290 Reward: -0.06623387488813623
+[32m[01-27 20:06:37 MainThread @ETG_RL.py:409][0m distance: -0.06623387488813623
+[32m[01-27 20:06:37 MainThread @ETG_RL.py:410][0m critic loss: 0.015217746872389743 actor loss: -164.11663560446453
+[32m[01-27 20:06:53 MainThread @ETG_RL.py:407][0m Total Steps: 349491 Reward: 0.06418855043600727
+[32m[01-27 20:06:53 MainThread @ETG_RL.py:409][0m distance: 0.06418855043600727
+[32m[01-27 20:06:53 MainThread @ETG_RL.py:410][0m critic loss: 0.014985791735543399 actor loss: -164.11534445172643
+[32m[01-27 20:07:13 MainThread @ETG_RL.py:407][0m Total Steps: 350692 Reward: -0.09502108106792093
+[32m[01-27 20:07:13 MainThread @ETG_RL.py:409][0m distance: -0.09502108106792093
+[32m[01-27 20:07:13 MainThread @ETG_RL.py:410][0m critic loss: 0.015102076882358446 actor loss: -164.11705097131784
+[32m[01-27 20:07:20 MainThread @ETG_RL.py:416][0m Evaluation over: 1 episodes, Reward: 0.19395228660313185 Steps: 5001 
+[32m[01-27 20:07:20 MainThread @ETG_RL.py:418][0m distance: 0.19395228660313185
+[32m[01-27 20:08:27 MainThread @ETG_RL.py:468][0m ESSteps: 71 Reward: 0.09639136336097355 step: 1201.0  sigma:0.009797805460084097
+[32m[01-27 20:08:27 MainThread @ETG_RL.py:470][0m average distance: 0.016094843741476468  max distance: 0.09639136336097355
+[32m[01-27 20:09:28 MainThread @ETG_RL.py:468][0m ESSteps: 72 Reward: 0.10574298315711139 step: 1201.0  sigma:0.009699827405483256
+[32m[01-27 20:09:28 MainThread @ETG_RL.py:470][0m average distance: 0.0070449388591088315  max distance: 0.10574298315711139
+[32m[01-27 20:10:47 MainThread @ETG_RL.py:468][0m ESSteps: 73 Reward: 0.14946845540939102 step: 1201.0  sigma:0.009602829131428424
+[32m[01-27 20:10:47 MainThread @ETG_RL.py:470][0m average distance: 0.038826700327003714  max distance: 0.14946845540939102
+[32m[01-27 20:11:49 MainThread @ETG_RL.py:468][0m ESSteps: 74 Reward: 0.09801008158480337 step: 1201.0  sigma:0.009506800840114139
+[32m[01-27 20:11:49 MainThread @ETG_RL.py:470][0m average distance: -0.0006669251371412249  max distance: 0.09801008158480337
+[32m[01-27 20:12:49 MainThread @ETG_RL.py:468][0m ESSteps: 75 Reward: 0.11994353684116191 step: 1201.0  sigma:0.009411732831712998
+[32m[01-27 20:12:49 MainThread @ETG_RL.py:470][0m average distance: 0.025109293567185543  max distance: 0.11994353684116191
+[32m[01-27 20:13:50 MainThread @ETG_RL.py:468][0m ESSteps: 76 Reward: 0.09411976353019552 step: 1201.0  sigma:0.009317615503395868
+[32m[01-27 20:13:50 MainThread @ETG_RL.py:470][0m average distance: 0.005612987218074783  max distance: 0.09411976353019552
+[32m[01-27 20:14:50 MainThread @ETG_RL.py:468][0m ESSteps: 77 Reward: 0.10365756778891977 step: 1201.0  sigma:0.00922443934836191
+[32m[01-27 20:14:50 MainThread @ETG_RL.py:470][0m average distance: -0.004077082882358959  max distance: 0.10365756778891977
+[32m[01-27 20:15:51 MainThread @ETG_RL.py:468][0m ESSteps: 78 Reward: 0.12205098569897999 step: 1201.0  sigma:0.00913219495487829
+[32m[01-27 20:15:51 MainThread @ETG_RL.py:470][0m average distance: 0.005149795976216202  max distance: 0.12205098569897999
+[32m[01-27 20:16:52 MainThread @ETG_RL.py:468][0m ESSteps: 79 Reward: 0.10757519667637096 step: 1201.0  sigma:0.009040873005329507
+[32m[01-27 20:16:52 MainThread @ETG_RL.py:470][0m average distance: 0.0026499752694238692  max distance: 0.10757519667637096
+[32m[01-27 20:17:54 MainThread @ETG_RL.py:468][0m ESSteps: 80 Reward: 0.1132106130124306 step: 1201.0  sigma:0.008950464275276212
+[32m[01-27 20:17:54 MainThread @ETG_RL.py:470][0m average distance: -0.010889755649733292  max distance: 0.1132106130124306
+[32m[01-27 20:18:10 MainThread @ETG_RL.py:407][0m Total Steps: 351893 Reward: 0.022972732390013503
+[32m[01-27 20:18:10 MainThread @ETG_RL.py:409][0m distance: 0.022972732390013503
+[32m[01-27 20:18:10 MainThread @ETG_RL.py:410][0m critic loss: 0.014759470540394296 actor loss: -164.11668966453738
+[32m[01-27 20:18:26 MainThread @ETG_RL.py:407][0m Total Steps: 353094 Reward: -0.02765088004705375
+[32m[01-27 20:18:26 MainThread @ETG_RL.py:409][0m distance: -0.02765088004705375
+[32m[01-27 20:18:26 MainThread @ETG_RL.py:410][0m critic loss: 0.015016895283066314 actor loss: -164.11485502702013
+[32m[01-27 20:18:41 MainThread @ETG_RL.py:407][0m Total Steps: 354295 Reward: 0.005266622906240331
+[32m[01-27 20:18:41 MainThread @ETG_RL.py:409][0m distance: 0.005266622906240331
+[32m[01-27 20:18:41 MainThread @ETG_RL.py:410][0m critic loss: 0.014819099293319163 actor loss: -164.1126277139046
+[32m[01-27 20:18:56 MainThread @ETG_RL.py:407][0m Total Steps: 355496 Reward: 0.031390449714102146
+[32m[01-27 20:18:56 MainThread @ETG_RL.py:409][0m distance: 0.031390449714102146
+[32m[01-27 20:18:56 MainThread @ETG_RL.py:410][0m critic loss: 0.014963261638112757 actor loss: -164.11346046771735
+[32m[01-27 20:19:12 MainThread @ETG_RL.py:407][0m Total Steps: 356697 Reward: 0.018389259083197954
+[32m[01-27 20:19:12 MainThread @ETG_RL.py:409][0m distance: 0.018389259083197954
+[32m[01-27 20:19:12 MainThread @ETG_RL.py:410][0m critic loss: 0.01535783318351399 actor loss: -164.11307748608743
+[32m[01-27 20:19:27 MainThread @ETG_RL.py:407][0m Total Steps: 357898 Reward: -0.06756407552884583
+[32m[01-27 20:19:27 MainThread @ETG_RL.py:409][0m distance: -0.06756407552884583
+[32m[01-27 20:19:27 MainThread @ETG_RL.py:410][0m critic loss: 0.014959990729319613 actor loss: -164.10941648205352
+[32m[01-27 20:19:42 MainThread @ETG_RL.py:407][0m Total Steps: 359099 Reward: -0.07635149741516983
+[32m[01-27 20:19:42 MainThread @ETG_RL.py:409][0m distance: -0.07635149741516983
+[32m[01-27 20:19:42 MainThread @ETG_RL.py:410][0m critic loss: 0.015070221265103299 actor loss: -164.11074002001507
+[32m[01-27 20:19:57 MainThread @ETG_RL.py:407][0m Total Steps: 360300 Reward: 0.007209726350780578
+[32m[01-27 20:19:57 MainThread @ETG_RL.py:409][0m distance: 0.007209726350780578
+[32m[01-27 20:19:57 MainThread @ETG_RL.py:410][0m critic loss: 0.014878152844051735 actor loss: -164.1126647237735
+[32m[01-27 20:20:03 MainThread @ETG_RL.py:416][0m Evaluation over: 1 episodes, Reward: 0.3681383500527927 Steps: 5001 
+[32m[01-27 20:20:03 MainThread @ETG_RL.py:418][0m distance: 0.3681383500527927
+[32m[01-27 20:20:19 MainThread @ETG_RL.py:407][0m Total Steps: 361501 Reward: -0.08726708463636901
+[32m[01-27 20:20:19 MainThread @ETG_RL.py:409][0m distance: -0.08726708463636901
+[32m[01-27 20:20:19 MainThread @ETG_RL.py:410][0m critic loss: 0.015216456464089322 actor loss: -164.11288267924922
+[32m[01-27 20:20:35 MainThread @ETG_RL.py:407][0m Total Steps: 362702 Reward: 0.005792897278459955
+[32m[01-27 20:20:35 MainThread @ETG_RL.py:409][0m distance: 0.005792897278459955
+[32m[01-27 20:20:35 MainThread @ETG_RL.py:410][0m critic loss: 0.014842333773819483 actor loss: -164.11337489907092
+[32m[01-27 20:20:50 MainThread @ETG_RL.py:407][0m Total Steps: 363903 Reward: 0.021509965826727123
+[32m[01-27 20:20:50 MainThread @ETG_RL.py:409][0m distance: 0.021509965826727123
+[32m[01-27 20:20:50 MainThread @ETG_RL.py:410][0m critic loss: 0.01497532246319529 actor loss: -164.11347350311914
+[32m[01-27 20:21:05 MainThread @ETG_RL.py:407][0m Total Steps: 365104 Reward: 0.0005307638988653815
+[32m[01-27 20:21:05 MainThread @ETG_RL.py:409][0m distance: 0.0005307638988653815
+[32m[01-27 20:21:05 MainThread @ETG_RL.py:410][0m critic loss: 0.014939310751098528 actor loss: -164.11093126943368
+[32m[01-27 20:21:20 MainThread @ETG_RL.py:407][0m Total Steps: 366305 Reward: -0.022790148911177262
+[32m[01-27 20:21:20 MainThread @ETG_RL.py:409][0m distance: -0.022790148911177262
+[32m[01-27 20:21:20 MainThread @ETG_RL.py:410][0m critic loss: 0.014815773047215238 actor loss: -164.10711455206192
+[32m[01-27 20:21:36 MainThread @ETG_RL.py:407][0m Total Steps: 367506 Reward: 0.009111800121690487
+[32m[01-27 20:21:36 MainThread @ETG_RL.py:409][0m distance: 0.009111800121690487
+[32m[01-27 20:21:36 MainThread @ETG_RL.py:410][0m critic loss: 0.014992573692445502 actor loss: -164.1057209329343
+[32m[01-27 20:21:51 MainThread @ETG_RL.py:407][0m Total Steps: 368707 Reward: 0.045111973213881995
+[32m[01-27 20:21:51 MainThread @ETG_RL.py:409][0m distance: 0.045111973213881995
+[32m[01-27 20:21:51 MainThread @ETG_RL.py:410][0m critic loss: 0.014844432579420141 actor loss: -164.10695063124885
+[32m[01-27 20:22:07 MainThread @ETG_RL.py:407][0m Total Steps: 369908 Reward: -0.08187412833170563
+[32m[01-27 20:22:07 MainThread @ETG_RL.py:409][0m distance: -0.08187412833170563
+[32m[01-27 20:22:07 MainThread @ETG_RL.py:410][0m critic loss: 0.015207392165901064 actor loss: -164.10857905277504
+[32m[01-27 20:22:22 MainThread @ETG_RL.py:407][0m Total Steps: 371109 Reward: 0.011439323601238158
+[32m[01-27 20:22:22 MainThread @ETG_RL.py:409][0m distance: 0.011439323601238158
+[32m[01-27 20:22:22 MainThread @ETG_RL.py:410][0m critic loss: 0.015244970669648878 actor loss: -164.10829894409687
+[32m[01-27 20:22:28 MainThread @ETG_RL.py:416][0m Evaluation over: 1 episodes, Reward: 0.22883421759095457 Steps: 5001 
+[32m[01-27 20:22:28 MainThread @ETG_RL.py:418][0m distance: 0.22883421759095457
+[32m[01-27 20:22:43 MainThread @ETG_RL.py:407][0m Total Steps: 372310 Reward: 0.00936015876464135
+[32m[01-27 20:22:43 MainThread @ETG_RL.py:409][0m distance: 0.00936015876464135
+[32m[01-27 20:22:43 MainThread @ETG_RL.py:410][0m critic loss: 0.014849542976697468 actor loss: -164.10636504186778
+[32m[01-27 20:22:58 MainThread @ETG_RL.py:407][0m Total Steps: 373511 Reward: -0.11462952573158597
+[32m[01-27 20:22:58 MainThread @ETG_RL.py:409][0m distance: -0.11462952573158597
+[32m[01-27 20:22:58 MainThread @ETG_RL.py:410][0m critic loss: 0.014773205871834148 actor loss: -164.10935859775464
+[32m[01-27 20:23:14 MainThread @ETG_RL.py:407][0m Total Steps: 374712 Reward: 0.025997470765127532
+[32m[01-27 20:23:14 MainThread @ETG_RL.py:409][0m distance: 0.025997470765127532
+[32m[01-27 20:23:14 MainThread @ETG_RL.py:410][0m critic loss: 0.015038811298495129 actor loss: -164.11099833949817
+[32m[01-27 20:23:30 MainThread @ETG_RL.py:407][0m Total Steps: 375913 Reward: 0.014947318996570924
+[32m[01-27 20:23:30 MainThread @ETG_RL.py:409][0m distance: 0.014947318996570924
+[32m[01-27 20:23:30 MainThread @ETG_RL.py:410][0m critic loss: 0.01494708091957335 actor loss: -164.109960576676
+[32m[01-27 20:23:45 MainThread @ETG_RL.py:407][0m Total Steps: 377114 Reward: 0.02084733009461958
+[32m[01-27 20:23:45 MainThread @ETG_RL.py:409][0m distance: 0.02084733009461958
+[32m[01-27 20:23:45 MainThread @ETG_RL.py:410][0m critic loss: 0.015196224198452539 actor loss: -164.11110196204905
+[32m[01-27 20:24:00 MainThread @ETG_RL.py:407][0m Total Steps: 378315 Reward: 0.008858242478859454
+[32m[01-27 20:24:00 MainThread @ETG_RL.py:409][0m distance: 0.008858242478859454
+[32m[01-27 20:24:00 MainThread @ETG_RL.py:410][0m critic loss: 0.015177746667843824 actor loss: -164.11037384719276
+[32m[01-27 20:24:15 MainThread @ETG_RL.py:407][0m Total Steps: 379516 Reward: -0.011301611105759508
+[32m[01-27 20:24:15 MainThread @ETG_RL.py:409][0m distance: -0.011301611105759508
+[32m[01-27 20:24:15 MainThread @ETG_RL.py:410][0m critic loss: 0.014832997560457674 actor loss: -164.11235350037893
+[32m[01-27 20:24:30 MainThread @ETG_RL.py:407][0m Total Steps: 380717 Reward: 0.04427754490691882
+[32m[01-27 20:24:30 MainThread @ETG_RL.py:409][0m distance: 0.04427754490691882
+[32m[01-27 20:24:30 MainThread @ETG_RL.py:410][0m critic loss: 0.01497647744121897 actor loss: -164.113543724041
+[32m[01-27 20:24:36 MainThread @ETG_RL.py:416][0m Evaluation over: 1 episodes, Reward: 0.3117428460116505 Steps: 5001 
+[32m[01-27 20:24:36 MainThread @ETG_RL.py:418][0m distance: 0.3117428460116505
+[32m[01-27 20:24:52 MainThread @ETG_RL.py:407][0m Total Steps: 381918 Reward: 0.0074703752127485284
+[32m[01-27 20:24:52 MainThread @ETG_RL.py:409][0m distance: 0.0074703752127485284
+[32m[01-27 20:24:52 MainThread @ETG_RL.py:410][0m critic loss: 0.015181341120115575 actor loss: -164.110211069836
+[32m[01-27 20:25:08 MainThread @ETG_RL.py:407][0m Total Steps: 383119 Reward: 0.024842317448367582
+[32m[01-27 20:25:08 MainThread @ETG_RL.py:409][0m distance: 0.024842317448367582
+[32m[01-27 20:25:08 MainThread @ETG_RL.py:410][0m critic loss: 0.014959577835482126 actor loss: -164.11062273951396
+[32m[01-27 20:25:24 MainThread @ETG_RL.py:407][0m Total Steps: 384320 Reward: -0.08431954515026643
+[32m[01-27 20:25:24 MainThread @ETG_RL.py:409][0m distance: -0.08431954515026643
+[32m[01-27 20:25:24 MainThread @ETG_RL.py:410][0m critic loss: 0.015052559698693808 actor loss: -164.11289732819492
+[32m[01-27 20:25:39 MainThread @ETG_RL.py:407][0m Total Steps: 385521 Reward: -0.07362378375820625
+[32m[01-27 20:25:39 MainThread @ETG_RL.py:409][0m distance: -0.07362378375820625
+[32m[01-27 20:25:39 MainThread @ETG_RL.py:410][0m critic loss: 0.015182258083572693 actor loss: -164.11322219683467
+[32m[01-27 20:25:54 MainThread @ETG_RL.py:407][0m Total Steps: 386722 Reward: 0.013674268965908967
+[32m[01-27 20:25:54 MainThread @ETG_RL.py:409][0m distance: 0.013674268965908967
+[32m[01-27 20:25:54 MainThread @ETG_RL.py:410][0m critic loss: 0.015273588141124016 actor loss: -164.11380364436295
+[32m[01-27 20:26:10 MainThread @ETG_RL.py:407][0m Total Steps: 387923 Reward: -0.036622481710525505
+[32m[01-27 20:26:10 MainThread @ETG_RL.py:409][0m distance: -0.036622481710525505
+[32m[01-27 20:26:10 MainThread @ETG_RL.py:410][0m critic loss: 0.015115999736102743 actor loss: -164.1147467290035
+[32m[01-27 20:26:25 MainThread @ETG_RL.py:407][0m Total Steps: 389124 Reward: -0.022271629744047672
+[32m[01-27 20:26:25 MainThread @ETG_RL.py:409][0m distance: -0.022271629744047672
+[32m[01-27 20:26:25 MainThread @ETG_RL.py:410][0m critic loss: 0.015104897305536876 actor loss: -164.1167156845207
+[32m[01-27 20:26:40 MainThread @ETG_RL.py:407][0m Total Steps: 390325 Reward: 0.01359460190022798
+[32m[01-27 20:26:40 MainThread @ETG_RL.py:409][0m distance: 0.01359460190022798
+[32m[01-27 20:26:40 MainThread @ETG_RL.py:410][0m critic loss: 0.015132629703404654 actor loss: -164.11410383975675
+[32m[01-27 20:26:46 MainThread @ETG_RL.py:416][0m Evaluation over: 1 episodes, Reward: 0.5048784835758685 Steps: 5001 
+[32m[01-27 20:26:46 MainThread @ETG_RL.py:418][0m distance: 0.5048784835758685
+[32m[01-27 20:27:01 MainThread @ETG_RL.py:407][0m Total Steps: 391526 Reward: -0.07195892523550396
+[32m[01-27 20:27:01 MainThread @ETG_RL.py:409][0m distance: -0.07195892523550396
+[32m[01-27 20:27:01 MainThread @ETG_RL.py:410][0m critic loss: 0.014971804191714322 actor loss: -164.11559594858696
+[32m[01-27 20:27:16 MainThread @ETG_RL.py:407][0m Total Steps: 392727 Reward: 0.03493980796331633
+[32m[01-27 20:27:16 MainThread @ETG_RL.py:409][0m distance: 0.03493980796331633
+[32m[01-27 20:27:16 MainThread @ETG_RL.py:410][0m critic loss: 0.015070798842517115 actor loss: -164.11345674513183
+[32m[01-27 20:27:31 MainThread @ETG_RL.py:407][0m Total Steps: 393928 Reward: -0.032011180052950096
+[32m[01-27 20:27:31 MainThread @ETG_RL.py:409][0m distance: -0.032011180052950096
+[32m[01-27 20:27:31 MainThread @ETG_RL.py:410][0m critic loss: 0.015050683497799425 actor loss: -164.11290786069796
+[32m[01-27 20:27:45 MainThread @ETG_RL.py:407][0m Total Steps: 395129 Reward: 0.01731643839955918
+[32m[01-27 20:27:45 MainThread @ETG_RL.py:409][0m distance: 0.01731643839955918
+[32m[01-27 20:27:45 MainThread @ETG_RL.py:410][0m critic loss: 0.015179630196796766 actor loss: -164.11268832979354
+[32m[01-27 20:28:00 MainThread @ETG_RL.py:407][0m Total Steps: 396330 Reward: 0.004155140779496018
+[32m[01-27 20:28:00 MainThread @ETG_RL.py:409][0m distance: 0.004155140779496018
+[32m[01-27 20:28:00 MainThread @ETG_RL.py:410][0m critic loss: 0.015087424602970592 actor loss: -164.11153192702778
+[32m[01-27 20:28:16 MainThread @ETG_RL.py:407][0m Total Steps: 397531 Reward: -0.07818930948213346
+[32m[01-27 20:28:16 MainThread @ETG_RL.py:409][0m distance: -0.07818930948213346
+[32m[01-27 20:28:16 MainThread @ETG_RL.py:410][0m critic loss: 0.01508246844698001 actor loss: -164.11284028243065
+[32m[01-27 20:28:31 MainThread @ETG_RL.py:407][0m Total Steps: 398732 Reward: -0.05930785475909811
+[32m[01-27 20:28:31 MainThread @ETG_RL.py:409][0m distance: -0.05930785475909811
+[32m[01-27 20:28:31 MainThread @ETG_RL.py:410][0m critic loss: 0.015231872029404011 actor loss: -164.11173597045186
+[32m[01-27 20:28:47 MainThread @ETG_RL.py:407][0m Total Steps: 399933 Reward: -0.015728258797446715
+[32m[01-27 20:28:47 MainThread @ETG_RL.py:409][0m distance: -0.015728258797446715
+[32m[01-27 20:28:47 MainThread @ETG_RL.py:410][0m critic loss: 0.015267060825339115 actor loss: -164.10958190206486
+[32m[01-27 20:29:02 MainThread @ETG_RL.py:407][0m Total Steps: 401134 Reward: -0.03638269518534776
+[32m[01-27 20:29:02 MainThread @ETG_RL.py:409][0m distance: -0.03638269518534776
+[32m[01-27 20:29:02 MainThread @ETG_RL.py:410][0m critic loss: 0.014841209380553227 actor loss: -164.1116066836596
+[32m[01-27 20:29:08 MainThread @ETG_RL.py:416][0m Evaluation over: 1 episodes, Reward: 0.10070316935471549 Steps: 5001 
+[32m[01-27 20:29:08 MainThread @ETG_RL.py:418][0m distance: 0.10070316935471549
+[32m[01-27 20:30:11 MainThread @ETG_RL.py:468][0m ESSteps: 81 Reward: 0.09300598432738823 step: 1201.0  sigma:0.00886095963252345
+[32m[01-27 20:30:11 MainThread @ETG_RL.py:470][0m average distance: 0.02956158355053733  max distance: 0.09300598432738823
+[32m[01-27 20:31:12 MainThread @ETG_RL.py:468][0m ESSteps: 82 Reward: 0.10257450539503125 step: 1201.0  sigma:0.008772350036198216
+[32m[01-27 20:31:12 MainThread @ETG_RL.py:470][0m average distance: 0.008582542050430042  max distance: 0.10257450539503125
+[32m[01-27 20:32:14 MainThread @ETG_RL.py:468][0m ESSteps: 83 Reward: 0.12282569555309977 step: 1201.0  sigma:0.008684626535836234
+[32m[01-27 20:32:14 MainThread @ETG_RL.py:470][0m average distance: 0.011858937927905159  max distance: 0.12282569555309977
+[32m[01-27 20:33:16 MainThread @ETG_RL.py:468][0m ESSteps: 84 Reward: 0.10016580680926834 step: 1201.0  sigma:0.008597780270477872
+[32m[01-27 20:33:16 MainThread @ETG_RL.py:470][0m average distance: -0.010213158010975307  max distance: 0.10016580680926834
+[32m[01-27 20:34:17 MainThread @ETG_RL.py:468][0m ESSteps: 85 Reward: 0.10419263959403827 step: 1201.0  sigma:0.008511802467773093
+[32m[01-27 20:34:17 MainThread @ETG_RL.py:470][0m average distance: -0.015807831041375592  max distance: 0.10419263959403827
+[32m[01-27 20:35:17 MainThread @ETG_RL.py:468][0m ESSteps: 86 Reward: 0.10060661817046201 step: 1201.0  sigma:0.008426684443095363
+[32m[01-27 20:35:17 MainThread @ETG_RL.py:470][0m average distance: -0.0527996297004783  max distance: 0.10060661817046201
+[32m[01-27 20:36:18 MainThread @ETG_RL.py:468][0m ESSteps: 87 Reward: 0.09202849240230357 step: 1201.0  sigma:0.00834241759866441
+[32m[01-27 20:36:18 MainThread @ETG_RL.py:470][0m average distance: -0.03780867807984238  max distance: 0.09202849240230357
+[32m[01-27 20:37:19 MainThread @ETG_RL.py:468][0m ESSteps: 88 Reward: 0.11030386974577516 step: 1201.0  sigma:0.008258993422677765
+[32m[01-27 20:37:19 MainThread @ETG_RL.py:470][0m average distance: -0.038449174215106234  max distance: 0.11030386974577516
+[32m[01-27 20:38:21 MainThread @ETG_RL.py:468][0m ESSteps: 89 Reward: 0.10383013441143166 step: 1201.0  sigma:0.008176403488450987
+[32m[01-27 20:38:21 MainThread @ETG_RL.py:470][0m average distance: -0.04303419795036405  max distance: 0.10383013441143166
+[32m[01-27 20:39:25 MainThread @ETG_RL.py:468][0m ESSteps: 90 Reward: 0.11047732369261487 step: 1201.0  sigma:0.008094639453566477
+[32m[01-27 20:39:25 MainThread @ETG_RL.py:470][0m average distance: -0.05059343726538429  max distance: 0.11047732369261487
+[32m[01-27 20:39:41 MainThread @ETG_RL.py:407][0m Total Steps: 402335 Reward: -0.08563776533199363
+[32m[01-27 20:39:41 MainThread @ETG_RL.py:409][0m distance: -0.08563776533199363
+[32m[01-27 20:39:41 MainThread @ETG_RL.py:410][0m critic loss: 0.0147220643662183 actor loss: -164.1099226520421
+[32m[01-27 20:39:57 MainThread @ETG_RL.py:407][0m Total Steps: 403536 Reward: -0.07549613854541212
+[32m[01-27 20:39:57 MainThread @ETG_RL.py:409][0m distance: -0.07549613854541212
+[32m[01-27 20:39:57 MainThread @ETG_RL.py:410][0m critic loss: 0.014990090045125706 actor loss: -164.1088292664235
+[32m[01-27 20:40:12 MainThread @ETG_RL.py:407][0m Total Steps: 404737 Reward: -0.07402138292631144
+[32m[01-27 20:40:12 MainThread @ETG_RL.py:409][0m distance: -0.07402138292631144
+[32m[01-27 20:40:12 MainThread @ETG_RL.py:410][0m critic loss: 0.015014358270420173 actor loss: -164.10674099759396
+[32m[01-27 20:40:28 MainThread @ETG_RL.py:407][0m Total Steps: 405938 Reward: 0.02260554042006868
+[32m[01-27 20:40:28 MainThread @ETG_RL.py:409][0m distance: 0.02260554042006868
+[32m[01-27 20:40:28 MainThread @ETG_RL.py:410][0m critic loss: 0.014957013134406468 actor loss: -164.10629446520397
+[32m[01-27 20:40:43 MainThread @ETG_RL.py:407][0m Total Steps: 407139 Reward: -0.07382107159420467
+[32m[01-27 20:40:43 MainThread @ETG_RL.py:409][0m distance: -0.07382107159420467
+[32m[01-27 20:40:43 MainThread @ETG_RL.py:410][0m critic loss: 0.014910476293095344 actor loss: -164.1071695141947
+[32m[01-27 20:40:59 MainThread @ETG_RL.py:407][0m Total Steps: 408340 Reward: -0.0696572851482983
+[32m[01-27 20:40:59 MainThread @ETG_RL.py:409][0m distance: -0.0696572851482983
+[32m[01-27 20:40:59 MainThread @ETG_RL.py:410][0m critic loss: 0.015080635099331356 actor loss: -164.10912424003354
+[32m[01-27 20:41:15 MainThread @ETG_RL.py:407][0m Total Steps: 409541 Reward: -0.009676480302494635
+[32m[01-27 20:41:15 MainThread @ETG_RL.py:409][0m distance: -0.009676480302494635
+[32m[01-27 20:41:15 MainThread @ETG_RL.py:410][0m critic loss: 0.01496142688223613 actor loss: -164.1101925331389
+[32m[01-27 20:41:31 MainThread @ETG_RL.py:407][0m Total Steps: 410742 Reward: -0.047252722598666815
+[32m[01-27 20:41:31 MainThread @ETG_RL.py:409][0m distance: -0.047252722598666815
+[32m[01-27 20:41:31 MainThread @ETG_RL.py:410][0m critic loss: 0.01496910752277266 actor loss: -164.1121189774919
+[32m[01-27 20:41:37 MainThread @ETG_RL.py:416][0m Evaluation over: 1 episodes, Reward: 0.3399064693697024 Steps: 5001 
+[32m[01-27 20:41:37 MainThread @ETG_RL.py:418][0m distance: 0.3399064693697024
+[32m[01-27 20:41:53 MainThread @ETG_RL.py:407][0m Total Steps: 411943 Reward: -0.005465288967551045
+[32m[01-27 20:41:53 MainThread @ETG_RL.py:409][0m distance: -0.005465288967551045
+[32m[01-27 20:41:53 MainThread @ETG_RL.py:410][0m critic loss: 0.014798551566005498 actor loss: -164.11207565320322
+[32m[01-27 20:42:09 MainThread @ETG_RL.py:407][0m Total Steps: 413144 Reward: -0.07396159314521063
+[32m[01-27 20:42:09 MainThread @ETG_RL.py:409][0m distance: -0.07396159314521063
+[32m[01-27 20:42:09 MainThread @ETG_RL.py:410][0m critic loss: 0.01494862150081389 actor loss: -164.1086253500501
+[32m[01-27 20:42:24 MainThread @ETG_RL.py:407][0m Total Steps: 414345 Reward: -0.0820233360208272
+[32m[01-27 20:42:24 MainThread @ETG_RL.py:409][0m distance: -0.0820233360208272
+[32m[01-27 20:42:24 MainThread @ETG_RL.py:410][0m critic loss: 0.015155831216171471 actor loss: -164.11103912277287
+[32m[01-27 20:42:40 MainThread @ETG_RL.py:407][0m Total Steps: 415546 Reward: -0.08303656580021429
+[32m[01-27 20:42:40 MainThread @ETG_RL.py:409][0m distance: -0.08303656580021429
+[32m[01-27 20:42:40 MainThread @ETG_RL.py:410][0m critic loss: 0.015101897891620166 actor loss: -164.11424838533807
+[32m[01-27 20:42:56 MainThread @ETG_RL.py:407][0m Total Steps: 416747 Reward: -0.075276479236905
+[32m[01-27 20:42:56 MainThread @ETG_RL.py:409][0m distance: -0.075276479236905
+[32m[01-27 20:42:56 MainThread @ETG_RL.py:410][0m critic loss: 0.014990578086846675 actor loss: -164.11357575352247
+[32m[01-27 20:43:12 MainThread @ETG_RL.py:407][0m Total Steps: 417948 Reward: -0.07635325976058728
+[32m[01-27 20:43:12 MainThread @ETG_RL.py:409][0m distance: -0.07635325976058728
+[32m[01-27 20:43:12 MainThread @ETG_RL.py:410][0m critic loss: 0.015024787130657828 actor loss: -164.11348159624873
+[32m[01-27 20:43:29 MainThread @ETG_RL.py:407][0m Total Steps: 419149 Reward: -0.06890831250009992
+[32m[01-27 20:43:29 MainThread @ETG_RL.py:409][0m distance: -0.06890831250009992
+[32m[01-27 20:43:29 MainThread @ETG_RL.py:410][0m critic loss: 0.015005250053509734 actor loss: -164.1116287396611
+[32m[01-27 20:43:44 MainThread @ETG_RL.py:407][0m Total Steps: 420350 Reward: -0.06916231563453076
+[32m[01-27 20:43:44 MainThread @ETG_RL.py:409][0m distance: -0.06916231563453076
+[32m[01-27 20:43:44 MainThread @ETG_RL.py:410][0m critic loss: 0.015111445174005804 actor loss: -164.11177755414596
+[32m[01-27 20:43:50 MainThread @ETG_RL.py:416][0m Evaluation over: 1 episodes, Reward: 0.4495504197628499 Steps: 5001 
+[32m[01-27 20:43:50 MainThread @ETG_RL.py:418][0m distance: 0.4495504197628499
+[32m[01-27 20:44:05 MainThread @ETG_RL.py:407][0m Total Steps: 421551 Reward: -0.08299582002995284
+[32m[01-27 20:44:05 MainThread @ETG_RL.py:409][0m distance: -0.08299582002995284
+[32m[01-27 20:44:05 MainThread @ETG_RL.py:410][0m critic loss: 0.015190526542969538 actor loss: -164.11239181887
+[32m[01-27 20:44:21 MainThread @ETG_RL.py:407][0m Total Steps: 422752 Reward: -0.0868392700490759
+[32m[01-27 20:44:21 MainThread @ETG_RL.py:409][0m distance: -0.0868392700490759
+[32m[01-27 20:44:21 MainThread @ETG_RL.py:410][0m critic loss: 0.014806473392723353 actor loss: -164.11657653859413
+[32m[01-27 20:44:36 MainThread @ETG_RL.py:407][0m Total Steps: 423953 Reward: -0.06741215929632274
+[32m[01-27 20:44:36 MainThread @ETG_RL.py:409][0m distance: -0.06741215929632274
+[32m[01-27 20:44:36 MainThread @ETG_RL.py:410][0m critic loss: 0.015021661978888075 actor loss: -164.11567724832983
+[32m[01-27 20:44:51 MainThread @ETG_RL.py:407][0m Total Steps: 425154 Reward: -0.014469926457000898
+[32m[01-27 20:44:51 MainThread @ETG_RL.py:409][0m distance: -0.014469926457000898
+[32m[01-27 20:44:51 MainThread @ETG_RL.py:410][0m critic loss: 0.015124912359763393 actor loss: -164.1124896860242
+[32m[01-27 20:45:06 MainThread @ETG_RL.py:407][0m Total Steps: 426355 Reward: 0.022881512773155366
+[32m[01-27 20:45:06 MainThread @ETG_RL.py:409][0m distance: 0.022881512773155366
+[32m[01-27 20:45:06 MainThread @ETG_RL.py:410][0m critic loss: 0.01495229887956758 actor loss: -164.11310022816272
+[32m[01-27 20:45:22 MainThread @ETG_RL.py:407][0m Total Steps: 427556 Reward: -0.09186387734718804
+[32m[01-27 20:45:22 MainThread @ETG_RL.py:409][0m distance: -0.09186387734718804
+[32m[01-27 20:45:22 MainThread @ETG_RL.py:410][0m critic loss: 0.014937647277928212 actor loss: -164.11198828043686
+[32m[01-27 20:45:37 MainThread @ETG_RL.py:407][0m Total Steps: 428757 Reward: -0.07022593389163981
+[32m[01-27 20:45:37 MainThread @ETG_RL.py:409][0m distance: -0.07022593389163981
+[32m[01-27 20:45:37 MainThread @ETG_RL.py:410][0m critic loss: 0.015134318623161386 actor loss: -164.11175036529616
+[32m[01-27 20:45:53 MainThread @ETG_RL.py:407][0m Total Steps: 429958 Reward: 0.06282118370216241
+[32m[01-27 20:45:53 MainThread @ETG_RL.py:409][0m distance: 0.06282118370216241
+[32m[01-27 20:45:53 MainThread @ETG_RL.py:410][0m critic loss: 0.014830980962491304 actor loss: -164.11237056328793
+[32m[01-27 20:46:08 MainThread @ETG_RL.py:407][0m Total Steps: 431159 Reward: -0.0965269238627767
+[32m[01-27 20:46:08 MainThread @ETG_RL.py:409][0m distance: -0.0965269238627767
+[32m[01-27 20:46:08 MainThread @ETG_RL.py:410][0m critic loss: 0.014885972831692922 actor loss: -164.11151114153327
+[32m[01-27 20:46:14 MainThread @ETG_RL.py:416][0m Evaluation over: 1 episodes, Reward: 0.42004248356450014 Steps: 5001 
+[32m[01-27 20:46:14 MainThread @ETG_RL.py:418][0m distance: 0.42004248356450014
+[32m[01-27 20:46:29 MainThread @ETG_RL.py:407][0m Total Steps: 432360 Reward: 0.012652165506460276
+[32m[01-27 20:46:29 MainThread @ETG_RL.py:409][0m distance: 0.012652165506460276
+[32m[01-27 20:46:29 MainThread @ETG_RL.py:410][0m critic loss: 0.015231685349244708 actor loss: -164.11010964526224
+[32m[01-27 20:46:45 MainThread @ETG_RL.py:407][0m Total Steps: 433561 Reward: 0.03658007914765705
+[32m[01-27 20:46:45 MainThread @ETG_RL.py:409][0m distance: 0.03658007914765705
+[32m[01-27 20:46:45 MainThread @ETG_RL.py:410][0m critic loss: 0.015030355158600829 actor loss: -164.11420197371737
+[32m[01-27 20:47:00 MainThread @ETG_RL.py:407][0m Total Steps: 434762 Reward: 0.0040147256736857775
+[32m[01-27 20:47:00 MainThread @ETG_RL.py:409][0m distance: 0.0040147256736857775
+[32m[01-27 20:47:00 MainThread @ETG_RL.py:410][0m critic loss: 0.014890596535767147 actor loss: -164.1154136435376
+[32m[01-27 20:47:17 MainThread @ETG_RL.py:407][0m Total Steps: 435963 Reward: -0.08157637324898635
+[32m[01-27 20:47:17 MainThread @ETG_RL.py:409][0m distance: -0.08157637324898635
+[32m[01-27 20:47:17 MainThread @ETG_RL.py:410][0m critic loss: 0.015076661463066948 actor loss: -164.1156683674859
+[32m[01-27 20:47:33 MainThread @ETG_RL.py:407][0m Total Steps: 437164 Reward: -0.07853244448448596
+[32m[01-27 20:47:33 MainThread @ETG_RL.py:409][0m distance: -0.07853244448448596
+[32m[01-27 20:47:33 MainThread @ETG_RL.py:410][0m critic loss: 0.015110212513908657 actor loss: -164.1152339557327
+[32m[01-27 20:47:48 MainThread @ETG_RL.py:407][0m Total Steps: 438365 Reward: -0.08238556146701945
+[32m[01-27 20:47:48 MainThread @ETG_RL.py:409][0m distance: -0.08238556146701945
+[32m[01-27 20:47:48 MainThread @ETG_RL.py:410][0m critic loss: 0.015229681626173181 actor loss: -164.11590835355304
+[32m[01-27 20:48:04 MainThread @ETG_RL.py:407][0m Total Steps: 439566 Reward: -0.01804219849621675
+[32m[01-27 20:48:04 MainThread @ETG_RL.py:409][0m distance: -0.01804219849621675
+[32m[01-27 20:48:04 MainThread @ETG_RL.py:410][0m critic loss: 0.014937980489791383 actor loss: -164.11559686335198
+[32m[01-27 20:48:19 MainThread @ETG_RL.py:407][0m Total Steps: 440767 Reward: 0.03861814461086865
+[32m[01-27 20:48:19 MainThread @ETG_RL.py:409][0m distance: 0.03861814461086865
+[32m[01-27 20:48:19 MainThread @ETG_RL.py:410][0m critic loss: 0.014888779317601882 actor loss: -164.11767495542045
+[32m[01-27 20:48:25 MainThread @ETG_RL.py:416][0m Evaluation over: 1 episodes, Reward: 0.6224325328302961 Steps: 5001 
+[32m[01-27 20:48:25 MainThread @ETG_RL.py:418][0m distance: 0.6224325328302961
+[32m[01-27 20:48:41 MainThread @ETG_RL.py:407][0m Total Steps: 441968 Reward: 0.03405274797557185
+[32m[01-27 20:48:41 MainThread @ETG_RL.py:409][0m distance: 0.03405274797557185
+[32m[01-27 20:48:41 MainThread @ETG_RL.py:410][0m critic loss: 0.015296480912315061 actor loss: -164.11646423848046
+[32m[01-27 20:48:58 MainThread @ETG_RL.py:407][0m Total Steps: 443169 Reward: -0.043870292415306635
+[32m[01-27 20:48:58 MainThread @ETG_RL.py:409][0m distance: -0.043870292415306635
+[32m[01-27 20:48:58 MainThread @ETG_RL.py:410][0m critic loss: 0.014917908771448985 actor loss: -164.11594361012226
+[32m[01-27 20:49:13 MainThread @ETG_RL.py:407][0m Total Steps: 444370 Reward: -0.07679855581933287
+[32m[01-27 20:49:13 MainThread @ETG_RL.py:409][0m distance: -0.07679855581933287
+[32m[01-27 20:49:13 MainThread @ETG_RL.py:410][0m critic loss: 0.01500537009874078 actor loss: -164.11484633675224
+[32m[01-27 20:49:29 MainThread @ETG_RL.py:407][0m Total Steps: 445571 Reward: -0.027063952285092736
+[32m[01-27 20:49:29 MainThread @ETG_RL.py:409][0m distance: -0.027063952285092736
+[32m[01-27 20:49:29 MainThread @ETG_RL.py:410][0m critic loss: 0.015121226051634644 actor loss: -164.11153782218025
+[32m[01-27 20:49:45 MainThread @ETG_RL.py:407][0m Total Steps: 446772 Reward: -0.07660156124508277
+[32m[01-27 20:49:45 MainThread @ETG_RL.py:409][0m distance: -0.07660156124508277
+[32m[01-27 20:49:45 MainThread @ETG_RL.py:410][0m critic loss: 0.015128790168285519 actor loss: -164.1121238435337
+[32m[01-27 20:50:00 MainThread @ETG_RL.py:407][0m Total Steps: 447973 Reward: -0.07312376300012426
+[32m[01-27 20:50:00 MainThread @ETG_RL.py:409][0m distance: -0.07312376300012426
+[32m[01-27 20:50:00 MainThread @ETG_RL.py:410][0m critic loss: 0.014926458047478027 actor loss: -164.1106976613117
+[32m[01-27 20:50:15 MainThread @ETG_RL.py:407][0m Total Steps: 449174 Reward: -0.07333538798226927
+[32m[01-27 20:50:15 MainThread @ETG_RL.py:409][0m distance: -0.07333538798226927
+[32m[01-27 20:50:15 MainThread @ETG_RL.py:410][0m critic loss: 0.015125111226988126 actor loss: -164.10885939014443
+[32m[01-27 20:50:30 MainThread @ETG_RL.py:407][0m Total Steps: 450375 Reward: 0.06128799026894288
+[32m[01-27 20:50:30 MainThread @ETG_RL.py:409][0m distance: 0.06128799026894288
+[32m[01-27 20:50:30 MainThread @ETG_RL.py:410][0m critic loss: 0.014933784600102237 actor loss: -164.1119984317878
+[32m[01-27 20:50:36 MainThread @ETG_RL.py:416][0m Evaluation over: 1 episodes, Reward: 0.6057382906287001 Steps: 5001 
+[32m[01-27 20:50:36 MainThread @ETG_RL.py:418][0m distance: 0.6057382906287001
+[32m[01-27 20:51:42 MainThread @ETG_RL.py:468][0m ESSteps: 91 Reward: 0.11167836303154688 step: 1201.0  sigma:0.008013693059030812
+[32m[01-27 20:51:42 MainThread @ETG_RL.py:470][0m average distance: 0.0036045616397438933  max distance: 0.11167836303154688
+[32m[01-27 20:52:45 MainThread @ETG_RL.py:468][0m ESSteps: 92 Reward: 0.14007715969522128 step: 1201.0  sigma:0.007933556128440504
+[32m[01-27 20:52:45 MainThread @ETG_RL.py:470][0m average distance: 0.02986206991972402  max distance: 0.14007715969522128
+[32m[01-27 20:53:47 MainThread @ETG_RL.py:468][0m ESSteps: 93 Reward: 0.08779790482643168 step: 1201.0  sigma:0.007854220567156098
+[32m[01-27 20:53:47 MainThread @ETG_RL.py:470][0m average distance: 0.028850265558600784  max distance: 0.08779790482643168
+[32m[01-27 20:54:48 MainThread @ETG_RL.py:468][0m ESSteps: 94 Reward: 0.09732779495097676 step: 1201.0  sigma:0.007775678361484537
+[32m[01-27 20:54:48 MainThread @ETG_RL.py:470][0m average distance: 0.004107538359170944  max distance: 0.09732779495097676
+[32m[01-27 20:55:50 MainThread @ETG_RL.py:468][0m ESSteps: 95 Reward: 0.07824234762279333 step: 1201.0  sigma:0.007697921577869691
+[32m[01-27 20:55:50 MainThread @ETG_RL.py:470][0m average distance: 0.01332345874076136  max distance: 0.07824234762279333
+[32m[01-27 20:56:51 MainThread @ETG_RL.py:468][0m ESSteps: 96 Reward: 0.12759146796636217 step: 1201.0  sigma:0.007620942362090995
+[32m[01-27 20:56:51 MainThread @ETG_RL.py:470][0m average distance: 0.022323441490645354  max distance: 0.12759146796636217
+[32m[01-27 20:57:52 MainThread @ETG_RL.py:468][0m ESSteps: 97 Reward: 0.0876015865603304 step: 1201.0  sigma:0.007544732938470085
+[32m[01-27 20:57:52 MainThread @ETG_RL.py:470][0m average distance: 0.015912405836314793  max distance: 0.0876015865603304
+[32m[01-27 20:58:53 MainThread @ETG_RL.py:468][0m ESSteps: 98 Reward: 0.09169443433707508 step: 1201.0  sigma:0.007469285609085384
+[32m[01-27 20:58:53 MainThread @ETG_RL.py:470][0m average distance: 0.017720219618318815  max distance: 0.09169443433707508
+[32m[01-27 20:59:54 MainThread @ETG_RL.py:468][0m ESSteps: 99 Reward: 0.10546437696792822 step: 1201.0  sigma:0.00739459275299453
+[32m[01-27 20:59:54 MainThread @ETG_RL.py:470][0m average distance: 0.030288521846121824  max distance: 0.10546437696792822

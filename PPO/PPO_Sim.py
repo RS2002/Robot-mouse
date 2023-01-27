@@ -2,7 +2,7 @@ from mujoco_py import load_model_from_path, MjSim,MjViewer
 import numpy as np
 
 class PPO_SimModel(object):
-    def __init__(self, modelPath, max_steps=2000, view=False):
+    def __init__(self, modelPath, max_steps=2000, view=False, save_path=None):
         super(PPO_SimModel, self).__init__()
         self.model = load_model_from_path(modelPath)  # 加载模型
         self.sim = MjSim(
@@ -41,6 +41,10 @@ class PPO_SimModel(object):
             self.viewer.cam.lookat[1] += -0.5
             self.viewer.cam.distance = self.model.stat.extent * 0.5
 
+        #save ctrldata
+        self.ctrldata=np.array([])
+        self.save_path=save_path
+
     def runStep(self, ctrlData):
         # ------------------------------------------ #
         # ID 0, 1 left-fore leg and coil
@@ -73,6 +77,11 @@ class PPO_SimModel(object):
             done=True
         if self.view:
             self.viewer.render()  # 将当前模拟状态显示在屏幕上
+            
+        if self.save_path is not None:
+            self.ctrldata=np.concatenate((self.ctrldata,ctrlData),axis=0)
+            if done:
+                np.savez(self.save_path, ctrldata=self.ctrldata)
         return state,reward,done,pos
 
     def get_sensors(self): #得到观测值与质心位置坐标

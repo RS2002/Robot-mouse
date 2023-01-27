@@ -5,7 +5,7 @@ from LegModel.foreLeg import ForeLegM
 from LegModel.hindLeg import HindLegM
 
 class PPO_SimModel(object):
-    def __init__(self, modelPath,T,dt,H,sigma_sq,phase,amp,T2_radio,max_steps=20000, view=False):
+    def __init__(self, modelPath,T,dt,H,sigma_sq,phase,amp,T2_radio,max_steps=20000, view=False, save_path=None):
         super(PPO_SimModel, self).__init__()
         self.model = load_model_from_path(modelPath)  # 加载模型
         self.sim = MjSim(
@@ -71,6 +71,10 @@ class PPO_SimModel(object):
         self.hl_left = HindLegM(hl_params)
         self.hl_right = HindLegM(hl_params)
 
+        #save ctrldata
+        self.ctrldata=np.array([])
+        self.save_path=save_path
+
     def step(self, ctrlData,donef=False):
         # ------------------------------------------ #
         # ID 0, 1 left-fore leg and coil
@@ -106,6 +110,7 @@ class PPO_SimModel(object):
             reward -= 0.1
             done=True
 
+        write_back=donef
         donef=False
 
         if self.steps>=self.max_steps or donef:
@@ -114,6 +119,12 @@ class PPO_SimModel(object):
             self.viewer.render()  # 将当前模拟状态显示在屏幕上
         info={}
         info['pos']=pos
+
+        if self.save_path is not None:
+            self.ctrldata=np.concatenate((self.ctrldata,ctrlData),axis=0)
+            if done or write_back:
+                np.savez(self.save_path, ctrldata=self.ctrldata)
+
         return state,reward,done,info
 
     def get_sensors(self): #得到观测值与质心位置坐标
@@ -184,3 +195,6 @@ class PPO_SimModel(object):
         act[4:6] = self.hl_left.pos_2_angle(act2[0],act2[1])
         act[6:8] = self.hl_right.pos_2_angle(act1[0],act1[1])
         return act
+
+    def set_savepath(self,savepath=None):
+        self.save_path=savepath

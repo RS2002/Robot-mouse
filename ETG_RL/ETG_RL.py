@@ -210,16 +210,16 @@ def run_evaluate_episodes(agent, env, max_step, action_bound, w=None, b=None):
     steps = 0
     while not done:
         steps += 1
-        if args.eval:
-            t0 = time.clock()
+        '''if args.eval:
+            t0 = time.clock()'''
         action = agent.predict(obs)
         new_action = action
         obs, reward, done, info = env.step(new_action * action_bound, donef=(steps > max_step))
-        if args.eval == 1:
+        '''if args.eval == 1:
             img = p.getCameraImage(640, 480, renderer=p.ER_BULLET_HARDWARE_OPENGL)[2]
             img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
             cv2.imwrite("img/img{}.jpg".format(steps), img)
-            # print("t:",time.clock()-t0)
+            # print("t:",time.clock()-t0)'''
         avg_reward += reward
         '''for key in Param_Dict.keys():
             if key in info.keys():
@@ -337,7 +337,9 @@ def main():
                             random_param=random_param,
                             ETG_H=args.ETG_H, vel_d=args.vel_d, step_y=args.step_y,
                             enable_action_filter=args.enable_action_filter)'''
-    env=PPO_SimModel("./models/ETG_obstacle1.xml",args.ETG_T, 0.026, args.ETG_H, 0.04, phase, 0.2, args.ETG_T2)
+
+    env=PPO_SimModel("./models/dynamic_4l_t3.xml",args.ETG_T, 0.026, args.ETG_H, 0.04, phase, 0.2, args.ETG_T2)
+    #env=PPO_SimModel("./models/ETG_obstacle1.xml",args.ETG_T, 0.026, args.ETG_H, 0.04, phase, 0.2, args.ETG_T2)
 
     e_step = args.e_step
 
@@ -487,15 +489,21 @@ def main():
         ETG_info = np.load(args.load[:-3] + ".npz")
         w = ETG_info["w"]
         b = ETG_info["b"]
-        outdir = os.path.join(args.load[:-3], args.task_mode)
+        env.set_savepath("./ctrldata/ground.npz")
+        #env.set_savepath("./ctrldata/obstacle1.npz")
+        #outdir = os.path.join(args.load[:-3], args.task_mode)
         if not os.path.exists(args.load[:-3]):
             os.makedirs(args.load[:-3])
-        avg_reward, avg_step, info = run_evaluate_episodes(agent, env, 1200, act_bound, w, b)
-        os.system("ffmpeg -r 38 -i img/img%01d.jpg -vcodec mpeg4 -vb 40M -y {}.mp4".format(outdir))
+        avg_reward, avg_step, info = run_evaluate_episodes(agent, env, 5000, act_bound, w, b)
+        '''os.system("ffmpeg -r 38 -i img/img%01d.jpg -vcodec mpeg4 -vb 40M -y {}.mp4".format(outdir))
         os.system("rm -rf img/*")
         logger.info('Evaluation over: {} episodes, Reward: {} Steps: {}'.format(
             EVAL_EPISODES, avg_reward, avg_step))
-        logger.info('distance: {}'.format(info['dis']))
+        logger.info('distance: {}'.format(info['dis']))'''
+        print('Evaluation over: {} episodes, Reward: {} Steps: {}'.format(
+            EVAL_EPISODES, avg_reward, avg_step))
+        print('distance: {}'.format(info['dis']))
+
 
 
 if __name__ == "__main__":
