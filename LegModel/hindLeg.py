@@ -25,11 +25,15 @@ class HindLegM(object):
 	def pos_2_angle(self, x, y):
 		lt = math.sqrt(x*x + y*y)
 		theta_2_t = self.LawOfCosines_angle(self.l1, self.l_a, lt)
+		if theta_2_t is None:
+			return [0,0]
 		theta_2 = theta_2_t - self.beta
 		#theta_1_t1 = self.LawOfCosines_angle(self.l1, lt, self.l_a)
 		#theta_1_t2 = theta_1 - theta_1_t1
 
 		theta_1_t1 = self.LawOfCosines_angle(self.l1, lt, self.l_a)
+		if theta_1_t1 is None:
+			return [0,0]
 		theta_1_t2 = 0
 		if x == 0:
 			if y < 0:
@@ -57,6 +61,8 @@ class HindLegM(object):
 		return lc
 	def LawOfCosines_angle(self, la, lb, lc):
 		angle_ab_cos = (la*la + lb*lb - lc*lc)/(2*la*lb)
+		if angle_ab_cos<-1 or angle_ab_cos>1:
+			return None
 		#print("----> ", angle_ab_cos)
 		angle_ab = math.acos(angle_ab_cos)
 		return angle_ab

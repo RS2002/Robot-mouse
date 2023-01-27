@@ -1,8 +1,8 @@
-from mujoco_py import load_model_from_path, MjSim #, MjViewer
+from mujoco_py import load_model_from_path, MjSim,MjViewer
 import numpy as np
 
 class PPO_SimModel(object):
-    def __init__(self, modelPath, max_steps=2000):
+    def __init__(self, modelPath, max_steps=2000, view=False):
         super(PPO_SimModel, self).__init__()
         self.model = load_model_from_path(modelPath)  # 加载模型
         self.sim = MjSim(
@@ -31,6 +31,15 @@ class PPO_SimModel(object):
         self.y=[0,0]
         self.max_steps=max_steps
         self.steps=0
+        self.view=view
+        if not self.view:
+            self.viewer=None
+        else:
+            self.viewer = MjViewer(self.sim)  # 3D渲染当前的模拟状态
+            self.viewer.cam.azimuth = 0
+            self.viewer.cam.lookat[0] += 0.25
+            self.viewer.cam.lookat[1] += -0.5
+            self.viewer.cam.distance = self.model.stat.extent * 0.5
 
     def runStep(self, ctrlData):
         # ------------------------------------------ #
@@ -57,11 +66,13 @@ class PPO_SimModel(object):
         reward=-(self.y[1]-self.y[0])
         done=False
         #加入跌倒检测机制
-        if pos[2] < 0.4:
+        if pos[2] < 0.04:
             reward -= 0.1
             done=True
         if self.steps>=self.max_steps:
             done=True
+        if self.view:
+            self.viewer.render()  # 将当前模拟状态显示在屏幕上
         return state,reward,done,pos
 
     def get_sensors(self): #得到观测值与质心位置坐标

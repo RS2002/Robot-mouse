@@ -1,9 +1,14 @@
+'''
+#For Windows
+import os
+os.add_dll_directory("C:/Users/RS/.mujoco/mjpro150/bin")
+os.add_dll_directory("C:/Users/RS/.mujoco/mujoco-py-1.50.1.0/mujoco_py")
+'''
 import argparse
 
 from ToSim import SimModel
 from Controller import MouseController
 import time
-
 
 RUN_STEPS = 10000
 if __name__ == '__main__':
