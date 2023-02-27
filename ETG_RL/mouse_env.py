@@ -75,6 +75,8 @@ class PPO_SimModel(object):
         self.ctrldata=np.array([])
         self.save_path=save_path
 
+        self.path_generator=np.array([])
+
     def step(self, ctrlData,donef=False):
         # ------------------------------------------ #
         # ID 0, 1 left-fore leg and coil
@@ -100,19 +102,22 @@ class PPO_SimModel(object):
         self.sim.data.ctrl[:] = ctrlData
         self.sim.step()  # 推进模拟
         #self.viewer.render()  # 将当前模拟状态显示在屏幕上
-        state,pos=self.get_sensors()
+        state,pos,linvel=self.get_sensors()
         self.y[0]=self.y[1]
         self.y[1]=pos[1]
-        reward=-(self.y[1]-self.y[0])
+
+        '''reward=-(self.y[1]-self.y[0])
         done=False
         #加入跌倒检测机制
         if pos[2] < 0.045:
             reward -= 0.1
-            done=True
+            done=True'''
+
+        reward=-linvel[1]*4
+        done=False
 
         write_back=donef
         donef=False
-
         if self.steps>=self.max_steps or donef:
             done=True
         if self.view:
@@ -124,6 +129,7 @@ class PPO_SimModel(object):
             self.ctrldata=np.concatenate((self.ctrldata,ctrlData),axis=0)
             if done or write_back:
                 np.savez(self.save_path, ctrldata=self.ctrldata)
+                np.savez("path_save.npz",path=self.path_generator)
 
         return state,reward,done,info
 
@@ -137,13 +143,13 @@ class PPO_SimModel(object):
         joint_pos=sensors[:12].copy()
         state=np.concatenate([linvel,frame_quat,joint_pos])
         #state=sensors.copy()
-        return state,pos
+        return state,pos,linvel
 
     def reset(self,ETG_W=None,ETG_b=None):
         #self.sim.set_state(self.sim_state)
         self.sim.reset() #恢复初始状态
         self.steps=0
-        state,pos=self.get_sensors()
+        state,pos,linvel=self.get_sensors()
         self.y[0]=pos[1]
         self.y[1]=pos[1]
         self.ETG_W=ETG_W
@@ -194,6 +200,12 @@ class PPO_SimModel(object):
         act[2:4] = self.fl_right.pos_2_angle(act2[0],act2[1])
         act[4:6] = self.hl_left.pos_2_angle(act2[0],act2[1])
         act[6:8] = self.hl_right.pos_2_angle(act1[0],act1[1])
+
+
+
+        if self.save_path is not None:
+            self.path_generator=np.concatenate((self.path_generator,act1),axis=0)
+
         return act
 
     def set_savepath(self,savepath=None):

@@ -1,0 +1,101 @@
+[32m[02-09 21:55:07 MainThread @pretrain.py:215][0m args:Namespace(ETG=1, ETG_H=20, ETG_T=0.5, ETG_T2=0.5, ETG_path='data/zero_param.npz', act_mode='traj', badfoot=0.1, e_step=400, enable_action_filter=0, epsilon=0.4, eval=0, feet=0.3, footcontact=0.1, footheight=0.015, gamma=0.95, load='', max_steps=10000000.0, normal=1, outdir='train_log', popsize=40, random=0, random_dynamic=0, random_force=0, render=0, reward_p=5, sigma=0.02, sigma_decay=0.99, stand=0, step_y=0.05, steplen=0.06, suffix='pretrain_test', task_mode='stairstair', tau=0.07, torso=1.5, up=0.6, vel_d=0.5, x_noise=0)
+[32m[02-09 21:57:53 MainThread @pretrain.py:257][0m ESSteps: 1 Reward: 2066.821656243981 step: 5001.0  sigma:0.0198
+[32m[02-09 21:57:53 MainThread @pretrain.py:259][0m average distance: -0.40284658849633137  max distance: 0.9881884281641161
+[32m[02-09 22:00:40 MainThread @pretrain.py:257][0m ESSteps: 2 Reward: 2857.1892311045285 step: 5001.0  sigma:0.019602
+[32m[02-09 22:00:40 MainThread @pretrain.py:259][0m average distance: 0.19046054905204768  max distance: 1.382946645733671
+[32m[02-09 22:03:06 MainThread @pretrain.py:257][0m ESSteps: 3 Reward: 2580.9858745515235 step: 5001.0  sigma:0.01940598
+[32m[02-09 22:03:06 MainThread @pretrain.py:259][0m average distance: 0.11821201869042455  max distance: 1.2446552548497731
+[32m[02-09 22:05:51 MainThread @pretrain.py:257][0m ESSteps: 4 Reward: 3383.2103993287687 step: 5001.0  sigma:0.0192119202
+[32m[02-09 22:05:51 MainThread @pretrain.py:259][0m average distance: -0.09108189516458301  max distance: 1.6457661511813917
+[32m[02-09 22:08:33 MainThread @pretrain.py:257][0m ESSteps: 5 Reward: 2695.8554035432603 step: 5001.0  sigma:0.019019800998
+[32m[02-09 22:08:33 MainThread @pretrain.py:259][0m average distance: 0.05716613111501776  max distance: 1.3020424817289993
+[32m[02-09 22:11:19 MainThread @pretrain.py:257][0m ESSteps: 6 Reward: 3435.507785625024 step: 5001.0  sigma:0.01882960298802
+[32m[02-09 22:11:19 MainThread @pretrain.py:259][0m average distance: -0.02056639719197827  max distance: 1.6723448348682317
+[32m[02-09 22:14:01 MainThread @pretrain.py:257][0m ESSteps: 7 Reward: 3033.485462150304 step: 5001.0  sigma:0.0186413069581398
+[32m[02-09 22:14:01 MainThread @pretrain.py:259][0m average distance: 0.06307678646792954  max distance: 1.4710328322928516
+[32m[02-09 22:16:34 MainThread @pretrain.py:257][0m ESSteps: 8 Reward: 2755.6459756409663 step: 5001.0  sigma:0.0184548938885584
+[32m[02-09 22:16:34 MainThread @pretrain.py:259][0m average distance: -0.10705481353679094  max distance: 1.332233531806438
+[32m[02-09 22:19:02 MainThread @pretrain.py:257][0m ESSteps: 9 Reward: 2841.321209453314 step: 5001.0  sigma:0.018270344949672817
+[32m[02-09 22:19:02 MainThread @pretrain.py:259][0m average distance: -0.11656519967386983  max distance: 1.3751019436453082
+[32m[02-09 22:21:24 MainThread @pretrain.py:257][0m ESSteps: 10 Reward: 2531.9689405041845 step: 5001.0  sigma:0.01808764150017609
+[32m[02-09 22:21:24 MainThread @pretrain.py:259][0m average distance: -0.06396390588466397  max distance: 1.2200917720913482
+[32m[02-09 22:23:55 MainThread @pretrain.py:257][0m ESSteps: 11 Reward: 2687.4299170962954 step: 5001.0  sigma:0.017906765085174327
+[32m[02-09 22:23:55 MainThread @pretrain.py:259][0m average distance: 0.1036140490584013  max distance: 1.2980939019920337
+[32m[02-09 22:26:16 MainThread @pretrain.py:257][0m ESSteps: 12 Reward: 2901.506493119015 step: 5001.0  sigma:0.017727697434322585
+[32m[02-09 22:26:16 MainThread @pretrain.py:259][0m average distance: -0.08368823205720657  max distance: 1.405029880343559
+[32m[02-09 22:28:37 MainThread @pretrain.py:257][0m ESSteps: 13 Reward: 3184.234978839274 step: 5001.0  sigma:0.01755042045997936
+[32m[02-09 22:28:37 MainThread @pretrain.py:259][0m average distance: 0.030833863207208573  max distance: 1.5463668204440577
+[32m[02-09 22:30:58 MainThread @pretrain.py:257][0m ESSteps: 14 Reward: 2398.718135397423 step: 5001.0  sigma:0.017374916255379565
+[32m[02-09 22:30:58 MainThread @pretrain.py:259][0m average distance: 0.07596831637351176  max distance: 1.1539240550430856
+[32m[02-09 22:33:21 MainThread @pretrain.py:257][0m ESSteps: 15 Reward: 4134.672471434358 step: 5001.0  sigma:0.01720116709282577
+[32m[02-09 22:33:21 MainThread @pretrain.py:259][0m average distance: 0.05865295638639989  max distance: 2.021859334607677
+[32m[02-09 22:35:44 MainThread @pretrain.py:257][0m ESSteps: 16 Reward: 3169.146132160329 step: 5001.0  sigma:0.017029155421897514
+[32m[02-09 22:35:44 MainThread @pretrain.py:259][0m average distance: 0.06713933865959303  max distance: 1.5388118543833251
+[32m[02-09 22:38:06 MainThread @pretrain.py:257][0m ESSteps: 17 Reward: 2920.2834539427113 step: 5001.0  sigma:0.01685886386767854
+[32m[02-09 22:38:06 MainThread @pretrain.py:259][0m average distance: 0.10630227587411864  max distance: 1.4145040043801007
+[32m[02-09 22:40:30 MainThread @pretrain.py:257][0m ESSteps: 18 Reward: 2082.253611006296 step: 5001.0  sigma:0.016690275229001753
+[32m[02-09 22:40:30 MainThread @pretrain.py:259][0m average distance: -0.10868246935216815  max distance: 0.9955067034719707
+[32m[02-09 22:42:51 MainThread @pretrain.py:257][0m ESSteps: 19 Reward: 4781.933244781258 step: 5001.0  sigma:0.016523372476711734
+[32m[02-09 22:42:51 MainThread @pretrain.py:259][0m average distance: 0.15838881640484023  max distance: 2.3454308910783865
+[32m[02-09 22:45:20 MainThread @pretrain.py:257][0m ESSteps: 20 Reward: 4086.907604164192 step: 5001.0  sigma:0.016358138751944615
+[32m[02-09 22:45:20 MainThread @pretrain.py:259][0m average distance: 0.08043357683479982  max distance: 1.9981464651727532
+[32m[02-09 22:47:53 MainThread @pretrain.py:257][0m ESSteps: 21 Reward: 2059.2342069175675 step: 5001.0  sigma:0.01619455736442517
+[32m[02-09 22:47:53 MainThread @pretrain.py:259][0m average distance: -0.02312558456024873  max distance: 0.9835850279764783
+[32m[02-09 22:50:16 MainThread @pretrain.py:257][0m ESSteps: 22 Reward: 2633.038037582775 step: 5001.0  sigma:0.01603261179078092
+[32m[02-09 22:50:16 MainThread @pretrain.py:259][0m average distance: 0.06317285498432995  max distance: 1.2708498359466964
+[32m[02-09 22:53:00 MainThread @pretrain.py:257][0m ESSteps: 23 Reward: 3065.289829643788 step: 5001.0  sigma:0.015872285672873108
+[32m[02-09 22:53:00 MainThread @pretrain.py:259][0m average distance: 0.11757446604415558  max distance: 1.4870405123793835
+[32m[02-09 22:55:45 MainThread @pretrain.py:257][0m ESSteps: 24 Reward: 4507.160922195189 step: 5001.0  sigma:0.015713562816144378
+[32m[02-09 22:55:45 MainThread @pretrain.py:259][0m average distance: 0.22292843761735243  max distance: 2.2081370001822203
+[32m[02-09 22:58:07 MainThread @pretrain.py:257][0m ESSteps: 25 Reward: 3484.117664302721 step: 5001.0  sigma:0.015556427187982934
+[32m[02-09 22:58:07 MainThread @pretrain.py:259][0m average distance: 0.1723288942721631  max distance: 1.6964576521319414
+[32m[02-09 23:00:52 MainThread @pretrain.py:257][0m ESSteps: 26 Reward: 2844.4542843913737 step: 5001.0  sigma:0.015400862916103104
+[32m[02-09 23:00:52 MainThread @pretrain.py:259][0m average distance: 0.045613699217710454  max distance: 1.3764359983129655
+[32m[02-09 23:03:34 MainThread @pretrain.py:257][0m ESSteps: 27 Reward: 2691.283388621229 step: 5001.0  sigma:0.015246854286942073
+[32m[02-09 23:03:34 MainThread @pretrain.py:259][0m average distance: 0.2629350578592349  max distance: 1.2999507264275625
+[32m[02-09 23:06:18 MainThread @pretrain.py:257][0m ESSteps: 28 Reward: 3920.2157310542566 step: 5001.0  sigma:0.015094385744072653
+[32m[02-09 23:06:18 MainThread @pretrain.py:259][0m average distance: 0.2512120601117772  max distance: 1.9143639728893276
+[32m[02-09 23:09:01 MainThread @pretrain.py:257][0m ESSteps: 29 Reward: 2989.986161970942 step: 5001.0  sigma:0.014943441886631926
+[32m[02-09 23:09:01 MainThread @pretrain.py:259][0m average distance: 0.2582399542236898  max distance: 1.4492353113810383
+[32m[02-09 23:11:26 MainThread @pretrain.py:257][0m ESSteps: 30 Reward: 3491.9785500064 step: 5001.0  sigma:0.014794007467765607
+[32m[02-09 23:11:26 MainThread @pretrain.py:259][0m average distance: 0.13996713306826683  max distance: 1.7004659746586526
+[32m[02-09 23:14:15 MainThread @pretrain.py:257][0m ESSteps: 31 Reward: 3348.0051044988663 step: 5001.0  sigma:0.014646067393087952
+[32m[02-09 23:14:15 MainThread @pretrain.py:259][0m average distance: 0.22182632675817385  max distance: 1.6283617539540862
+[32m[02-09 23:17:02 MainThread @pretrain.py:257][0m ESSteps: 32 Reward: 2815.6602129742705 step: 5001.0  sigma:0.014499606719157072
+[32m[02-09 23:17:02 MainThread @pretrain.py:259][0m average distance: 0.25437146465024596  max distance: 1.362421398558465
+[32m[02-09 23:19:45 MainThread @pretrain.py:257][0m ESSteps: 33 Reward: 3976.139819954457 step: 5001.0  sigma:0.014354610651965501
+[32m[02-09 23:19:45 MainThread @pretrain.py:259][0m average distance: 0.23368929910383568  max distance: 1.9426264889530118
+[32m[02-09 23:22:27 MainThread @pretrain.py:257][0m ESSteps: 34 Reward: 3600.5653906147563 step: 5001.0  sigma:0.014211064545445845
+[32m[02-09 23:22:27 MainThread @pretrain.py:259][0m average distance: 0.14999242281599337  max distance: 1.7544244686865136
+[32m[02-09 23:24:54 MainThread @pretrain.py:257][0m ESSteps: 35 Reward: 4241.225409666687 step: 5001.0  sigma:0.014068953899991387
+[32m[02-09 23:24:54 MainThread @pretrain.py:259][0m average distance: 0.14001436638410863  max distance: 2.075132889366929
+[32m[02-09 23:27:16 MainThread @pretrain.py:257][0m ESSteps: 36 Reward: 3978.242069742917 step: 5001.0  sigma:0.013928264360991474
+[32m[02-09 23:27:16 MainThread @pretrain.py:259][0m average distance: 0.49614612553984605  max distance: 1.9435599417926872
+[32m[02-09 23:29:40 MainThread @pretrain.py:257][0m ESSteps: 37 Reward: 3181.1762438905766 step: 5001.0  sigma:0.01378898171738156
+[32m[02-09 23:29:40 MainThread @pretrain.py:259][0m average distance: 0.26848208850427663  max distance: 1.544866463705047
+[32m[02-09 23:32:05 MainThread @pretrain.py:257][0m ESSteps: 38 Reward: 2579.1455700000774 step: 5001.0  sigma:0.013651091900207744
+[32m[02-09 23:32:05 MainThread @pretrain.py:259][0m average distance: 0.22729148715391329  max distance: 1.2439655043417548
+[32m[02-09 23:34:32 MainThread @pretrain.py:257][0m ESSteps: 39 Reward: 4236.502242952637 step: 5001.0  sigma:0.013514580981205667
+[32m[02-09 23:34:32 MainThread @pretrain.py:259][0m average distance: 0.5564665200066432  max distance: 2.072842773731851
+[32m[02-09 23:36:54 MainThread @pretrain.py:257][0m ESSteps: 40 Reward: 3806.1685129699226 step: 5001.0  sigma:0.01337943517139361
+[32m[02-09 23:36:54 MainThread @pretrain.py:259][0m average distance: 0.31858683054048376  max distance: 1.857653305577273
+[32m[02-09 23:39:24 MainThread @pretrain.py:257][0m ESSteps: 41 Reward: 4344.978104576423 step: 5001.0  sigma:0.013245640819679673
+[32m[02-09 23:39:24 MainThread @pretrain.py:259][0m average distance: 0.3813719627430639  max distance: 2.1270179214090428
+[32m[02-09 23:41:45 MainThread @pretrain.py:257][0m ESSteps: 42 Reward: 3454.9255145817788 step: 5001.0  sigma:0.013113184411482876
+[32m[02-09 23:41:45 MainThread @pretrain.py:259][0m average distance: 0.32088206977813616  max distance: 1.6819031174283685
+[32m[02-09 23:44:06 MainThread @pretrain.py:257][0m ESSteps: 43 Reward: 3722.7336271080003 step: 5001.0  sigma:0.012982052567368046
+[32m[02-09 23:44:06 MainThread @pretrain.py:259][0m average distance: 0.3112243219467218  max distance: 1.8156649004421739
+[32m[02-09 23:46:28 MainThread @pretrain.py:257][0m ESSteps: 44 Reward: 3568.762117317918 step: 5001.0  sigma:0.012852232041694365
+[32m[02-09 23:46:28 MainThread @pretrain.py:259][0m average distance: 0.1923263912719091  max distance: 1.738642861326565
+[32m[02-09 23:48:53 MainThread @pretrain.py:257][0m ESSteps: 45 Reward: 2911.4904143125627 step: 5001.0  sigma:0.012723709721277421
+[32m[02-09 23:48:53 MainThread @pretrain.py:259][0m average distance: 0.26779933497065356  max distance: 1.4098155260248404
+[32m[02-09 23:51:25 MainThread @pretrain.py:257][0m ESSteps: 46 Reward: 3729.797477765171 step: 5001.0  sigma:0.012596472624064646
+[32m[02-09 23:51:25 MainThread @pretrain.py:259][0m average distance: 0.20380191211385457  max distance: 1.8193851754007546
+[32m[02-09 23:53:56 MainThread @pretrain.py:257][0m ESSteps: 47 Reward: 3095.9419775972633 step: 5001.0  sigma:0.012470507897824
+[32m[02-09 23:53:56 MainThread @pretrain.py:259][0m average distance: 0.15927812984384176  max distance: 1.5027062838678422
+[32m[02-09 23:56:17 MainThread @pretrain.py:257][0m ESSteps: 48 Reward: 3840.04343866514 step: 5001.0  sigma:0.01234580281884576
+[32m[02-09 23:56:17 MainThread @pretrain.py:259][0m average distance: 0.2849938435588437  max distance: 1.8744422825997955
+[32m[02-09 23:59:01 MainThread @pretrain.py:257][0m ESSteps: 49 Reward: 4935.5457335512365 step: 5001.0  sigma:0.012222344790657301
+[32m[02-09 23:59:01 MainThread @pretrain.py:259][0m average distance: 0.3542891126137563  max distance: 2.422394903475842
+[32m[02-10 00:01:44 MainThread @pretrain.py:257][0m ESSteps: 50 Reward: 3992.8401796095695 step: 5001.0  sigma:0.012100121342750729
+[32m[02-10 00:01:44 MainThread @pretrain.py:259][0m average distance: 0.3732238699981994  max distance: 1.9510818687807914

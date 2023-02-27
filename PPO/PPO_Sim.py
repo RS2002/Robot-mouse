@@ -1,5 +1,6 @@
-from mujoco_py import load_model_from_path, MjSim,MjViewer
+from mujoco_py import load_model_from_path, MjSim, MjViewer
 import numpy as np
+
 
 class PPO_SimModel(object):
     def __init__(self, modelPath, max_steps=2000, view=False, save_path=None):
@@ -28,12 +29,12 @@ class PPO_SimModel(object):
                       "m1_tail": 8,
                       "neck": 9, "head": 10, "spine": 11, "fl_t1": 12, "fr_t1": 13, "rl_t1": 14, "rr_t1": 15,
                       "com_pos": 16, "com_quat": 19, "com_vel": 23, "imu_acc": 26, "imu_gyro": 29}  # 设置传感器的序号
-        self.y=[0,0]
-        self.max_steps=max_steps
-        self.steps=0
-        self.view=view
+        self.y = [0, 0]
+        self.max_steps = max_steps
+        self.steps = 0
+        self.view = view
         if not self.view:
-            self.viewer=None
+            self.viewer = None
         else:
             self.viewer = MjViewer(self.sim)  # 3D渲染当前的模拟状态
             self.viewer.cam.azimuth = 0
@@ -41,9 +42,9 @@ class PPO_SimModel(object):
             self.viewer.cam.lookat[1] += -0.5
             self.viewer.cam.distance = self.model.stat.extent * 0.5
 
-        #save ctrldata
-        self.ctrldata=np.array([])
-        self.save_path=save_path
+        # save ctrldata
+        self.ctrldata = np.array([])
+        self.save_path = save_path
 
     def runStep(self, ctrlData):
         # ------------------------------------------ #
@@ -60,46 +61,54 @@ class PPO_SimModel(object):
         # ID 10 is spine	(Horizontal)  [-1: right, 1: left]
         # Note: range is [-1, 1]
         # ------------------------------------------ #
-        self.steps+=1
+        self.steps += 1
         self.sim.data.ctrl[:] = ctrlData
         self.sim.step()  # 推进模拟
-        #self.viewer.render()  # 将当前模拟状态显示在屏幕上
-        state,pos=self.get_sensors()
-        self.y[0]=self.y[1]
-        self.y[1]=pos[1]
-        reward=-(self.y[1]-self.y[0])
+        # self.viewer.render()  # 将当前模拟状态显示在屏幕上
+        state, pos, linvel = self.get_sensors()
+        self.y[0] = self.y[1]
+        self.y[1] = pos[1]
+
+        '''reward=-(self.y[1]-self.y[0])
         done=False
         #加入跌倒检测机制
-        if pos[2] < 0.04:
+        if pos[2] < 0.045:
             reward -= 0.1
-            done=True
-        if self.steps>=self.max_steps:
-            done=True
+            done=True'''
+
+        reward = -linvel[1] * 4
+        done=False
+
+        if self.steps >= self.max_steps:
+            done = True
         if self.view:
             self.viewer.render()  # 将当前模拟状态显示在屏幕上
-            
+
         if self.save_path is not None:
-            self.ctrldata=np.concatenate((self.ctrldata,ctrlData),axis=0)
+            self.ctrldata = np.concatenate((self.ctrldata, ctrlData), axis=0)
             if done:
                 np.savez(self.save_path, ctrldata=self.ctrldata)
-        return state,reward,done,pos
+        return state, reward, done, pos
 
-    def get_sensors(self): #得到观测值与质心位置坐标
+    def get_sensors(self):  # 得到观测值与质心位置坐标
         sensors = self.sim.data.sensordata
         pos = sensors[self.index["com_pos"]:self.index["com_pos"] + 3].copy()  # 位置
         linvel = sensors[self.index["com_vel"]:self.index["com_vel"] + 3].copy()  # 线速度
         # acc = sensors[self.index["imu_acc"]:self.index["imu_acc"] + 3].copy()  # 加速度
         # angvel = sensors[self.index["imu_gyro"]:self.index["imu_gyro"] + 3].copy()  # 角速度
-        frame_quat=sensors[self.index["com_quat"]:self.index["com_quat"] + 4].copy()  # 方向信息
-        joint_pos=sensors[:12].copy()
-        state=np.concatenate([linvel,frame_quat,joint_pos])
-        return state,pos
+        frame_quat = sensors[self.index["com_quat"]:self.index["com_quat"] + 4].copy()  # 方向信息
+        joint_pos = sensors[:12].copy()
+        state = np.concatenate([linvel, frame_quat, joint_pos])
+        return state, pos, linvel
 
     def reset(self):
-        #self.sim.set_state(self.sim_state)
-        self.sim.reset() #恢复初始状态
-        self.steps=0
-        state,pos=self.get_sensors()
-        self.y[0]=pos[1]
-        self.y[1]=pos[1]
+        # self.sim.set_state(self.sim_state)
+        self.sim.reset()  # 恢复初始状态
+        self.steps = 0
+        state, pos ,vel= self.get_sensors()
+        self.y[0] = pos[1]
+        self.y[1] = pos[1]
         return state
+
+    def set_savepath(self,savepath=None):
+        self.save_path=savepath

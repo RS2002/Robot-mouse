@@ -12,6 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 import os
+#os.environ['CUDA_VISIBLE_DEVICES']="7"
 import torch
 import numpy as np
 import gym
@@ -32,7 +33,6 @@ import time
 from alg.es import SimpleGA
 from mouse_env import *
 
-#os.environ['CUDA_VISIBLE_DEVICES']="7"
 
 WARMUP_STEPS = 1e4
 EVAL_EVERY_STEPS = 1e4
@@ -159,7 +159,7 @@ def run_train_episode(agent, env, rpm, max_step, action_bound, w=None, b=None):
         new_action = copy(action)
         # Perform action
         next_obs, reward, done, info = env.step(new_action * action_bound, donef=(episode_steps > max_step))
-        terminal = float(done) if episode_steps < 2000 else 0
+        terminal = float(done) if episode_steps < 20000 else 0
         terminal = 1. - terminal
         '''for key in Param_Dict.keys():
             if key in info.keys():
@@ -253,7 +253,7 @@ def run_EStrain_episode(agent, env, rpm, max_step, action_bound, w=None, b=None)
         new_action = copy(action)
         # Perform action
         next_obs, reward, done, info = env.step(new_action * action_bound, donef=(episode_steps > max_step))
-        terminal = float(done) if episode_steps < 2000 else 0
+        terminal = float(done) if episode_steps < 20000 else 0
         terminal = 1. - terminal
         '''for key in Param_Dict.keys():
             if key in info.keys():
@@ -339,7 +339,7 @@ def main():
                             enable_action_filter=args.enable_action_filter)'''
 
     env=PPO_SimModel("./models/dynamic_4l_t3.xml",args.ETG_T, 0.026, args.ETG_H, 0.04, phase, 0.2, args.ETG_T2)
-    #env=PPO_SimModel("./models/ETG_obstacle1.xml",args.ETG_T, 0.026, args.ETG_H, 0.04, phase, 0.2, args.ETG_T2)
+    #env=PPO_SimModel("./models/scene_test1.xml",args.ETG_T, 0.026, args.ETG_H, 0.04, phase, 0.2, args.ETG_T2)
 
     e_step = args.e_step
 
@@ -489,8 +489,8 @@ def main():
         ETG_info = np.load(args.load[:-3] + ".npz")
         w = ETG_info["w"]
         b = ETG_info["b"]
-        env.set_savepath("./ctrldata/ground.npz")
-        #env.set_savepath("./ctrldata/obstacle1.npz")
+        env.set_savepath("./ctrldata/scene0.npz")
+        #env.set_savepath("./ctrldata/scene1.npz")
         #outdir = os.path.join(args.load[:-3], args.task_mode)
         if not os.path.exists(args.load[:-3]):
             os.makedirs(args.load[:-3])
@@ -503,8 +503,6 @@ def main():
         print('Evaluation over: {} episodes, Reward: {} Steps: {}'.format(
             EVAL_EPISODES, avg_reward, avg_step))
         print('distance: {}'.format(info['dis']))
-
-
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
@@ -532,7 +530,7 @@ if __name__ == "__main__":
     parser.add_argument("--steplen", type=float, default=0.05)
     parser.add_argument("--ETG", type=int, default=1)
     parser.add_argument("--ETG_T2", type=float, default=0.5)
-    parser.add_argument("--e_step", type=int, default=800)
+    parser.add_argument("--e_step", type=int, default=5000)
     parser.add_argument("--act_mode", type=str, default="traj")
     parser.add_argument("--ETG_path", type=str, default="None")
     parser.add_argument("--ETG_H", type=int, default=20)
