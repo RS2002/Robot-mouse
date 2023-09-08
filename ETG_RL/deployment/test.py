@@ -1,19 +1,15 @@
-from absl import flags
-from absl import app
 from absl import logging
 import numpy as np
 import time
-from tqdm import tqdm
 import pybullet  # pytype:disable=import-error
 import pybullet_data
 from pybullet_utils import bullet_client
 
 from robots import a1_robot
-from robots import robot_config
 from envs import EnvWrapper
-from model.mujoco_model import MujocoModel
-from model.mujoco_agent import MujocoAgent
-from model.sac import SAC
+from Bezier.model import MujocoModel
+from Bezier.model import MujocoAgent
+from Bezier.model import SAC
 from copy import copy
 import argparse
 

@@ -1,0 +1,40 @@
+<mujoco>
+
+    <include file="basic_scene.xml" />
+    <include file="leg_fl_assets/fl_t3_stl_assets.xml"/>
+
+    <asset>
+        <mesh name="main_body" file="stl-meshes/main_chest.stl" scale="0.001 0.001 0.001"/>
+    </asset>
+
+    <worldbody>
+        <light diffuse=".5 .5 .5" pos="0 -1.0 3" dir="0 0 -1"/>
+
+        <camera name="body_cam" mode="fixed" pos="20 0.1 0.05" euler="90 90 0" fovy="1"/>
+        <camera name="top camera" mode="fixed" pos="0 -1 30" euler="0 0 180" fovy="6"/>
+
+            <body name="fl" pos="0.0115 0 0">
+                <include file="leg_fl_assets/fl_t3_asset_exp.xml"/>
+            </body>
+
+
+        <!--
+            <include file="test_environment/turn_test_2m.xml"/>
+        -->
+        <include file="test_environment/straight_line.xml"/>
+
+    </worldbody>
+
+
+     <include file="leg_fl_assets/fl_t3_tendon.xml"/>
+
+
+
+
+
+    <include file="leg_fl_assets/fl_sensor_actuator.xml"/>
+
+
+
+
+</mujoco>
