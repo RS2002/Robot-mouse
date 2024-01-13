@@ -1,0 +1,62 @@
+<mujoco>
+
+    <!-- Front left leg type 3 -->
+    <!-- IMPORTANT MODEL PARAMETERS
+        'lr0':0.02678, 'rp': 0.008, 'd1': 0.0128, 'l1': 0.0317, 
+        'l2': 0.01, 'l3': 0.0305, 'l4': 0.0205,'theta3':73*np.pi/180
+    -->
+
+        <body pos="0 0 0">
+            <geom name="main_box_rl" mass=".015" type="box" pos="0.011 0.008 0" size=".004 .014 .014" rgba="0 .9 0 0"/>
+            
+            <body name="visual_main_rl" pos="0 0 0" euler="-90 90 0">
+                <geom name="visual_servo_rl" type="mesh" mesh="main_rl" mass="0" contype="0" conaffinity="0" rgba=".95 .95 .95 1"/>
+            </body>
+
+            <!-- Extension with slider for jumping -->
+            <!-- joint name="rail" type="slide" axis="0 0 1"/ -->
+            <!-- joint name="rail" type="slide" axis="0 0 1" damping="0.01" frictionloss="0.01" pos="0 -0.3325 0"/-->
+            <body name ="main_leg_rl" pos="0.025 0.0025 -0.0064">
+
+                <joint name="m1_rl" pos="0 0 0" type="hinge" axis="1 0 0" damping="0.01" armature="0.00065" limited="true" range="-90 90" ref="0"/>
+                <geom name="leg1_rl" mass="0.001" type="capsule" fromto="0 0 0 0 0 -0.0317" size="0.0024" rgba="0.8 0.8 0.8 0"/>
+
+                <body name="visual_leg1_rl" pos="-0.002 0 0" euler="0 0 0">
+                    <geom name="visual_leg1_rl" type="mesh" mesh="m1_leg_rl" mass="0" contype="0" conaffinity="0" rgba=".95 .95 .95 1"/>
+                </body>
+
+                <site name="router_hip_rl" pos="0 0 0" size="0.002" rgba="1 .4 .4 0.3"/>
+                <body name="lower_leg_rl" pos="0 0 -0.0317">
+                    <joint name="knee1_rl" pos="0 0 0" type="hinge" axis="1 0 0" stiffness="0.19" damping="0.005" armature="0.000065" limited="true" range="-90 90" ref="15"/>
+                    <geom name="leg2_rl" type="capsule" mass="0.0015" fromto="0 0 0 0 0.0305 0" size="0.009" rgba=".8 .1 .1 0"/>
+                    <body name="visual_leg2_rl" pos="-0.002 0 0" euler="0 0 0">
+                        <geom name="visual_leg2_rl" type="mesh" mesh="leg2_rl" mass="0" contype="0" conaffinity="0" rgba="1 .4 .4 1"/>
+                    </body>
+                    <site name="m2_pickup_rl" pos="0 0.02 0" size="0.002" rgba="1 .4 .4 0.3"/>
+
+                    <body name="foot_rl" pos="0 0.0305 0">
+                        <joint name="ankle_rl" pos="0 0 0" type="hinge" axis="1 0 0" stiffness="0.1" damping="0.005" armature="0.000065" limited="true" range="-70 70" ref="-17"/>
+
+                        <geom name="ankle_rl" type="capsule" mass="0.001" fromto="0 0 0 0 0 -0.0205" size="0.001" rgba=".95 .95 .95 0"/>
+                        <geom name="visual_ankle_rl" type="mesh" mesh="leg3_rl" mass="0" contype="0" conaffinity="0" rgba="1 .4 .4 1" euler="-6 0 0" pos="-0.002 0 0"/>
+                        <!--geom name="foot_placement_rl" type="sphere" pos="0 0 -0.0205" size="0.003" rgba=".8 .1 .1 1"/-->
+                        <geom name="foot_placement_rl2" type="capsule" fromto="-0.0035 0 -0.0205 0.0035 0 -0.0205" friction="1.4 0.005 0.0001" size="0.002" rgba="1 .4 .4 1"/> 
+
+                        <site name="foot_s_rl" pos="0 0 -0.0205" size="0.004" rgba="1 .4 .4 0.3"/>
+                    </body>
+                </body>
+            </body>
+
+            <site name="x1_rl" pos="0.025 0.02 0.0064" size="0.002" rgba="1 .4 .4 0.3"/>
+            <body name="servo2_rl" pos="0.025 0.0025 0.0064">
+                <geom name="motor2_rl" type="cylinder" mass="0.002" fromto="-0.003 0 0 0.003 0 0" size="0.008" rgba=".8 .1 .1 0" />
+                <joint name="m2_rl" pos="0 0 0" type="hinge" axis="1 0 0" armature="0.00065" damping="0.01" limited="true" range="-180 180" ref="0"/>
+                
+                <body name="visual_m2_rl" pos="0 0 0" euler="0 90 0">
+                    <geom name="visual_m2_rl" type="mesh" mesh="m2_reel_rl" mass="0" contype="0" conaffinity="0" rgba="1 .4 .4 1"/>
+                </body>
+
+                <site name="s1_rl" pos="0.0 0.0 0.009" size="0.002" rgba="1 .4 .4 0.3"/>
+            </body>
+        </body>
+</mujoco>

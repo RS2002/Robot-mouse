@@ -1,0 +1,10 @@
+<mujoco>
+    <tendon>
+        <spatial name="m2_tendon_rl" limited="true" range="0 0.06" width="0.001" rgba="1 .4 .4 0.5">
+            <site site="s1_rl"/>
+            <geom geom="motor2_rl" sidesite="x1_rl"/>
+            <site site="router_hip_rl"/>
+            <site site="m2_pickup_rl"/>
+        </spatial>
+    </tendon>
+</mujoco>

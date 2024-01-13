@@ -4,6 +4,11 @@ from LegModel.hindLeg import HindLegM
 
 def get_Bezier_point(tao, psi, delta, St): # tao=前进步长的一半,psi=地上的最高点,delta=地下的最低点
     St = St % 2
+
+    reverse = True
+    if reverse:
+        St=2-St
+
     control_point_list=[
         [-tao, 0],
         [-1.4 * tao, 0],
@@ -21,7 +26,40 @@ def get_Bezier_point(tao, psi, delta, St): # tao=前进步长的一半,psi=地�
     n = len(control_point_list)
     if St>=0 and St<1:
         return [tao * (1 - 2 * St),delta * math.cos(math.pi * (1 - 2 * St)/2)]
-    elif St>=1 and St<2:
+    elif St>=1 and St<=2:
+        x, y = 0, 0
+        for j in range(n):
+                x += math.factorial(n - 1) / math.factorial(j) / math.factorial(n - 1 - j) * math.pow(
+                    (St - 1), j) * math.pow(1 - (St - 1), n - 1 - j) * control_point_list[j][0]
+                y += math.factorial(n - 1) / math.factorial(j) / math.factorial(n - 1 - j) * math.pow(
+                    (St - 1), j) * math.pow(1 - (St - 1), n - 1 - j) * control_point_list[j][1]
+        return x,y
+
+def get_my_Bezier_point(param_list, St):
+    St = St % 2
+
+    reverse = True
+    if reverse:
+        St=2-St
+
+    control_point_list=[
+        [param_list[0], 0],
+        [param_list[1], 0],
+        [param_list[2], param_list[7]],
+        [param_list[2], param_list[7]],
+        [param_list[2], param_list[7]],
+        [param_list[3], param_list[8]],
+        [param_list[3], param_list[8]],
+        [param_list[3], param_list[9]],
+        [param_list[4], param_list[9]],
+        [param_list[4], param_list[9]],
+        [param_list[5], 0],
+        [param_list[6], 0]
+    ]
+    n = len(control_point_list)
+    if St>=0 and St<1:
+        return [param_list[10] * (1 - 2 * St),param_list[11] * math.cos(math.pi * (1 - 2 * St)/2)]
+    elif St>=1 and St<=2:
         x, y = 0, 0
         for j in range(n):
                 x += math.factorial(n - 1) / math.factorial(j) / math.factorial(n - 1 - j) * math.pow(
