@@ -13,7 +13,7 @@ def get_args():
     parser.add_argument('--state_dim', type=int, default=14)
     parser.add_argument('--action_dim', type=int, default=2)
     parser.add_argument('--max_steps', type=int, default=5000) # 每个episode内的最大步数
-    parser.add_argument('--max_epoch', type=int, default=1000) # 最大训练epoch
+    parser.add_argument('--max_epoch', type=int, default=10000) # 最大训练epoch
     parser.add_argument('--episode_num', type=int, default=16) # 每个epoch内的episode数目
     parser.add_argument('--update_num', type=int, default=10) # 每个epoch内更新的episode数目
     parser.add_argument('--learning_rate', type=float, default=0.03)
@@ -32,9 +32,10 @@ def main():
     device_name = "cuda:"+args.cuda
     device = torch.device(device_name if torch.cuda.is_available() and not args.cpu else 'cpu')
 
-    env=Env(modelPath=args.modelPath,max_steps=args.max_steps)
+    env=Env(modelPath=args.modelPath,max_steps=args.max_steps,view=True)
     ars=ARS(state_dim=args.state_dim,action_dim=args.action_dim,device=device,env=env,max_epoch=args.max_epoch,episode_num=args.episode_num,update_num=args.update_num,learning_rate=args.learning_rate,exploration_noise=args.exploration_noise)
-    ars.train()
+    ars.load("./ARS.pkl")
+    ars.eval()
 
 if __name__ == '__main__':
     main()

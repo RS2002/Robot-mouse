@@ -1,20 +1,28 @@
-import torch
+# import torch
 import pickle
 import tqdm
 import copy
+import numpy as np
 
 class ARS():
     def __init__(self,state_dim,action_dim,device,env,max_epoch,episode_num=16,update_num=10,learning_rate=0.03,exploration_noise=0.05):
-        self.device=device
+        # self.device=device
         self.state_dim=state_dim
         self.action_dim=action_dim
 
-        self.state = torch.zeros(state_dim).to(device)
-        self.mean = torch.zeros(state_dim).to(device)
-        self.mean_diff = torch.zeros(state_dim).to(device)
-        self.var = torch.zeros(state_dim).to(device)
+        # self.state = torch.zeros(state_dim).to(device)
+        # self.mean = torch.zeros(state_dim).to(device)
+        # self.mean_diff = torch.zeros(state_dim).to(device)
+        # self.var = torch.zeros(state_dim).to(device)
+        #
+        # self.param = torch.zeros([action_dim, state_dim],dtype=torch.double).to(device)
 
-        self.param = torch.zeros([action_dim, state_dim],dtype=torch.double).to(device)
+        self.state = np.zeros(state_dim)
+        self.mean = np.zeros(state_dim)
+        self.mean_diff = np.zeros(state_dim)
+        self.var = np.zeros(state_dim)
+
+        self.param = np.zeros([action_dim, state_dim])
 
         self.env=env
         self.learning_rate=learning_rate
@@ -36,16 +44,20 @@ class ARS():
         self.mean_diff += (x - last_mean) * (x - self.mean)
         self.var = (self.mean_diff / self.state).clip(min=1e-8)
         # normalization
-        return (x - self.mean) / torch.sqrt(self.var)
+        # return (x - self.mean) / torch.sqrt(self.var)
+        return (x - self.mean) / np.sqrt(self.var)
 
     def forward(self,x,param):
         x=self.norm(x)
-        y=torch.matmul(param,x)
-        y=torch.tanh(y)
+        # y=torch.matmul(param,x)
+        # y=torch.tanh(y)
+        y = param.dot(x)
+        y = np.tanh(y)
         return y
 
     def update(self,delta_list,pos_reward,neg_reward):
-        rewards_dev=torch.std(pos_reward+neg_reward)
+        # rewards_dev=torch.std(pos_reward+neg_reward)
+        rewards_dev=np.std(pos_reward+neg_reward)
         update_direction=0
         for i in range(delta_list.shape[0]):
             update_direction+=(pos_reward[i]-neg_reward[i])*delta_list[i]
@@ -59,11 +71,16 @@ class ARS():
     def load(self,path="ARS.pkl"):
         with open(path, 'rb') as file:
             dict = pickle.load(file)
-        self.state = dict["state"].to(self.device)
-        self.mean = dict["mean"].to(self.device)
-        self.mean_diff = dict["mean_diff"].to(self.device)
-        self.var = dict["var"].to(self.device)
-        self.param = dict["param"].to(self.device)
+        # self.state = dict["state"].to(self.device)
+        # self.mean = dict["mean"].to(self.device)
+        # self.mean_diff = dict["mean_diff"].to(self.device)
+        # self.var = dict["var"].to(self.device)
+        # self.param = dict["param"].to(self.device)
+        self.state = dict["state"]
+        self.mean = dict["mean"]
+        self.mean_diff = dict["mean_diff"]
+        self.var = dict["var"]
+        self.param = dict["param"]
 
     def iteration(self,param):
         step=0
@@ -73,20 +90,27 @@ class ARS():
         done = False
         while not done:
             step += 1
-            state = torch.tensor(state).to(self.device)
+            # state = torch.tensor(state).to(self.device)
+            state = np.array(state)
             action = self.forward(state,param)
             state, reward, done, pos = self.env.runStep(action)
             total_reward+=reward
-            distance=pos[1]
+            distance=-pos[1]
         return total_reward,distance,step
 
     def train(self):
+        self.eval()
+
         for i in range(self.max_epoch):
             pabr=tqdm.tqdm(range(self.episode_num))
 
-            delta_list=torch.randn([self.episode_num,self.action_dim,self.state_dim]).to(self.device)
-            pos_reward=torch.zeros([self.episode_num]).to(self.device)
-            neg_reward=torch.zeros([self.episode_num]).to(self.device)
+            # delta_list=torch.randn([self.episode_num,self.action_dim,self.state_dim]).to(self.device)
+            # pos_reward=torch.zeros([self.episode_num]).to(self.device)
+            # neg_reward=torch.zeros([self.episode_num]).to(self.device)
+
+            delta_list = np.random.randn(self.episode_num, self.action_dim, self.state_dim)
+            pos_reward = np.zeros([self.episode_num])
+            neg_reward = np.zeros([self.episode_num])
 
 
             for j in pabr:
@@ -98,8 +122,13 @@ class ARS():
                 param=self.param-delta*self.exploration_noise
                 neg_reward[j],_,_ = self.iteration(param)
 
-            best_reward=torch.max(neg_reward,pos_reward)
-            _,indices=torch.sort(best_reward)
+            # best_reward=torch.max(neg_reward,pos_reward)
+            # _,indices=torch.sort(best_reward)
+
+            best_reward = np.max([neg_reward, pos_reward],axis=0)
+            indices = np.argsort(best_reward)
+
+
             indices=indices[-self.update_num:]
             delta_list=delta_list[indices]
             pos_reward=pos_reward[indices]
@@ -117,4 +146,10 @@ class ARS():
                     self.best_reward=reward
                 if distance>self.best_distance:
                     self.best_distance=distance
+            log="Epoch: {:} | Reward: {:} | Distance: {:}".format(i,reward,distance)
             print("Epoch: {:} | Reward: {:} | Distance: {:}".format(i,reward,distance))
+            with open("log.txt",'a') as file:
+                file.write(log+"\n")
+    def eval(self):
+        reward, distance, _ = self.iteration(self.param)
+        print("Eval | Reward: {:} | Distance: {:}".format(reward,distance))

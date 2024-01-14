@@ -110,7 +110,10 @@ class Env(object):
         self.t = (self.t + dt) % 2
         state = np.concatenate([state, self.t + delta_St])
 
-        reward = -linvel[1] * 4
+        # ori
+        # reward = -linvel[1] * 4
+
+        reward = - linvel[1] * 10 - linvel[0]**2 - linvel[1]**2
 
         done=False
         if self.steps >= self.max_steps:
