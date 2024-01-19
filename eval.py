@@ -10,7 +10,7 @@ def get_args():
     parser.add_argument("--cuda", type=str, default='0')
 
     parser.add_argument('--modelPath', type=str, default="./models/dynamic_4l_t3.xml")
-    parser.add_argument('--state_dim', type=int, default=14)
+    parser.add_argument('--state_dim', type=int, default=13)
     parser.add_argument('--action_dim', type=int, default=2)
     parser.add_argument('--max_steps', type=int, default=5000) # 每个episode内的最大步数
     parser.add_argument('--max_epoch', type=int, default=10000) # 最大训练epoch
@@ -34,7 +34,7 @@ def main():
 
     env=Env(modelPath=args.modelPath,max_steps=args.max_steps,view=True)
     ars=ARS(state_dim=args.state_dim,action_dim=args.action_dim,device=device,env=env,max_epoch=args.max_epoch,episode_num=args.episode_num,update_num=args.update_num,learning_rate=args.learning_rate,exploration_noise=args.exploration_noise)
-    ars.load("./ARS.pkl")
+    ars.load("./best.pkl")
     ars.eval()
 
 if __name__ == '__main__':

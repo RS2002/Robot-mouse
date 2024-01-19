@@ -1,22 +1,22 @@
-import copy
 import mujoco
 import mujoco.viewer
 import numpy as np
 from Bezier import get_Bezier_point,pos_2_angle
 import math
 import random
-import torch
 
 L_span = 0.03
 delta_St = np.array([0, 1, 1, 0])
 dt = 0.005
 para = [[[-0.00, -0.045], [0.03, 0.01]], [[-0.00, -0.045], [0.03, 0.005]], [[0.00, -0.05], [0.03, 0.01]],[[0.00, -0.05], [0.03, 0.005]]]
-max_dis=0.025
+start_step=500
+alpha=0.7
 
-class Env(object):
-    def __init__(self, modelPath, max_steps=5000, view=False):
-        super().__init__()
+class PPO_SimModel(object):
+    def __init__(self, modelPath, max_steps=2000, view=False, save_path=None):
+        super(PPO_SimModel, self).__init__()
         self.model = mujoco.MjModel.from_xml_path(modelPath)  # 加载模型
+        # self.random_env()
         self.data = mujoco.MjData(self.model)
         self.render = view
         if self.render:
@@ -35,12 +35,12 @@ class Env(object):
                       "m1_tail": 8,
                       "neck": 9, "head": 10, "spine": 11, "fl_t1": 12, "fr_t1": 13, "rl_t1": 14, "rr_t1": 15,
                       "com_pos": 16, "com_quat": 19, "com_vel": 23, "imu_acc": 26, "imu_gyro": 29}  # 设置传感器的序号
-
-
-        self.last_pos = [0, 0, 0]
+        self.y = [0, 0]
         self.max_steps = max_steps
         self.steps = 0
+        # save ctrldata
         self.ctrldata = np.array([])
+        self.save_path = save_path
         self.t=0
         self.old_ctrl=0
         self.initializing()
@@ -52,22 +52,13 @@ class Env(object):
             mujoco.mj_step(self.model, self.data)
             if self.render:
                 self.viewer.sync()
-        # self.random_env()
+        self.random_env()
         self.old_ctrl=0
         self.t=0
         self.steps = 0
         self.ctrldata = np.array([])
         state, pos, vel = self.get_sensors()
-        self.last_pos = copy.deepcopy(pos)
-        # old
-        # state = np.concatenate([state, self.t + delta_St])
-
-        quat=state[-4:]
-        rm=quat2rm(quat)
-        state = state[:-1]
-        state[-3] = rm[0, 0]
-        state[-2] = rm[1, 1]
-        state[-1] = rm[2, 2]
+        self.y = [pos[1], pos[1]]
         state = np.concatenate([state, self.t + delta_St])
         return state
 
@@ -88,76 +79,76 @@ class Env(object):
         # Note: range is [-1, 1]
         # ------------------------------------------ #
 
-        ctrlData*=max_dis
-        psi=ctrlData[0]+max_dis
-        delta=ctrlData[1]-max_dis
+        # self.data.ctrl[:] = ctrlData
 
+        ctrlData=alpha * self.old_ctrl + (1 - alpha) * ctrlData
+        self.old_ctrl=ctrlData
+
+        psi=ctrlData[-2]*0.02
+        delta=ctrlData[-1]*0.02
+
+        # print(psi)
+        # print(delta)
+        # print("")
 
         for i in range(4):
+            psi_max=para[i][1][1]*3/2
+            delta_min = -para[i][1][1] * 1 / 2
+
+            # psi=psi_max
+            # delta=delta_min
+
             x, y = get_Bezier_point(L_span, psi, delta, self.t + delta_St[i])
             if i < 2:
                 leg = "f"
             else:
                 leg = "h"
 
-            dx = para[i][0][0]
+            dx=para[i][0][0]
             dy = para[i][0][1]
 
-            X = x + dx
-            Y = y + dy
-
+            if self.steps<start_step:
+                X = x + dx
+                Y = y + dy
+            else:
+                X = x + dx + ctrlData[i*2]*0.05
+                Y = y + dy + ctrlData[i*2+1]*0.05
             self.data.ctrl[i * 2:(i + 1) * 2] = pos_2_angle(X, Y, leg)
-        self.data.ctrl[8:]=0
-
+        # self.data.ctrl[:8]=self.data.ctrl[:8]+ctrlData[:8]
+        #self.data.ctrl[8:]=ctrlData[8:12]
 
         mujoco.mj_step(self.model, self.data)
         self.steps+=1
         if self.render:
             self.viewer.sync()
-
         state,pos,linvel = self.get_sensors()
+        self.y[0] = self.y[1]
+        self.y[1] = pos[1]
 
-        quat=state[-4:]
-        rm=quat2rm(quat)
-        # print(rm)
-
-
-        self.t = (self.t + dt) % 2
-        # old
-        # state = np.concatenate([state, self.t + delta_St])
-        state=state[:-1]
-        state[-3]=rm[0,0]
-        state[-2]=rm[1,1]
-        state[-1]=rm[2,2]
-        state = np.concatenate([state, self.t + delta_St])
-
-        # ori
-        # reward = -linvel[1] * 4
-
-        # test1
-        # reward = - linvel[1] - linvel[0]**2 - linvel[2]**2
-
-        # test2
-        reward = - linvel[1] * 4
-        direction_punish=0
-        for i in range(3):
-            for j in range(3):
-                if i==j:
-                    direction_punish += (1 - rm[i, j]) ** 2
-                else:
-                    direction_punish += rm[i, j] ** 2
-        reward-=direction_punish
-
-        #test3
-        reward += - linvel[0] ** 2 - linvel[2] ** 2
-
-
+        '''reward=-(self.y[1]-self.y[0])
         done=False
+        #加入跌倒检测机制
+        if pos[2] < 0.045:
+            reward -= 0.1
+            done=True'''
+
+        reward = -linvel[1] * 4
+        done=False
+        #加入左右偏移惩罚
+        if pos[0]<-0.1 or pos[0]>0.1:
+            reward -= 0.1
+
         if self.steps >= self.max_steps:
             done = True
 
+        if self.save_path is not None:
+            self.ctrldata = np.concatenate((self.ctrldata, ctrlData), axis=0)
+            if done:
+                np.savez(self.save_path, ctrldata=self.ctrldata)
 
-        self.last_pos=copy.deepcopy(pos)
+        self.t = (self.t + dt) % 2
+        state = np.concatenate([state, self.t + delta_St])
+
         return state, reward, done, pos
 
     def get_sensors(self):  # 得到观测值与质心位置坐标
@@ -173,6 +164,9 @@ class Env(object):
     def reset(self):
         mujoco.mj_resetData(self.model, self.data)
         return self.initializing()
+
+    def set_savepath(self,savepath=None):
+        self.save_path=savepath
 
     def random_env(self):
         # self.model.opt (可以修改如重力、风速之类的参数)
@@ -195,16 +189,3 @@ def generate_boxes(x_min=-0.5, x_max=0.5, y_min=-3.5, y_max=1, size=0.01):
                 y += size * 2
                 counter += 1
             x += size * 2
-
-def quat2rm(q):
-    r=np.zeros([3,3])
-    r[0,0]=q[0]**2+q[1]**2-q[2]**2-q[3]**2
-    r[0,1]=2*(q[1]*q[2]-q[0]*q[3])
-    r[0,2]=2*(q[1]*q[3]+q[0]*q[2])
-    r[1,0]=2*(q[1]*q[2]+q[0]*q[3])
-    r[1,1]=q[0]**2-q[1]**2+q[2]**2-q[3]**2
-    r[1,2]=2*(q[2]*q[3]-q[0]*q[1])
-    r[2,0]=2*(q[1]*q[3]-q[0]*q[2])
-    r[2,1]=2*(q[2]*q[3]+q[0]*q[1])
-    r[2,2]=q[0]**2-q[1]**2-q[2]**2+q[3]**2
-    return r
