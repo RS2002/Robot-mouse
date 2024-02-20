@@ -10,8 +10,8 @@ def get_args():
     parser.add_argument("--cuda", type=str, default='0')
 
     parser.add_argument('--modelPath', type=str, default="./models/dynamic_4l_t3.xml")
-    parser.add_argument('--state_dim', type=int, default=13)
-    parser.add_argument('--action_dim', type=int, default=2)
+    parser.add_argument('--state_dim', type=int, default=31)
+    parser.add_argument('--action_dim', type=int, default=12)
     parser.add_argument('--max_steps', type=int, default=5000) # 每个episode内的最大步数
     parser.add_argument('--max_epoch', type=int, default=500) # 最大训练epoch
     parser.add_argument('--episode_num', type=int, default=16) # 每个epoch内的episode数目

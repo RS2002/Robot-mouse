@@ -2,16 +2,17 @@ import copy
 import mujoco
 import mujoco.viewer
 import numpy as np
-from Bezier import get_my_Bezier_point,pos_2_angle
+from Bezier import get_Bezier_point,pos_2_angle
 import math
 import random
 import torch
 import matplotlib.pyplot as plt
 
+L_span = 0.03
 delta_St = np.array([0, 1, 1, 0])
 dt = 0.005
 para = [[[-0.00, -0.045], [0.03, 0.01]], [[-0.00, -0.045], [0.03, 0.005]], [[0.00, -0.05], [0.03, 0.01]],[[0.00, -0.05], [0.03, 0.005]]]
-max_dis=0.03
+max_dis=0.025
 
 class Env(object):
     def __init__(self, modelPath, max_steps=5000, view=False):
@@ -64,11 +65,11 @@ class Env(object):
         self.last_pos = copy.deepcopy(pos)
         self.last_action = 0
         self.n=0
-
         self.movePath = [[], [], []]
+
         # quat=state[-4:]
         # rm=quat2rm(quat)
-        state = np.concatenate([[-1]*12, state, self.t + delta_St, [0]])
+        state = np.concatenate([[-1]*2, state, self.t + delta_St, [0]])
         # state = np.concatenate([[-1]*10, state, self.t + delta_St, [0]])
 
         return state
@@ -91,28 +92,21 @@ class Env(object):
         # ------------------------------------------ #
 
         ctrlData*=max_dis
-        ctrlData[0]=ctrlData[0]-max_dis
-        ctrlData[1]=(ctrlData[1]-max_dis)*1.4
-        ctrlData[2]=(ctrlData[2]-max_dis)*1.5
-        ctrlData[3]*=0.5
-        ctrlData[4]=(ctrlData[4]+max_dis)*1.5
-        ctrlData[5]=(ctrlData[5]+max_dis)*1.4
-        ctrlData[6]=ctrlData[6]+max_dis
-        ctrlData[7]=(ctrlData[7]+max_dis)*0.3
-        ctrlData[8]=(ctrlData[8]+max_dis)*0.3
-        ctrlData[9]=(ctrlData[9]+max_dis)*0.4
-        ctrlData[10]=ctrlData[10]+max_dis
-        ctrlData[11]=(ctrlData[11]-max_dis)*0.2
+        ctrlData[2:]*=0.01
 
         # ctrlData=0.3*self.old_ctrl+0.7*ctrlData
         self.old_ctrl=copy.deepcopy(ctrlData)
 
+        psi=ctrlData[0]+max_dis
+        delta=ctrlData[1]-max_dis
 
+        # psi = 0.01
+        # delta = -0.005
 
         old=np.array(self.data.ctrl[:8])
 
         for i in range(4):
-            x, y = get_my_Bezier_point(ctrlData, self.t + delta_St[i])
+            x, y = get_Bezier_point(L_span, psi, delta, self.t + delta_St[i])
             if i < 2:
                 leg = "f"
             else:
@@ -125,6 +119,7 @@ class Env(object):
             Y = y + dy
 
             self.data.ctrl[i * 2:(i + 1) * 2] = pos_2_angle(X, Y, leg)
+        # self.data.ctrl[:8]+=ctrlData[2:]
         self.data.ctrl[8:]=0
 
         now=np.array(self.data.ctrl[:8])
@@ -159,6 +154,9 @@ class Env(object):
 
         # if self.n>10:
         #     reward-=0.1
+
+        # if abs(linvel[0])>0.08:
+        #     reward -= 0.1
 
 
         self.t = (self.t + dt) % 2
@@ -199,6 +197,7 @@ class Env(object):
 
         for i in range(1, 451):
             self.model.geom("box{}".format(i)).size[-1] = random.random() * 0.01
+        return
 
     def drawPath(self):
         ax = plt.axes(projection='3d')
@@ -207,7 +206,6 @@ class Env(object):
         ax.set_ylabel('Y', fontsize=16)
         ax.set_zlabel('Z', fontsize=16)
         plt.show()
-
 def generate_boxes(x_min=-0.5, x_max=0.5, y_min=-3.5, y_max=1, size=0.05):
     with open("box.txt", 'w') as file:
         x = x_min
@@ -221,6 +219,7 @@ def generate_boxes(x_min=-0.5, x_max=0.5, y_min=-3.5, y_max=1, size=0.05):
                 y += size * 2
                 counter += 1
             x += size * 2
+
 
 def quat2rm(q):
     r=np.zeros([3,3])

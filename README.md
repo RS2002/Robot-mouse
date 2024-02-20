@@ -1,1 +1,1 @@
-# Final Project: Robot Rat NeRmo
+# Final Project: ARS-Bezier in Robot Rat NeRmo
