@@ -1,10 +1,10 @@
 # Final Project: ARS-Bezier in Robot Rat NeRmo
 
-** Article: ** under way
+**Article:** under way
 
-** Author: ** Zijian Zhao
+**Author:** Zijian Zhao
 
-** Supervisors: ** Prof. Gangchen, Prof. Kai Huang, Zitao Zhang
+**Supervisors:** Prof. Gangchen, Prof. Kai Huang, Zitao Zhang
 
 
 
