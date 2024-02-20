@@ -1,6 +1,6 @@
 # Final Project: ARS-Bezier in Robot Rat NeRmo
 
-**Article:** under way
+**Article:** 基于轨迹调制和强化学习的小型四足机器人运动控制方法, Motion Control Method for Small Quadruped Robots Based on Trajectory Modulation and Reinforcement Learning (under way)
 
 **Author:** Zijian Zhao
 
