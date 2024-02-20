@@ -12,6 +12,7 @@ def get_args():
 
     # parser.add_argument('--modelPath', type=str, default="./models/dynamic_4l_t3.xml")
     parser.add_argument('--modelPath', type=str, default="./models/scene_test1.xml")
+    parser.add_argument('--parameterPath', type=str, default="./best.pth")
 
 
     parser.add_argument('--state_dim', type=int, default=31)
@@ -36,7 +37,7 @@ def main():
 
     env=Env(modelPath=args.modelPath,max_steps=args.max_steps,view=True)
     ars=ARS(state_dim=args.state_dim,action_dim=args.action_dim,device=device,env=env,max_epoch=args.max_epoch,episode_num=args.episode_num,update_num=args.update_num,learning_rate=args.learning_rate,exploration_noise=args.exploration_noise)
-    ars.load("./complex/best.pkl")
+    ars.load(args.parameterPath)
     ars.eval()
     # env.drawPath()
 
