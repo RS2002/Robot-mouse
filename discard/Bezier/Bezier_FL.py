@@ -64,7 +64,7 @@ x_real=[]
 y_real=[]
 
 
-model = mujoco.MjModel.from_xml_path("../models/FL.xml")
+model = mujoco.MjModel.from_xml_path("../../models/FL.xml")
 data = mujoco.MjData(model)
 viewer = mujoco.viewer.launch_passive(model, data)
 fl_params = {'lr0': 0.033, 'rp': 0.008, 'd1': 0.0128, 'l1': 0.0295,
@@ -155,7 +155,7 @@ for i in range(5):
 
 
 X,Y=get_range()
-plt.plot(X,Y,'bo',label='bound')
+# plt.plot(X,Y,'bo',label='bound', linewidth=1)
 plt.plot(x_target,y_target,'yellow',label='target', linewidth=1)
 plt.plot(x_real,y_real,'r',label='real', linewidth=1)
 plt.legend(prop={'size': 18}, framealpha=0.3)

@@ -1,10 +1,10 @@
 # Final Project: ARS-Bezier in Robot Rat NeRmo
 
-**Article:** 基于轨迹调制和强化学习的小型四足机器人运动控制方法, Motion Control Method for Small Quadruped Robots Based on Trajectory Modulation and Reinforcement Learning (under way)
+**Article:** 基于轨迹调制和强化学习的小型四足机器人运动控制方法, Motion Control Method for Small Quadruped Robots Based on Trajectory Modulation and Reinforcement Learning
 
 **Author:** Zijian Zhao
 
-**Supervisors:** Prof. Gangchen, Prof. Kai Huang, Zitao Zhang
+**Supervisors:** Prof. Kai Huang, Prof. Gang Chen, Zitao Zhang
 
 
 

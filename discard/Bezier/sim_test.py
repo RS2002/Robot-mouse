@@ -11,7 +11,9 @@ if __name__ == '__main__':
 
 	args = parser.parse_args()
 
-	theMouse = SimModel("../models/scene_test3.xml")
+	# theMouse = SimModel("../../models/dynamic_4l_t3.xml")
+	theMouse = SimModel("../../models/scene_test3.xml")
+
 
 	theController = MouseController(args.fre)
 	for i in range(100):
@@ -27,6 +29,8 @@ if __name__ == '__main__':
 	end = time.time()
 	timeCost = end-start
 	print("Time -> ", timeCost)
+	print(theMouse.pos[0])
+	print(theMouse.pos[-1])
 	# theMouse.write_log()
 	theMouse.close_window()
-	theMouse.drawPath()
+	# theMouse.drawPath()

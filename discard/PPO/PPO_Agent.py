@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
 from torch.distributions import MultivariateNormal
-device = torch.device("cuda:2" if torch.cuda.is_available() else "cpu")
+device = torch.device("cuda:3" if torch.cuda.is_available() else "cpu")
 
 class Memory:
     def __init__(self):

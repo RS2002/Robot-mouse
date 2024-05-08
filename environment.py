@@ -9,7 +9,23 @@ import torch
 import matplotlib.pyplot as plt
 
 delta_St = np.array([0, 1, 1, 0])
-dt = 0.005
+# delta_St = np.array([0, 0.5, 0.5, 0])
+# delta_St = np.array([0, 0.2, 0.55, 0.75])
+# delta_St = np.array([0, 0.4, 1.1, 1.5])
+# delta_St = np.array([0, 0.5, 1.0, 1.5])
+
+
+# dt = 0.005
+# dt = 0.01
+# dt = 0.015
+dt = 0.02
+# dt = 0.025
+
+# dt = 0.07
+# dt = 0.09
+# dt = 0.011
+# dt = 0.013
+
 para = [[[-0.00, -0.045], [0.03, 0.01]], [[-0.00, -0.045], [0.03, 0.005]], [[0.00, -0.05], [0.03, 0.01]],[[0.00, -0.05], [0.03, 0.005]]]
 max_dis=0.03
 
@@ -37,6 +53,11 @@ class Env(object):
                       "com_pos": 16, "com_quat": 19, "com_vel": 23, "imu_acc": 26, "imu_gyro": 29}  # 设置传感器的序号
 
         self.movePath = [[], [], []]
+        self.control_point_list = []
+        self.pos = []
+        self.linvel = []
+        self.angvel = []
+        self.acc = []
 
         self.last_pos = [0, 0, 0]
         self.last_action = 0
@@ -60,12 +81,18 @@ class Env(object):
         self.t=0
         self.steps = 0
         self.ctrldata = np.array([])
-        state, pos, vel = self.get_sensors()
+        state, pos, vel,acc = self.get_sensors()
         self.last_pos = copy.deepcopy(pos)
         self.last_action = 0
         self.n=0
 
         self.movePath = [[], [], []]
+        self.control_point_list = []
+        self.pos = []
+        self.linvel = []
+        self.angvel = []
+        self.acc = []
+
         # quat=state[-4:]
         # rm=quat2rm(quat)
         state = np.concatenate([[-1]*12, state, self.t + delta_St, [0]])
@@ -112,7 +139,7 @@ class Env(object):
         old=np.array(self.data.ctrl[:8])
 
         for i in range(4):
-            x, y = get_my_Bezier_point(ctrlData, self.t + delta_St[i])
+            x, y, control_points = get_my_Bezier_point(ctrlData, self.t + delta_St[i])
             if i < 2:
                 leg = "f"
             else:
@@ -136,10 +163,16 @@ class Env(object):
             self.viewer.sync()
 
         tData = self.data.site(self.fixPoint).xpos
+
+        state,pos,linvel,acc = self.get_sensors()
+
         for i in range(3):
             self.movePath[i].append(tData[i])
-
-        state,pos,linvel = self.get_sensors()
+        self.control_point_list.append(control_points)
+        self.pos.append(pos)
+        self.linvel.append(linvel)
+        self.angvel.append(state[-7:-4])
+        self.acc.append(acc)
 
         c_F=np.sum(state[:4])
         if c_F ==0:
@@ -164,10 +197,6 @@ class Env(object):
         self.t = (self.t + dt) % 2
         state = np.concatenate([ctrlData, state, self.t + delta_St, [reward]])
 
-
-
-
-
         done=False
         if self.steps >= self.max_steps:
             done = True
@@ -185,7 +214,7 @@ class Env(object):
         linvel = sensors[self.index["com_vel"]:self.index["com_vel"] + 3].copy()  # 线速度
         c_F = sensors[self.index["fl_t1"]:self.index["fl_t1"] + 4].copy()  # 腿部压力传感器
         state = np.concatenate([c_F, linvel, angvel, framequat])
-        return state,pos,linvel
+        return state,pos,linvel,acc
 
     def reset(self):
         mujoco.mj_resetData(self.model, self.data)
@@ -207,6 +236,38 @@ class Env(object):
         ax.set_ylabel('Y', fontsize=16)
         ax.set_zlabel('Z', fontsize=16)
         plt.show()
+
+    def write_log(self):  # 记录传感器数据
+        def compute_L2(arr,digit=4):
+            sum = 0
+            for i in range(len(arr)):
+                sum += arr[i] ** 2
+                arr[i] = round(arr[i], digit)
+            sum = round(math.sqrt(sum), digit)
+            return sum
+
+
+        f1 = open("position.txt", mode='w')
+        f2 = open("linear velocity.txt", mode='w')
+        f3 = open("angular velocity.txt", mode='w')
+        f4 = open("acceleration.txt", mode='w')
+        f5 = open("control point.txt",mode='w')
+        for i in range(len(self.pos)):
+            pos_scalar = compute_L2(self.pos[i])
+            linvel_scalar = compute_L2(self.linvel[i])
+            angvel_scalar = compute_L2(self.angvel[i])
+            acc_scalar = compute_L2(self.acc[i])
+            f1.writelines(str(self.pos[i]) + ":  " + str(pos_scalar) + "\n")
+            f2.writelines(str(self.linvel[i]) + ":  " + str(linvel_scalar) + "\n")
+            f3.writelines(str(self.angvel[i]) + ":  " + str(angvel_scalar) + "\n")
+            f4.writelines(str(self.acc[i]) + ":  " + str(acc_scalar) + "\n")
+            f5.writelines(str(self.control_point_list[i]) + "\n")
+        f1.close()
+        f2.close()
+        f3.close()
+        f4.close()
+        f5.close()
+
 
 def generate_boxes(x_min=-0.5, x_max=0.5, y_min=-3.5, y_max=1, size=0.05):
     with open("box.txt", 'w') as file:

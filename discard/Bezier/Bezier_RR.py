@@ -102,7 +102,7 @@ x_real=[]
 y_real=[]
 
 
-model = mujoco.MjModel.from_xml_path("../models/RR.xml")
+model = mujoco.MjModel.from_xml_path("../../models/RR.xml")
 data = mujoco.MjData(model)
 viewer = mujoco.viewer.launch_passive(model, data)
 hl_params = {'lr0': 0.032, 'rp': 0.008, 'd1': 0.0128, 'l1': 0.0317,
@@ -160,3 +160,11 @@ plt.plot(x_target,y_target,'g',label='target')
 plt.plot(x_real,y_real,'r',label='real')
 plt.legend()
 plt.show()
+
+# X,Y=get_range()
+# plt.plot(X,Y,'bo',label='bound', linewidth=1)
+# plt.xticks(fontsize=14)
+# plt.yticks(fontsize=14)
+# plt.xlabel('X', fontsize=20)
+# plt.ylabel('Y', fontsize=20)
+# plt.show()

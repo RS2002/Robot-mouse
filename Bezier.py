@@ -25,7 +25,7 @@ def get_Bezier_point(tao, psi, delta, St): # tao=前进步长的一半,psi=地�
     ]
     n = len(control_point_list)
     if St>=0 and St<1:
-        return [tao * (1 - 2 * St),delta * math.cos(math.pi * (1 - 2 * St)/2)]
+        return tao * (1 - 2 * St),delta * math.cos(math.pi * (1 - 2 * St)/2),control_point_list
     elif St>=1 and St<=2:
         x, y = 0, 0
         for j in range(n):
@@ -33,7 +33,7 @@ def get_Bezier_point(tao, psi, delta, St): # tao=前进步长的一半,psi=地�
                     (St - 1), j) * math.pow(1 - (St - 1), n - 1 - j) * control_point_list[j][0]
                 y += math.factorial(n - 1) / math.factorial(j) / math.factorial(n - 1 - j) * math.pow(
                     (St - 1), j) * math.pow(1 - (St - 1), n - 1 - j) * control_point_list[j][1]
-        return x,y
+        return x,y,control_point_list
 
 def get_my_Bezier_point(param_list, St):
     St = St % 2
@@ -58,7 +58,7 @@ def get_my_Bezier_point(param_list, St):
     ]
     n = len(control_point_list)
     if St>=0 and St<1:
-        return [param_list[10] * (1 - 2 * St),param_list[11] * math.cos(math.pi * (1 - 2 * St)/2)]
+        return param_list[10] * (1 - 2 * St),param_list[11] * math.cos(math.pi * (1 - 2 * St)/2), control_point_list
     elif St>=1 and St<=2:
         x, y = 0, 0
         for j in range(n):
@@ -66,7 +66,7 @@ def get_my_Bezier_point(param_list, St):
                     (St - 1), j) * math.pow(1 - (St - 1), n - 1 - j) * control_point_list[j][0]
                 y += math.factorial(n - 1) / math.factorial(j) / math.factorial(n - 1 - j) * math.pow(
                     (St - 1), j) * math.pow(1 - (St - 1), n - 1 - j) * control_point_list[j][1]
-        return x,y
+        return x,y, control_point_list
 
 
 fl_params = {'lr0': 0.033, 'rp': 0.008, 'd1': 0.0128, 'l1': 0.0295,
