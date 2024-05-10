@@ -11,8 +11,8 @@ if __name__ == '__main__':
 
 	args = parser.parse_args()
 
-	# theMouse = SimModel("../../models/dynamic_4l_t3.xml")
-	theMouse = SimModel("../../models/scene_test3.xml")
+	theMouse = SimModel("../../models/dynamic_4l_t3.xml")
+	# theMouse = SimModel("../../models/scene_test3.xml")
 
 
 	theController = MouseController(args.fre)

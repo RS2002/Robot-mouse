@@ -8,6 +8,10 @@
 
 
 
+The official GitHub for the conference version is [RS2002/ARS-Bezier: Official Repository for The Paper, ARS-Bezier: A Trajectory-based Reinforcement Learning Approach for Autonomous Locomotion of a Rat Robot (github.com)](https://github.com/RS2002/ARS-Bezier).
+
+
+
 ## 1. ARS-Bezier Method
 
 ![](./img/main.jpg)
