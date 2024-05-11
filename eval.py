@@ -10,10 +10,10 @@ def get_args():
     parser.add_argument("--cpu", action="store_true",default=False)
     parser.add_argument("--cuda", type=str, default='0')
 
-    # parser.add_argument('--modelPath', type=str, default="./models/dynamic_4l_t3.xml")
-    parser.add_argument('--modelPath', type=str, default="./models/mytest2.xml")
-    parser.add_argument('--parameterPath', type=str, default="./result/success/random/complex/ARS.pkl")
-
+    parser.add_argument('--modelPath', type=str, default="./models/dynamic_4l_t3.xml")
+    # parser.add_argument('--modelPath', type=str, default="./models/mytest2.xml")
+    parser.add_argument('--parameterPath', type=str, default="./result/success/random/complex/best.pkl")
+    # parser.add_argument('--parameterPath', type=str, default="./result/success/scene0/complex/best.pkl")
 
     parser.add_argument('--state_dim', type=int, default=31)
     parser.add_argument('--action_dim', type=int, default=12)

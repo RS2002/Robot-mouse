@@ -11,8 +11,8 @@ def get_args():
     parser.add_argument("--cuda", type=str, default='0')
 
 
-    # parser.add_argument('--modelPath', type=str, default="./models/dynamic_4l_t3.xml")
-    parser.add_argument('--modelPath', type=str, default="./models/mytest1.xml")
+    parser.add_argument('--modelPath', type=str, default="./models/dynamic_4l_t3.xml")
+    # parser.add_argument('--modelPath', type=str, default="./models/mytest2.xml")
     parser.add_argument('--parameterPath', type=str, default="./result/success/random/simple/ARS.pkl")
 
 
